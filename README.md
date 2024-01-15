@@ -2,8 +2,6 @@
 - 👀 I’m interested in ...angular framework
 - 🌱 I’m currently learning ...javascript
 - 💞️ I’m looking to collaborate on ...growing it company
-- 📫 How to reach me ...
-- 😄 Pronouns: ...anshi
 - ⚡ Fun fact: ...(>-<)
 
 <!---
