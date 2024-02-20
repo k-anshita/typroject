@@ -1,0 +1,80 @@
+.footer-bgimg {
+    background-image: url(/assets/pattern.png.webp);
+    padding: 72px 0;
+}
+
+.footer-widget {
+    padding: 40px 30px 7px;
+    background-color: black;
+    color: white;
+    border: 1px solid #4a4a4a;
+}
+
+.footer-img {
+    float: left;
+    width: 97px;
+    height: 97px;
+    /* margin-bottom:23px; */
+
+}
+
+.footer {
+    margin-bottom: 23px;
+}
+
+.footer-text {
+    padding-left: 110px;
+}
+
+.date {
+    font-size: 12px;
+    color: #ffb320;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.img-description {
+    font-size: 12px;
+}
+
+.author-img {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    float: left;
+}
+
+.footer-title {
+    margin-bottom: 40px;
+}
+
+.author-description {
+    color: #ff205f;
+    font-size: 12px;
+}
+
+.footer-section {
+    padding: 18px 0 16px;
+    overflow: hidden;
+    background: #252525;
+}
+
+.footer-pagelink {
+    float: right;
+    color: #aeaeae;
+    font-weight: 500;
+}
+
+.footer-gametext {
+    float: left;
+    color: #aeaeae;
+    font-weight: 500;
+}
+
+@media screen and (max-width:970px) {
+    .footer-gametext {
+        display: none;
+    }
+    
+}

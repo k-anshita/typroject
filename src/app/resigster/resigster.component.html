@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-12 col-sm-12 col-md-6">
+            <img src="./assets/login.webp" class="res_img">
+        </div>
+        <!-- <div class="col-6 borders">
+            <form class="form" [formGroup]="registerform">
+                <h1>REGISTRATION</h1>
+                <input class="input_bg" type="text" value="" formControlName="firstname"
+                    placeholder="Please enter your firstname"><br><br>
+                <input class="input_bg" type="text" value="" formControlName="lastname"
+                    placeholder="Please enter your lastname"><br><br>
+                <input class="input_bg" type="email" value="" formControlName="email"
+                    placeholder="please enter youe email"><br><br>
+                gender:<input type="radio" name="gender" value="male" formControlName="gender">male
+                <input type="radio" name="gender" value="female" formControlName="gender">female<br><br>
+                <label>Date of birth:</label>
+                <input class="input_bg" type="date" value="" formControlName="date"
+                    placeholder="Enter your birthdate"><br><br>
+                <button type="button" class="btn btn-primary" (click)="add()">RESIGSTER</button><br><br>
+                <div>
+                    <span><a routerLink="/">
+                            <font color="black">already have an account?</font>
+                        </a></span>
+                </div>
+            </form>
+        </div> -->
+
+        <div class="col-12 col-sm-12 col-md-6 borders">
+            <!-- <form> -->
+            <div class="form">
+                <h4>REGISTRATION</h4>
+                <input class=" input_bg form-control" type="text" value="" [(ngModel)]="firstname"
+                    placeholder="Please enter your firstname" required><br>
+                <input class=" input_bg form-control" type="text" value="" [(ngModel)]="lastname"
+                    placeholder="Please enter your lastname" required><br>
+                <input class=" input_bg form-control" type="email" value="" [(ngModel)]="email"
+                    placeholder="please enter your email" required><br>
+                <input class=" input_bg form-control" type="text" value="" [(ngModel)]="username"
+                    placeholder="please enter your usename" required><br>
+                <input class=" input_bg form-control" type="password" value="" [(ngModel)]="password"
+                    placeholder="please enter your password" required><br>
+                gender:<input type="radio" name="gender" value="male" [(ngModel)]="gender">male
+                <input type="radio" name="gender" value="female" [(ngModel)]="gender">female<br><br>
+                <label>Date of birth:</label>
+                <input class=" input_bg form-control" type="date" value="" [(ngModel)]="date"
+                    placeholder="Enter your birthdate"><br>
+                <button type="button" class="btn btn-primary" (click)="add()">REGISTER
+                </button><br><br>
+                <div>
+                    <span><a routerLink="/">
+                            <font color="black">already have an account?</font>
+                        </a></span>
+                </div>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+</div>

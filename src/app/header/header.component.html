@@ -1,0 +1,117 @@
+<!-- <header class="header" (window:resize)="resize()" #header>
+    <a routerLink="/main">
+        <img src="/assets/b-1.webp" class="logo_img" (load)="resize()">
+    </a>
+    <div class="header_element ">
+        <span class="dropdown px-3">
+            <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
+                <i class="fa fa-user user-icon"></i>
+                {{loginuser_data.firstname}}{{loginuser_data.lastname}}
+            </span>
+            <ul class="dropdown-menu">
+                <li><a routerLink="/profile">
+                        <font color="black">Profile</font>
+                    </a></li>
+                <li><a routerLink="/cardreport">
+                        <font color="black">Card Report</font>
+                    </a></li>
+                <li><a routerLink="/randomreport">
+                        <font color="black">Random Report</font>
+                    </a></li>
+                <li><a routerLink="/ticreport">
+                        <font color="black">Tic-Toe Report</font>
+                    </a></li>
+                <li (click)="logout()">Log Out</li>
+            </ul>
+        </span>
+    </div> -->
+<!-- </div> -->
+<!-- </header>
+<div class="main" #main>
+    <router-outlet></router-outlet>
+</div> -->
+
+
+
+
+
+<header class="header" (window:resize)="resize()" #header>
+    <div class="container">
+        <a routerLink="/home">
+            <img src="/assets/logo.png.webp" class="logo_img" (load)="resize()">
+        </a>
+
+        <div class="header_element ">
+            <span class="dropdown px-3">
+                <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
+                    <i class="fa fa-user user-icon"></i>
+                    {{loginuser_data.firstname}}{{loginuser_data.lastname}}
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/profile">
+                            <font color="black">Profile</font>
+                        </a></li>
+                    <li><a routerLink="/cardreport">
+                            <font color="black">Card Report</font>
+                        </a></li>
+                    <li><a routerLink="/randomreport">
+                            <font color="black">Random Report</font>
+                        </a></li>
+                    <li><a routerLink="/ticreport">
+                            <font color="black">Tic-Toe Report</font>
+                        </a></li>
+                    <li (click)="logout()" id="user_selectionbox">Log Out</li>
+                </ul>
+            </span>
+        </div>
+        <div class="users_login">
+            <button (click)="check_loginuser()">
+                <font color="black">Login/Register</font>
+            </button>
+        </div>
+        <!-- <div class="nav-icon">
+            <i class="fa fa-bars"></i>
+        </div> -->
+        <div class="nav-icon">
+            <span class="dropdown px-3">
+                <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
+                    <i class="fa fa-bars"></i>
+
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/home">
+                            <font color="black">Home</font>
+                        </a></li>
+                    <li><a routerLink="/games">
+                            <font color="black">Games</font>
+                        </a></li>
+                    <li><a routerLink="/contact">
+                            <font color="black">contact</font>
+                        </a></li>
+                    <!-- <li><a routerLink="/ticreport">
+                            <font color="black">Tic-Toe Report</font>
+                        </a></li>
+                    <li (click)="logout()">Log Out</li> -->
+                </ul>
+            </span>
+        </div>
+        <nav class="main-menu">
+            <div>
+                <!-- <ul class="navbar-nav"> -->
+                <span class="px-3"><a routerLink="/home">
+                        <font color="white">Home</font>
+                    </a></span>
+                <span class="px-3 "><a routerLink="/games">
+                        <font color="white">Games</font>
+                    </a></span>
+                <span class="px-3 "><a routerLink="/contact">
+                        <font color="white">Contact</font>
+                    </a></span>
+                <!-- </ul> -->
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
