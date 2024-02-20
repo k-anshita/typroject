@@ -1,0 +1,30 @@
+<div class="container-fluild">
+  <button><a routerLink="/home">
+      <font color="black">BACK</font>
+    </a></button>
+  <button (click)="fillRandom((activebutton=true));nocount()" [disabled]="disabled">Fill random</button>
+
+  <!-- <button (click)="nocount()">Count</button> -->
+  <!-- <div *ngIf="count">{{count}}</div>  -->
+  <button (click)="reset()">RESET</button><br>
+  {{findstring}}{{randomno}}
+  <div *ngIf="minus_count">{{minus_count}}</div>
+  <!-- <div>you are{{per}} compeleted</div> -->
+  <!-- <div>{{same_number}}</div> -->
+
+  <div *ngIf="this.per==100">
+    <img class="animation" src="./assets/1239451_ce1e2.gif">
+  </div>
+
+  <div class="board">
+    <ng-container *ngFor="let row of getvalue;let i = index">
+      <div class="box" *ngFor="let col of getvalue;let j=index;" (click)="clickevent(i+''+j,i,j)"
+        [ngClass]="{
+            'pink':(i+j)%2==0,
+          'green':(this.multiselect.includes(i+''+j))&&randomValues && randomValues.length > i && randomValues[i].length > j && randomValues[i][j]==randomno,
+          'red':(this.multiselect.includes(i+''+j))&&randomValues && randomValues.length > i && randomValues[i].length > j &&randomValues[i][j]!=randomno}">
+        {{randomValues && randomValues.length > i && randomValues[i].length > j ? randomValues[i][j]:''}}
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<button><a routerLink="/home">
+        <font color="black">BACK</font>
+    </a></button><br>
+<h2 style="text-align: center;">random card winners</h2>
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-4"> -->
+        <!-- <h3 *ngFor="let info of card_winner;let i=index">
+                {{info.win}}
+                {{info.time}}
+            </h3> -->
+        <!-- </div>
+        <div class="col-4">
+            <h3 *ngFor="let tic of tic_winner;let i=index">
+                {{tic.ticwinner}}
+            </h3>
+        </div> -->
+        <!-- <div class="col-4">
+            <h3 *ngFor="let chess of chess_winner;let i=index">
+                {{chess.win}}
+                {{chess.time}}
+            </h3>
+        </div> -->
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>MESSAGE</th>
+                    <!-- <th>DATE&TIME</th> -->
+                    <!-- <th>ID</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let chess of chess_winner;let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{chess.message}}</td>
+                    <!-- <td>{{chess.time}}</td> -->
+                    <!-- <td>{{chess.numberid}}</td> -->
+                </tr>
+            </tbody>
+        </table>
+        <!-- </div> -->
+
+    </div>

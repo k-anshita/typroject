@@ -1,0 +1,166 @@
+.news-header {
+    background-color: black;
+    width: 100%;
+    padding: 24px 0;
+    position: relative;
+    height: 74px;
+    overflow: hidden;
+}
+
+.news-title {
+    position: absolute;
+    color: white;
+    background-color: #ffb320;
+    width: 29%;
+    top: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    padding-top: 24px;
+    height: 100%;
+    padding-right: 66px;
+    overflow: hidden;
+}
+
+.news-ticker {
+    width: 71%;
+    float: right;
+    overflow: hidden;
+}
+
+.marquee-wrapper {
+    width: 10000px;
+    transform: translateX(0px);
+    animation: 13.1034s linear 0s infinite normal none running marqueeAnimation;
+}
+
+@keyframes marqueeAnimation {
+    100% {
+        transform: translateX(-1551.2px);
+    }
+}
+
+.news-ticker-contant .news-item {
+    margin-right: 35px;
+    color: white;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.news-item span {
+    margin-right: 35px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    padding: 4px 20px;
+}
+
+.New {
+    background-color: #ff205f;
+}
+
+.strategy {
+    background-color: #4eae60;
+}
+
+.Latest {
+    background-color: #694eae;
+}
+
+.bg-img {
+    background-image: url(/assets/card-bg.jpg);
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-imgtext {
+    color: white;
+    left: 0;
+    bottom: 0;
+    padding-top: 350px;
+    padding-bottom: 40px;
+}
+
+.reveiewgame-bg {
+    background-image: url(/assets/review.webp);
+}
+
+.review-img {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.section {
+    padding-top: 87px;
+}
+
+.heading-color {
+    color: white;
+}
+
+.reveiew-message {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.cata {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px 25px;
+}
+
+.New {
+    background-color: #ff205f;
+}
+
+.recentgame-title {
+    text-align: center;
+    margin-bottom: 75px;
+    color: black;
+    padding-top: 50px;
+}
+
+.review-rating {
+    color: #ffb320;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.review-rating .is-fade {
+    color: #e0e3e4;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .bg-imgtext {
+        padding-top: 100px;
+    }
+
+    .news-title {
+        font-size: 13px;
+        padding-right: 23px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .news-title {
+        display: none;
+    }
+}
+
+@media screen and (max-width:354px) {
+    .bg-imgtext {
+        padding-top: 50px;
+    }
+}

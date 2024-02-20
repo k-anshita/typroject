@@ -1,0 +1,25 @@
+<div class="container-fluild">
+  <button><a routerLink="/home">
+    <font color="black">BACK</font>
+  </a></button>
+<button type="button" (click)="reset()">RESET</button>
+  <p id="turn">{{turn}}</p>
+  <div class="board" id="board">
+    <div class="box" *ngFor="let val of getvalue;let i = index;" (click)="onclicks(i)"
+      [ngClass]="{'pink': this.winnerPosition?.includes(i)}">{{val}}</div>
+
+  </div>
+  <p id="res" [ngClass]="this.result==''?'white':'green'">{{result}}</p>
+  
+</div>
+
+
+<!-- [ngClass]="{'pink': this.winnerPosition?.includes(i)}" -->
+<!-- <div class="box" (click)="onclicks(1)" [ngClass]="{'green': this.winnerPosition?.includes(1)}">{{getvalue[1]}}</div>
+      <div class="box" (click)="onclicks(2)" [ngClass]="{'green': this.winnerPosition?.includes(2)}">{{getvalue[2]}}</div>
+      <div class="box" (click)="onclicks(3)" [ngClass]="{'green': this.winnerPosition?.includes(3)}">{{getvalue[3]}}</div>
+      <div class="box" (click)="onclicks(4)" [ngClass]="{'green': this.winnerPosition?.includes(4)}">{{getvalue[4]}}</div>
+      <div class="box" (click)="onclicks(5)" [ngClass]="{'green': this.winnerPosition?.includes(5)}">{{getvalue[5]}}</div>
+      <div class="box" (click)="onclicks(6)" [ngClass]="{'green': this.winnerPosition?.includes(6)}">{{getvalue[6]}}</div>
+      <div class="box" (click)="onclicks(7)" [ngClass]="{'green': this.winnerPosition?.includes(7)}">{{getvalue[7]}}</div>
+      <div class="box" (click)="onclicks(8)" [ngClass]="{'green': this.winnerPosition?.includes(9)}">{{getvalue[8]}}</div> -->
