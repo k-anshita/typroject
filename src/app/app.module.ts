@@ -24,6 +24,11 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
+import { RPSComponent } from './rps/rps.component';
+import { SudokuComponent } from './sudoku/sudoku.component';
+import { WhackAMoleComponent } from './whack-a-mole/whack-a-mole.component';
+import { WordSearchComponent } from './word-search/word-search.component';
+import { GuessthenumberComponent } from './guessthenumber/guessthenumber.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +50,11 @@ import { MemoryGameComponent } from './memory-game/memory-game.component';
     ContactComponent,
     HeaderComponent,
     MemoryGameComponent,
+    RPSComponent,
+    SudokuComponent,
+    WhackAMoleComponent,
+    WordSearchComponent,
+    GuessthenumberComponent,
   ],
   imports: [
     BrowserModule,

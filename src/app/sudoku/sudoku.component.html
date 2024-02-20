@@ -1,0 +1,17 @@
+<div class="container-fluild">
+    <button><a routerLink="/home">
+      <font color="black">BACK</font>
+    </a></button>
+    <div class="container">
+    <h1>Sudoku</h1>
+    <div class="sudoku-grid">
+      <div *ngFor="let row of sudokuGrid; let i = index" class="sudoku-row">
+        <div *ngFor="let cell of row; let j = index" class="sudoku-cell">
+          <input type="text" [value]="cell === 0 ? '' : cell" (input)="onCellChange($event, i, j)" class="sudoku-input">
+        </div>
+      </div>
+    </div><br><br>
+    <button (click)="solveSudoku()" class="btn solve-btn">Solve</button>
+    <button (click)="resetGrid()" class="btn reset-btn">Reset</button>
+  </div>
+  </div>

@@ -1,0 +1,27 @@
+
+<div class="word-search-game">
+    <div class="grid">
+      <div class="grid-row" *ngFor="let row of grid; let i = index">
+        <div class="grid-cell" 
+        *ngFor="let letter of row; let j = index"
+             [class.selected]="isSelected(i, j)"
+             (click)="selectLetter(i, j)"
+             (mouseclick)="selectLetter(i, j)" [ngClass]="{'.highlighted': isLetterHighlighted(i,j)}">
+          {{ letter }}
+          
+        </div>
+      </div>
+    </div>
+    <div class="words-to-find">
+      <p>Words to find:</p>
+      <ul>
+        <li *ngFor="let word of wordsToFind" [class.found]="foundWords.has(word)">{{ word }}</li>
+      </ul>
+      <div><p>time:{{ timer }}</p></div>
+      <div *ngIf="isGameWon && timer < totalTime" class="game-over">Congratulations! You found all the words in {{ timer }} seconds!</div>
+      <div *ngIf="!isGameWon && timer >= totalTime" class="game-over">Time's up! You did not find all the words in time.</div>
+    </div>
+    <button (click)="resetGame()" class="reset-button">Reset Game</button>
+  </div>
+  
+  

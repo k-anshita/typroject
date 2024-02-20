@@ -1,0 +1,46 @@
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mole-hole {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    border: 2px solid black;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .mole {
+    width: 60px;
+    height: 60px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .info {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+  

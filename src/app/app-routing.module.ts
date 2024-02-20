@@ -16,7 +16,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { GamesComponent } from './games/games.component';
 import { ContactComponent } from './contact/contact.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
-
+import { RPSComponent } from './rps/rps.component';
+import { SudokuComponent } from './sudoku/sudoku.component';
+import { WhackAMoleComponent } from './whack-a-mole/whack-a-mole.component';
+import { WordSearchComponent } from './word-search/word-search.component';
+import { GuessthenumberComponent } from './guessthenumber/guessthenumber.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'res', component: ResigsterComponent },
@@ -32,6 +36,11 @@ const routes: Routes = [
   { path: 'randomreport', component: RandomreportComponent, canActivate: [AuthGuard] },
   { path: 'ticreport', component: TicreportComponent, canActivate: [AuthGuard] },
   {path:'memorygame',component:MemoryGameComponent},
+  {path:'RPS',component:RPSComponent},
+  {path:'sudoku',component:SudokuComponent},
+  {path:'whack-a-mole',component:WhackAMoleComponent},
+  {path:'wordsearch',component:WordSearchComponent},
+  {path:'guessthenumber',component:GuessthenumberComponent},  
 ];
 
 @NgModule({

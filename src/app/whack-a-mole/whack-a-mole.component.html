@@ -1,0 +1,26 @@
+<div class="container-fluild">
+    <button><a routerLink="/home">
+      <font color="black">BACK</font>
+    </a></button>
+
+
+<div class="game-container">
+    <h1>Whack-a-Mole Game</h1>
+    
+    <div class="game-board">
+      <div *ngFor="let mole of moles; let i = index" class="mole-hole" (click)="whack(i)">
+        <div *ngIf="mole" class="mole"></div>
+      </div>
+    </div>
+  
+    <div class="info">
+      <p>Score: {{ score }}</p>
+      <p>Target Score: {{ targetScore }}</p>
+      <p *ngIf="!gameOver">Time left: {{ timeLeft }}s</p>
+      <p *ngIf="gameOver && timeLeft === 0">Time's up!</p>
+      <p *ngIf="gameOver && score < targetScore">You did not reach the target score.</p>
+      <p *ngIf="gameOver && score >= targetScore">Congratulations! You've won the game!</p>
+      <button (click)="restart()" [disabled]="!gameOver">Restart</button>
+    </div>
+  </div>
+</div>
