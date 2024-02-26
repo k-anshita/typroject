@@ -23,6 +23,7 @@ import { GamesComponent } from './games/games.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MemoryGameComponent } from './memory-game/memory-game.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     GamesComponent,
     ContactComponent,
     HeaderComponent,
+    MemoryGameComponent,
   ],
   imports: [
     BrowserModule,

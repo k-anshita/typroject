@@ -15,7 +15,7 @@ import { CardreportComponent } from './cardreport/cardreport.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { GamesComponent } from './games/games.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { MemoryGameComponent } from './memory-game/memory-game.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'cardreport', component: CardreportComponent, canActivate: [AuthGuard] },
   { path: 'randomreport', component: RandomreportComponent, canActivate: [AuthGuard] },
   { path: 'ticreport', component: TicreportComponent, canActivate: [AuthGuard] },
-
+  {path:'memorygame',component:MemoryGameComponent},
 ];
 
 @NgModule({

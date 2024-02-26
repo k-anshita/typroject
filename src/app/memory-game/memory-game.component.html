@@ -1,0 +1,16 @@
+<div class="container-fluild">
+    <button><a routerLink="/home">
+      <font color="black">BACK</font>
+    </a></button>
+    <div class="container">
+        <h1>Memory Game</h1>
+        <div class="timer">Time: {{ formatTime() }}</div>
+        <div class="grid">
+          <div *ngFor="let card of cards; let i = index" class="card" [class.flipped]="card.flipped || card.matched" (click)="flipCard(i)">
+            <div class="front"></div>
+            <div class="back">{{ card.value }}</div>
+          </div>
+        </div>
+        <button (click)="resetGame()">Reset Game</button>
+      </div>
+      </div>
