@@ -29,6 +29,11 @@ import { SudokuComponent } from './sudoku/sudoku.component';
 import { WhackAMoleComponent } from './whack-a-mole/whack-a-mole.component';
 import { WordSearchComponent } from './word-search/word-search.component';
 import { GuessthenumberComponent } from './guessthenumber/guessthenumber.component';
+import { KillthebirdsComponent } from './killthebirds/killthebirds.component';
+import { ConnectfourComponent } from './connectfour/connectfour.component';
+import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
+import { StackcubeComponent } from './stackcube/stackcube.component';
+import { CandyComponent } from './candy/candy.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,11 @@ import { GuessthenumberComponent } from './guessthenumber/guessthenumber.compone
     WhackAMoleComponent,
     WordSearchComponent,
     GuessthenumberComponent,
+    KillthebirdsComponent,
+    ConnectfourComponent,
+    TowerofhanoiComponent,
+    StackcubeComponent,
+    CandyComponent,
   ],
   imports: [
     BrowserModule,

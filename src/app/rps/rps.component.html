@@ -1,28 +1,69 @@
-<div class="container-fluild">
-    <button><a routerLink="/home">
-      <font color="black">BACK</font>
-    </a></button>
-<div class="container">
-    <h1 class="title">Rock, Paper, Scissors Game</h1>
-    <div *ngIf="!gameStarted">
-      <p class="instruction">Choose the number of rounds:</p>
-      <input type="number" [(ngModel)]="totalRounds" min="1">
-      <button class="btn start-game" (click)="startGame()">Start Game</button>
-    </div>
-    <div *ngIf="gameStarted">
-      <div class="options">
-        <button class="btn rock" (click)="play('rock')">ROCK</button>
-        <button class="btn paper" (click)="play('paper')">Paper</button>
-        <button class="btn scissors" (click)="play('scissors')">Scissors</button>
+<div class="container-fluid">
+
+<button><a routerLink="/home">
+  <font color="black">BACK</font>
+</a></button><br>
+<div class="form">
+
+
+  <input type="radio" id="rock-rock" name="rock-paper-scissors">
+  <input type="radio" id="rock-paper" name="rock-paper-scissors">
+  <input type="radio" id="rock-scissors" name="rock-paper-scissors">
+  <input type="radio" id="paper-rock" name="rock-paper-scissors">
+  <input type="radio" id="paper-paper" name="rock-paper-scissors">
+  <input type="radio" id="paper-scissors" name="rock-paper-scissors">
+  <input type="radio" id="scissors-rock" name="rock-paper-scissors">
+  <input type="radio" id="scissors-paper" name="rock-paper-scissors">
+  <input type="radio" id="scissors-scissors" name="rock-paper-scissors">
+
+  <div>
+    <h1>CSS Rock-Paper-Scissors</h1>
+    <div id="hands">
+      <div class="hand" id="computer-hand">
+        <div class="fist"></div>
+        <div class="finger finger-1"></div>
+        <div class="finger finger-2"></div>
+        <div class="finger finger-3"></div>
+        <div class="finger finger-4"></div>
+        <div class="thumb"></div>
+        <div class="arm"></div>
       </div>
-      <div *ngIf="result !== null" class="result">
-        <p class="result-message">{{ resultMessage }}</p>
-        <p class="round">Round {{ currentRound }} / {{ totalRounds }}</p>
-        <p class="">you Choose:{{ playerMove }}</p>
-        <p>Computer choose:{{computerMove }}</p>
-        <p class="score">Score: You {{ playerScore }} - Computer {{ computerScore }}</p>
-        <button class="btn play-again" (click)="resetGame()">Next Round</button>
+
+      <div class="hand" id="user-hand">
+        <div class="fist"></div>
+        <div class="finger finger-1"></div>
+        <div class="finger finger-2"></div>
+        <div class="finger finger-3"></div>
+        <div class="finger finger-4"></div>
+        <div class="thumb"></div>
+        <div class="arm"></div>
+      </div>
+      
+      <div id="icons">
+        <div>
+          <label for="rock-rock">✊</label>
+          <label for="paper-rock">✊</label>
+          <label for="scissors-rock">✊</label>
+        </div>
+        <div>
+          <label for="rock-paper">🖐️</label>
+          <label for="paper-paper">🖐️</label>
+          <label for="scissors-paper">🖐️</label>
+        </div>
+        <div>
+          <label for="rock-scissors">✌</label>
+          <label for="paper-scissors">✌</label>
+          <label for="scissors-scissors">✌</label>
+        </div>
       </div>
     </div>
   </div>
+
+  <div id="message">
+    <h2></h2>
+    <input type="reset" value="Refresh Round" />
   </div>
+
+
+</div>
+</div>

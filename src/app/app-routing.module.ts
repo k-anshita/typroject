@@ -21,6 +21,11 @@ import { SudokuComponent } from './sudoku/sudoku.component';
 import { WhackAMoleComponent } from './whack-a-mole/whack-a-mole.component';
 import { WordSearchComponent } from './word-search/word-search.component';
 import { GuessthenumberComponent } from './guessthenumber/guessthenumber.component';
+import { KillthebirdsComponent } from './killthebirds/killthebirds.component';
+import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
+import { StackcubeComponent } from './stackcube/stackcube.component';
+import { ConnectfourComponent } from './connectfour/connectfour.component';
+import { CandyComponent } from './candy/candy.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'res', component: ResigsterComponent },
@@ -41,6 +46,11 @@ const routes: Routes = [
   {path:'whack-a-mole',component:WhackAMoleComponent},
   {path:'wordsearch',component:WordSearchComponent},
   {path:'guessthenumber',component:GuessthenumberComponent},  
+  {path:'killthebirds',component:KillthebirdsComponent},
+  {path:'towerofhanoi',component:TowerofhanoiComponent},
+  {path:'stackcube',component:StackcubeComponent},
+{path:'connectfour',component:ConnectfourComponent},
+{path:'candy',component:CandyComponent},
 ];
 
 @NgModule({
