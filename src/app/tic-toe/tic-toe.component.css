@@ -23,22 +23,25 @@ h1 {
     text-align: center;
 }
 .btnback{
-    border-radius: 45%;
+    border-radius: 50%;
     color: white;
-    background-color: rgb(72, 66, 66);
+    background-color: rgb(235, 221, 221);
     float: left;
-    margin-top: 100px;
-    margin-left: 10px;
-    padding: 10px;
+    padding: 15px;
+    top: 20%;
+    left: 30%;
+    position: absolute;
   }
+  
+ 
   .btnback a{
     list-style: none;
-    color: white;
-    font-size: 20px;
+    color: rgb(18, 14, 14);
+    font-size: 30px;
     font-weight: bold;
   }
   .btnback:hover{
-    background-color: rgb(167, 129, 202);
+    background-color: rgb(164, 121, 203);
    
   }
 .board {
@@ -105,17 +108,26 @@ p {
     text-shadow: 3px 2px #cd9ec7;
 }
 
+         
 .reset {
- 
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0px 0px 3px 0px rebeccapurple;
+    background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);
     padding: 10px 20px;
     margin: 50px 0px 50px 0px;
-    background-color: rgb(248, 214, 172);
-    color: black;
-    font-weight: bold;
-}
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  .reset:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
 
 .header {
     background: linear-gradient(135deg, rgb(17, 13, 143) 0%, rgb(141, 28, 202) 100%);
