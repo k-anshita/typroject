@@ -42,10 +42,10 @@ li {
     margin-bottom: 70px;
     width:100%;
     color:white; */
-  background-color: #7a7f7f45;
+  background:rgba(0, 0,0, 0.2);
   /* overflow: hidden; */
   padding: 10px 0;
-  /* position: fixed; */
+  position: absolute;
   width: 100%;
   z-index: 1;
   /* border-bottom: 1px solid #ffb320; */
@@ -64,10 +64,10 @@ li {
   /* display:inline-block; */
 }
 .user-icon{
-  color:black;
+  color:white;
 }
 .dropdown-toggle::after{
-  color: black;
+  color: white;
 }
 .game_logo {
   display: inline-block;
@@ -116,7 +116,7 @@ navbar-toggler-icon.close {
 .buttons .header-sign-in {
   margin-right: 20px;
 }
-.buttons .btn {
+.buttons .btn{
   padding: 5px 30px;
   border-radius: 24px;
   font-size: 16px;
@@ -137,7 +137,7 @@ navbar-toggler-icon.close {
   margin-bottom: 2px;
 }
 .navbar-nav .nav-item .nav-link {
-  color: #0b4c62;
+  color:white;
   padding-left: 28px;
   padding-right: 28px;
   font-size: 20px;
@@ -145,9 +145,18 @@ navbar-toggler-icon.close {
   line-height: 124%;
   letter-spacing: -0.36px;
 }
-header-btn .btn:focus {
+.header-btn .btn:focus {
   box-shadow: none;
   border: none;
+
+}
+.top-header .btn:focus{
+  box-shadow: none;
+}
+.top-header .btn:hover{
+  box-shadow: none;
+  background-color: #0b4c62;
+  color: white;
 }
 .navbar-toggler:focus {
   box-shadow: none;
@@ -155,6 +164,13 @@ header-btn .btn:focus {
 .dropdown-menu{
   right: 10%;
   left: auto;
+}
+a{
+  color:#0b4c62 ;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
 }
 @media (min-width: 992px){
 .navbar-expand-lg .navbar-toggler {
@@ -222,6 +238,9 @@ header-btn .btn:focus {
 }
 @media screen and (max-width:768px) {
   .users_login{
+    display: none;
+  }
+  .header-text{
     display: none;
   }
 }

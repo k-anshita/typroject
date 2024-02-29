@@ -1,5 +1,11 @@
 
 <div class="word-search-game">
+  <!-- <img src="/assets/a.png" alt="" class="centered">
+  <img src="/assets/f.png" alt="" class="f">
+  <img src="/assets/j.png" alt="" class="j">
+  <img src="/assets/u.png" alt="" class="u"> -->
+  <p class="title">words to find</p>
+  <button class="back-btn" routerLink="/games"> <i class='fas fa-arrow-circle-left'></i></button>
     <div class="grid">
       <div class="grid-row" *ngFor="let row of grid; let i = index">
         <div class="grid-cell" 
@@ -13,11 +19,13 @@
       </div>
     </div>
     <div class="words-to-find">
-      <p>Words to find:</p>
+      <div class="find">
+      <p class="find-title">Word:</p>
       <ul>
         <li *ngFor="let word of wordsToFind" [class.found]="foundWords.has(word)">{{ word }}</li>
       </ul>
-      <div><p>time:{{ timer }}</p></div>
+    </div>
+      <div><p><i class='fas fa-clock'></i>{{ timer }}</p></div>
       <div *ngIf="isGameWon && timer < totalTime" class="game-over">Congratulations! You found all the words in {{ timer }} seconds!</div>
       <div *ngIf="!isGameWon && timer >= totalTime" class="game-over">Time's up! You did not find all the words in time.</div>
     </div>

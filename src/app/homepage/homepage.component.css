@@ -1,5 +1,9 @@
-.bg-img {
-    background-image: url(/assets/back_img.jpg);
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.home-main {
+    background-image: url(/assets/home-bg.jpg);
     width: 100%;
     /* height: 723px; */
     background-repeat: no-repeat;
@@ -7,6 +11,45 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
+    height: auto;
+    padding-top: 190px;
+    padding-bottom: 190px;
+}
+.home-lining{
+    width: 40%;
+    margin-left: 60px;
+}
+.title{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    margin: 0px;
+}
+.title:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+.content{
+    font-size: 20px;
+    color: white;
+}
+.home-lining .btn{
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background:#200b50fa;
+    padding: 10px 20px;
+    border-radius: 35px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin-top: 10px;
+}
+.home-lining .btn:hover,.read-more:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    border: none;
 }
 
 h2 {
@@ -53,7 +96,7 @@ button {
 .news-title {
     position: absolute;
     color: white;
-    background-color: #ffb320;
+    background-color: #60169a;
     width: 29%;
     top: 0;
     font-size: 18px;
@@ -76,7 +119,111 @@ button {
     transform: translateX(0px);
     animation: 13.1034s linear 0s infinite normal none running marqueeAnimation;
 }
+.read-more {
+    background-color: #2b1961;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+ 
+}
 
+.home .trailer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0px;
+}
+.home .trailer h1{
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+}
+.home .trailer-video img{
+    min-width: 300px;
+    width: 100vw;
+    max-width: 800px;
+} 
+.home .trailer .content h3{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+.home .trailer .content {
+   color: black;
+   width: 60%;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.home .row .top-game {
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/assets/back_img.jpg");
+    width: 98vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.home .row .top-game .content{
+    padding: 30px;
+}
+/* .home .row .range{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.home .row .range .card{
+    background: #392378 ;
+    color: white;
+    display: flex;
+    padding: 10px;
+   
+}
+.home .row .range .card .card-body{
+    padding: 10px;
+}
+.home .row .range .card img{
+    border-radius: 50%;
+} */
+.feedback-lining{
+    background-image: url(/assets/6920655.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+}
+.feedback-lining h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.feedback-lining .feedback{
+    display: flex;
+    justify-content: center;
+   
+}
+.feedback-lining .feedback .card{
+    background-color: rgb(8 8 8 / 58%);;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border: none;
+}
+.feedback-lining .feedback .card:hover{
+    box-shadow: 0 0 20px #2f2d2d;
+}
+.feedback-lining .feedback img{
+    border-radius: 50%;
+    width: 45%;
+    height: auto;
+}
 @keyframes marqueeAnimation {
     100% {
         transform: translateX(-1551.2px);

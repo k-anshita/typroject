@@ -2,17 +2,43 @@ body {
     margin: 0;
     font-family: "Helvetica", "Verdana", "Roboto", sans-serif;
   }
-  
-  h1 {
-    margin: 0 0 15px;
-    padding: 15px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: normal;
-    text-align: center;
-    background-color: #1f90ff;
+  .container-fluid{
+    background-image: url(/assets/designs1-02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:auto;
+    padding-top: 110px;
   }
-  
+  h1 {
+    padding: 10px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+           
+  .reset {
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+  }
+
+  .reset:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+ 
   form {
     display: flex;
     flex-flow: column nowrap;
@@ -23,6 +49,7 @@ body {
     position: relative;
     width: 450px;
     height: 450px;
+    margin-bottom: 40px;
   }
   
   .field {
@@ -55,15 +82,27 @@ body {
   .front {
     position: absolute;
     top: 60px;
-    border: 15px solid #007fff;
+    border: 15px solid #f8b00c;
     border-radius: 4px;
     box-sizing: border-box;
     width: 450px;
     height: 390px;
     pointer-events: none;
-    background: radial-gradient(circle, transparent, transparent 18px, #007fff 20px, #007fff 23px, #1f90ff 23px, #1f90ff 36px, #007fff) center top/60px 60px;
+    background: radial-gradient(circle, transparent, transparent 18px, #f79a01 20px, #d7d767 23px, #d1d12385 23px, #fad44f 36px, #fae069) center top/60px 60px;
   }
-  
+  .back-btn{
+    padding: 0px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+.fa-arrow-circle-left{
+  font-size: 70px;
+}
   /* Invisible inputs */
   input {
     display: none;
@@ -148,12 +187,12 @@ body {
   }
   /* Yellow's turn */
   input:hover + input + .disc {
-    color: #ffd918;
+    color: rgb(76, 240, 76);
     opacity: 1;
     transition: opacity 0.2s, top 0s;
   }
   input:checked + input + .disc {
-    color: #ffd918;
+    color: rgb(76, 240, 76);
     opacity: 1;
   }
   
@@ -318,29 +357,7 @@ body {
     animation: outcome 1s;
   }
   
-  /* Button style */
-  button {
-    margin: 20px auto;
-    border: none;
-    border-radius: 2px;
-    padding: 12px 18px;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #fff;
-    background: #2196f3 center;
-    box-shadow: 0 0 4px #999;
-    outline: none;
-    transition: background 0.5s;
-  }
-  button:hover {
-    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
-  }
-  button:active {
-    background-color: #6eb9f7;
-    background-size: 100%;
-    transition: background 0s;
-  }
+
   
   @keyframes outcome {
     0% {

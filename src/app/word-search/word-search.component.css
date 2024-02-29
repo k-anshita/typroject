@@ -3,8 +3,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 110px 0px;
+    position: relative;
+    background-image: url(/assets/alpha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
+  .title{
+    color: #262626;
+    font-size: 45px;
+    text-shadow: 3px 3px #fa3975;
+    font-family: 'Courgette', cursive;
+  }
   .grid {
     border: 2px solid #000;
     display: inline-block;
@@ -16,23 +26,35 @@
   }
   
   .grid-cell {
-    border: 1px solid #ccc;
-    width: 30px;
-    height: 30px;
+    border: 1px solid #11090947;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    font-weight: 500
   }
   
   .grid-cell.selected {
-    background-color: yellow;
+    background-color: #fa3975;
   }
   
   .words-to-find {
     margin-top: 20px;
+    text-align: center;
   }
-  
+  .words-to-find .find-title{
+    font-size: 35px;
+    color: black;
+    text-shadow: 2px 2px #fa3975;
+  }
+  .words-to-find p{
+    font-size: 35px;
+  }
+  .fa-clock{
+    margin-right: 20px;
+  }
   .words-to-find ul {
     list-style-type: none;
     padding: 0;
@@ -41,34 +63,122 @@
   .words-to-find li {
     margin-bottom: 5px;
     text-decoration: none;
+    background-color: #fa3975;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 30px;
+    color: white;
   }
   
   .words-to-find li.found {
     text-decoration: line-through;
   }
-  
+  .find{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .highlighted {
     background-color: red;
   }
-  
+            
+  .reset-button {
+    background-image: linear-gradient(to right, #f857a6 0%, #ff5858  51%, #f857a6  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+  }
+
+  .reset-button:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+   
+  .back-btn{
+      padding: 0px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: white;
+      border: none;
+      position: absolute;
+      top: 11%;
+      left: 20%;
+  }
+  .fa-arrow-circle-left{
+    font-size: 70px;
+  }
+ 
   .game-over {
     background-color: #f5f5f5;
     padding: 5px;
     border-radius: 5px;
   }
   
-  .reset-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    outline: none;
+  /* .centered {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation: uptodown 5s infinite 2s;
   }
-  
-  .reset-button:hover {
-    background-color: #2980b9;
+  @keyframes uptodown {
+    0%   {left:20%; top:20%;}
+  25%  { left:20%; top:30%;}
+  50%  {left:20%; top:40%;}
+  75%  {left:20%; top:30%}
+  100% {left:20%; top:20%}
   }
+  .f{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    animation: ltr 5s infinite 2s;
+
+  }
+  @keyframes ltr {
+    0%   {left:10%; top:30%;}
+  25%  { left:10%; top:20%;}
+  50%  {left:10%; top:10%;}
+  75%  {left:10%; top:20%}
+  100% {left:10%; top:30%}
+  }
+  .j{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation: tob 5s infinite 2s;
+
+  }
+  @keyframes tob {
+    0%   {left:80%; top:50%;}
+  25%  { left:80%; top:30%;}
+  50%  {left:80%; top:10%;}
+  75%  {left:80%; top:30%}
+  100% {left:80%; top:50%}
+  }
+  .u{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation: btom 5s infinite 2s;
+
+  }
+  @keyframes btom {
+    0%   {left:65%; top:10%;}
+  25%  { left:65%; top:20%;}
+  50%  {left:65%; top:30%;}
+  75%  {left:65%; top:20%}
+  100% {left:65%; top:10%}
+  } */

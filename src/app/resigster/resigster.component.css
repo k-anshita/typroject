@@ -15,9 +15,8 @@ h4 {
 }
 
 .input_bg {
-    width: 70%;
+    width: 100%;
     padding: 10px;
-    margin-left: 10px;
 }
 
 button {
@@ -39,21 +38,22 @@ img {
 }
 .btn{
     margin-bottom: 8px;
-    background-color: #0b4c62;
+    background-color: #006bb7;
 }
 h1 {
 
     padding-bottom: 10px;
     text-align: center;
-    color: #0b4c62;
+    color: #006bb7;
 }
 .bg-img {
-    background-image: url(/assets/5171523.jpg);
+    background-image: url(/assets/home.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 595px;
-    padding-top: 70px;
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 80px;
 }
 .col {
     width: 50%;
@@ -75,6 +75,9 @@ h1 {
 .form1 .form-group{
     padding-bottom: 8px;
 }
+a:hover{
+    text-decoration: none;
+}
 @media screen and (max-width:900px) {
     .borders {
         box-shadow: none;
@@ -88,7 +91,7 @@ h1 {
         height: 100vh;
     }
     .input_bg {
-        width: 65%;
+        width: 100%;
         padding: 10px;
         margin-left: 10px;
     }

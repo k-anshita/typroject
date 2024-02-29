@@ -14,17 +14,19 @@
       </div>
     </div> -->
 <!-- </div> -->
-<div class="container mt-2">
+<div class="container-fluid main-card ">
   <div class="background_image" #backgroundImage (window:resize)="backgroundImageChange()">
 <!-- <div class="container">
   <div class="background_image"> -->
     <div class="row">
-      <button>
-        <a routerLink="/home">
-          <font color="white">BACK</font>
+      <div class="btns">
+        <button (click)="reset()">RESET</button>
+      </div>
+      <button class="back-btn mr-5">
+        <a routerLink="/games">
+          <i class='fas fa-arrow-circle-left'></i>
         </a>
       </button>
-      <button (click)="reset()">RESET</button>
       <div class="card-wrapper">
         <div class="cards">
           <div class="randomcard" *ngFor="let no of random_value,let i=index;" class="{{i==2?'margin':''}}">
@@ -35,5 +37,6 @@
         </div>
       </div>
     </div>
+    
   </div>
 </div>

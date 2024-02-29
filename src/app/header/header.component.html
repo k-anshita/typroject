@@ -38,8 +38,8 @@
           </div>
           <div class="col-md-6 col-sm-5 buttons justify-content-end">
              <div class="header-sign-in">
-                <button (click)="check_loginuser()" type="button" class="btn btn-outline-primary">
-                    sign in
+                <button  type="button" class="btn btn-outline-primary"><a routerLink="/res">sign in</a>
+                    
                 </button>
              </div>
              <div class="header-log-in">
@@ -54,14 +54,14 @@
 
 
 <header class="header" (window:resize)="resize()" #header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg ">
     <!-- <div class="container"> -->
         <a routerLink="/home"  class="navbar-brand">
             <img src="/assets/logo.png.webp" class="logo_img" (load)="resize()">
         </a>
 
        
-        <button type="button" class="navbar-toggler"  data-bs-toggle="collapse"
+        <button type="button" class="navbar-toggler"  data-bs-toggle="collapse" id="myTopnav"
         data-bs-target="#responsivenav" aria-controls="responsivenav" aria-expanded="false"
         aria-label="Toggle navigation" >
         <span  id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
