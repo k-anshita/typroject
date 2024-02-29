@@ -66,6 +66,7 @@ button {
     background-color: #ffb320;
     border-radius: 30px;
     border: none;
+ 
 }
 
 .game-note {
@@ -96,7 +97,7 @@ button {
 .news-title {
     position: absolute;
     color: white;
-    background-color: #60169a;
+    background-color: #ffb320;
     width: 29%;
     top: 0;
     font-size: 18px;
@@ -119,61 +120,21 @@ button {
     transform: translateX(0px);
     animation: 13.1034s linear 0s infinite normal none running marqueeAnimation;
 }
-.read-more {
-    background-color: #2b1961;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
- 
+
+@keyframes marqueeAnimation {
+    100% {
+        transform: translateX(-1551.2px);
+    }
 }
 
-.home .trailer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 0px;
-}
-.home .trailer h1{
-    margin-bottom: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 45px;
-}
-.home .trailer-video img{
-    min-width: 300px;
-    width: 100vw;
-    max-width: 800px;
-} 
-.home .trailer .content h3{
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-}
-.home .trailer .content {
-   color: black;
-   width: 60%;
-    font-size: 20px;
-    margin: auto;
-    padding: 10px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.home .row .top-game {
-    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/assets/back_img.jpg");
-    width: 98vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+.news-ticker-contant .news-item {
+    margin-right: 35px;
     color: white;
 }
 .home .row .top-game .content{
     padding: 30px;
 }
-/* .home .row .range{
+.home .row .range{
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -190,144 +151,31 @@ button {
 }
 .home .row .range .card img{
     border-radius: 50%;
-} */
-.feedback-lining{
-    background-image: url(/assets/6920655.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 40px 0px;
 }
-.feedback-lining h1{
-    color: white;
-    font-size: 50px;
+.home .row .second{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 30px;
+    flex-direction: column;
 }
-.feedback-lining .feedback{
+.home .row .second .feedback{
     display: flex;
     justify-content: center;
    
 }
-.feedback-lining .feedback .card{
-    background-color: rgb(8 8 8 / 58%);;
-    color: white;
-    padding: 20px;
+.home .row .second .feedback .card{
+    background-color: rgb(56, 15, 95);
     margin: 20px;
-    text-align: center;
-    border: none;
+    padding: 20px ;
+    transition: 0.2s;
+    color: white;
+
 }
-.feedback-lining .feedback .card:hover{
-    box-shadow: 0 0 20px #2f2d2d;
+.home .row .second .feedback .card:hover{
+    /* box-shadow: 0 0 10px black; */
+    transform: translateY(-5px);
 }
-.feedback-lining .feedback img{
+.home .row .second .feedback img{
     border-radius: 50%;
-    width: 45%;
-    height: auto;
-}
-@keyframes marqueeAnimation {
-    100% {
-        transform: translateX(-1551.2px);
-    }
-}
-
-.news-ticker-contant .news-item {
-    margin-right: 35px;
-    color: white;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.news-item span {
-    margin-right: 35px;
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    color: white;
-    padding: 4px 20px;
-}
-
-.bg-imgtext {
-    color: white;
-    left: 0;
-    bottom: 0;
-    padding-top: 350px;
-    padding-bottom: 40px;
-}
-
-.New {
-    background-color: #ff205f;
-}
-
-.strategy {
-    background-color: #4eae60;
-}
-
-.Latest {
-    background-color: #694eae;
-}
-
-.recentgame-title {
-    text-align: center;
-    margin-bottom: 75px;
-    color: black;
-    padding-top: 50px;
-}
-
-.img-descri {
-    padding: 30px;
-}
-
-.game-des {
-    padding: 34px 22px 20px;
-    background: #fff;
-    border: 1px solid #d6dee7;
-    border-top: none;
-    position: relative;
-}
-
-.bg_img {
-    background-color: #eef2f6;
-}
-
-.cata {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    color: #fff;
-    padding: 6px 25px;
-}
-
-.tournament-title {
-    display: inline-block;
-    padding: 7px 25px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #fff;
-    text-transform: uppercase;
-    background: #fb6e10;
-}
-
-.spad {
-    padding-top: 97px;
-    padding-bottom: 97px;
-}
-
-
-@media screen and (max-width:768px) {
-    .bg-imgtext {
-        padding-top: 100px;
-    }
-
-    .news-title {
-        font-size: 13px;
-        padding-right: 23px;
-    }
-}
-
-@media screen and (max-width:354px) {
-    .bg-imgtext {
-        padding-top: 236px;
-    }
+    height: 200px;
 }

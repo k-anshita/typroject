@@ -1,22 +1,23 @@
-/* .footer-bgimg {
-   
+.footer-bgimg {
+    background-image: url(/assets/pattern.png.webp);
     padding: 72px 0;
 }
 
 .footer-widget {
     padding: 40px 30px 7px;
-    background-color: #0b4c62;
+    background-color: black;
     color: white;
-    border: 1px solid #4a4a4a;
 }
-.comments{
-    padding: 40px 30px 24px;
+.subscription .sub-part .s-button input{
+    padding: 10px;
+    width: 30%;
 }
+
 .footer-img {
     float: left;
     width: 97px;
     height: 97px;
- 
+    /* margin-bottom:23px; */
 
 }
 
@@ -25,12 +26,9 @@
 }
 
 .footer-text {
-    padding-left: 20px;
+    padding-left: 110px;
 }
-.footer-main{
-    display: flex;
-    justify-content: start;
-}
+
 .date {
     font-size: 12px;
     color: #ffb320;
@@ -50,19 +48,17 @@
     float: left;
 }
 
-.footer-title {
-    margin-bottom: 40px;
-}
-
-.author-description {
-    color: #ff205f;
-    font-size: 12px;
+footer .top .center h2 {
+    /* text-align: center; */
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
 .footer-section {
     padding: 18px 0 16px;
     overflow: hidden;
-    background: #64CCC5;
+    background: #252525;
 }
 
 .footer-pagelink {
@@ -73,131 +69,13 @@
 
 .footer-gametext {
     float: left;
-    color: #0b4c62;
+    color: #aeaeae;
     font-weight: 500;
-}
-@media screen and (max-width:1199px) {
-    .comments{
-        padding: 40px 30px 63px;
-    }
 }
 
 @media screen and (max-width:970px) {
     .footer-gametext {
         display: none;
     }
-    .footer-header-img{
-        text-align: center;
-    }
-    .footer-widget:first-child{
-        margin-bottom: 25px;
-    }
     
-}
-@media screen and (max-width:768px) {
-    .footer-header-img{
-        display: none;
-    }
-    .footer-header p{
-        margin-bottom: 30px;
-    }
-    .footer-bgimg{
-        padding: 60px 0;
-    }
-} */
-
-body{
-    margin: 0px;
-    padding: 0px;
-}
-.subscription{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-   
-}
-.subscription .sub-part{
-      width: 40%;
-      padding: 40px 0px;
-    
-}
-.subscription .sub-part .s-button .btnsub{
-    padding: 10px;
-    color: white;
-}
-.subscription .sub-part .s-button input{
-    padding: 10px;
-    width: 30%;
-}
-.subscription .sub-part .s-button .btnsub{
-    background-color:  #1e0e4a;
-}
-
-footer {
-    /* font-family: 'Poppins', sans-serif; */
-    background: #110432;
-    margin-top: 10px;
-    color: white;
-}
-
-footer .top {
-    display: flex;
-    justify-content: center;
-
-}
-
-footer .top .center {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px 0px;
-}
-
-footer .top .center .navigation,
-footer .top .center .help-center,
-footer .top .center .legel-info {
-
-    position: relative;
-    /* text-align: center; */
-    min-width: 200px;
-    margin: 0px 30px;
-    text-align: center;
-}
-
-footer .top .center h2 {
-    /* text-align: center; */
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    color: #00f1ff;
-}
-
-footer .top .center ul {
-    padding: 0;
-    list-style: none;
-}
-
-footer .bottom {
-    background-color: #1e0e4a;
-    height: 60px;
-    color: white;
-    display: flex;
-    font-size: 70%;
-    justify-content: center;
-    align-items: center;
-}
-@media only screen and (max-width:800px){
-    
-    footer .top .center .navigation,
-footer .top .center .help-center,
-footer .top .center .legel-info {
-
-    width: 100%;
-    margin: 0px 30px;
-    text-align: center;
-}
-  
 }

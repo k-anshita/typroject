@@ -118,7 +118,7 @@ body {
   input:indeterminate {
     display: initial;
   }
-  /* Inputs for red */
+
   .column > input:nth-of-type(2n) {
     right: 360px;
   }
@@ -140,7 +140,7 @@ body {
   .column > .column > .column > .column > .column > .column > .column > input:nth-of-type(2n) {
     right: 0;
   }
-  /* Inputs for yellow */
+
   .column > input:nth-of-type(2n+1) {
     left: 0;
   }
@@ -163,7 +163,8 @@ body {
     left: 360px;
   }
   
-  /* Disc */
+ 
+
   .disc {
     position: relative;
     top: 0;
@@ -176,7 +177,7 @@ body {
     transition: opacity 0.2s, top 0s 0.2s, color 0s 0.2s;
   }
   
-  /* Red's turn */
+ 
   input:hover + .disc {
     color: #ff010b;
     opacity: 1;
@@ -186,7 +187,7 @@ body {
     color: #ff010b;
     opacity: 1;
   }
-  /* Yellow's turn */
+ 
   input:hover + input + .disc {
     color: rgb(76, 240, 76);
     opacity: 1;
@@ -197,7 +198,7 @@ body {
     opacity: 1;
   }
   
-  /* Height and time of disc fall per row */
+ 
   input:hover + .disc:nth-of-type(1),
   input:hover + input + .disc:nth-of-type(1){
     top: -75px;
@@ -247,13 +248,13 @@ body {
     transition: top 0.32s cubic-bezier(0.56, 0, 1, 1);
   }
   
-  /* Fix stuck disc */
+
   input:checked + .disc,
   input:checked + input + .disc {
     top: 0 !important;
   }
   
-  /* Tracking turns */
+ 
   input:checked + .disc {
     counter-increment: player 2;
   }
@@ -272,7 +273,7 @@ body {
     overflow: hidden;
   }
   
-  /* Draw outcome */
+  
   form:valid .column > .column > .column > .column > .column > .column > .column > .column::after {
     content: "It's a draw!";
     z-index: 1;
@@ -291,16 +292,16 @@ body {
     animation: outcome 1.5s;
   }
   
-  /* Red column win */
+
   input:checked + .disc + input + input:checked + .disc + input + input:checked + .disc + input + input:checked ~ .column::after,
-  /* Red row win */
+ 
   input:nth-of-type(2):checked ~ .column > input:nth-of-type(2):checked ~ .column > input:nth-of-type(2):checked ~ .column > input:nth-of-type(2):checked ~ .column::after,
   input:nth-of-type(4):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(4):checked ~ .column::after,
   input:nth-of-type(6):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(6):checked ~ .column::after,
   input:nth-of-type(8):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(8):checked ~ .column::after,
   input:nth-of-type(10):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(10):checked ~ .column::after,
   input:nth-of-type(12):checked ~ .column > input:nth-of-type(12):checked ~ .column > input:nth-of-type(12):checked ~ .column > input:nth-of-type(12):checked ~ .column::after,
-  /* Red diagonal win */
+ 
   input:nth-of-type(2):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(8):checked ~ .column::after,
   input:nth-of-type(4):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(10):checked ~ .column::after,
   input:nth-of-type(6):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(12):checked ~ .column::after,
@@ -324,16 +325,16 @@ body {
     animation: outcome 1s;
   }
   
-  /* Yellow column win */
+ 
   input:checked + input + .disc + input:checked + input + .disc + input:checked + input + .disc + input:checked ~ .column::after,
-  /* Yellow row win */
+
   input:nth-of-type(1):checked ~ .column > input:nth-of-type(1):checked ~ .column > input:nth-of-type(1):checked ~ .column > input:nth-of-type(1):checked ~ .column::after,
   input:nth-of-type(3):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(3):checked ~ .column::after,
   input:nth-of-type(5):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(5):checked ~ .column::after,
   input:nth-of-type(7):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(7):checked ~ .column::after,
   input:nth-of-type(9):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(9):checked ~ .column::after,
   input:nth-of-type(11):checked ~ .column > input:nth-of-type(11):checked ~ .column > input:nth-of-type(11):checked ~ .column > input:nth-of-type(11):checked ~ .column::after,
-  /* Yellow diagonal win */
+ 
   input:nth-of-type(1):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(7):checked ~ .column::after,
   input:nth-of-type(3):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(9):checked ~ .column::after,
   input:nth-of-type(5):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(11):checked ~ .column::after,
@@ -358,7 +359,29 @@ body {
     animation: outcome 1s;
   }
   
-
+  /* Button style */
+  button {
+    margin: 20px auto;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background: #2196f3 center;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    transition: background 0.5s;
+  }
+  button:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  button:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
   
   @keyframes outcome {
     0% {

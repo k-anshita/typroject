@@ -1,6 +1,4 @@
-h1 {
-    text-align: center;
-}
+
 
 body {
     margin: 0;
@@ -9,7 +7,43 @@ body {
 * {
     box-sizing: border-box;
 }
-
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.container-fluid{
+    text-align: center;
+}
+.tic{
+    padding-top: 100px;
+    background: url('/assets/tic_back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.btnback{
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(235, 221, 221);
+    float: left;
+    padding: 15px;
+    top: 20%;
+    left: 30%;
+    position: absolute;
+  }
+  
+ 
+  .btnback a{
+    list-style: none;
+    color: rgb(18, 14, 14);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .btnback:hover{
+    background-color: rgb(164, 121, 203);
+   
+  }
 .board {
     /* position: relative; */
     display: grid;
@@ -20,6 +54,7 @@ body {
     margin: auto;
     /* box-shadow: 10px 10px 10px 0px rebeccapurple; */
     box-shadow: 0px 0px 4px 0px #100202;
+ 
 }
 
 .box {
@@ -64,23 +99,35 @@ p {
 }
 
 .pink {
-    background-color: plum;
+    background-color: rgb(175, 106, 191);
 }
 
 .green {
     color: #262626;
     font-size: 40px;
-    text-shadow: 3px 2px #3cdf28;
+    text-shadow: 3px 2px #cd9ec7;
 }
 
-button {
-    margin: 10px;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0px 0px 3px 0px rebeccapurple;
-    padding: 10px;
-    margin-top: 90px;
-}
+         
+.reset {
+    background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);
+    padding: 10px 20px;
+    margin: 50px 0px 50px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  .reset:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
 
 .header {
     background: linear-gradient(135deg, rgb(17, 13, 143) 0%, rgb(141, 28, 202) 100%);

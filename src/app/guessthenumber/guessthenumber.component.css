@@ -1,12 +1,16 @@
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
   }
+  .guess-number{
+    background: url("/assets/guess_number_back.jpeg");
+  }
   
   .game-container {
-    background-color: #f0f0f0;
+   
     padding: 20px;
     border-radius: 10px;
     text-align: center;
