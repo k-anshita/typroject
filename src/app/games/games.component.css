@@ -1,3 +1,6 @@
+/* .games{
+    padding: 100px;
+}
 .news-header {
     background-color: black;
     width: 100%;
@@ -163,4 +166,66 @@
     .bg-imgtext {
         padding-top: 50px;
     }
+} */
+
+
+.games{
+    padding-top: 90px;
+    text-align: center;
+
 }
+.games .first{
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url("/assets/gamepage_back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100vh;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.games .first .content{
+    width: 60%;
+    margin: auto;
+}
+.games .first h1{
+    font-size: 60px;
+}
+.games .first p{
+    font-size: 20px;
+}
+.games .second{
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url("/assets/gamepage_back3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.games .second h1{
+    color: white;
+}
+.games .second .row{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.games .second .row .card{
+    padding: 20px;
+    margin: 20px;
+    width: 28%;
+    background-color: rgba(0,0,0,0.50);
+    color: white;
+    transition: 0.2s;
+}
+.games .second .row .card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px white;
+}
+
+.games .second .row .card .review-message{
+    margin: 10px;
+}
+.games .second .row .card .review-rating{
+    color: orange;
+}
+

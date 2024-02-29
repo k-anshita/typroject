@@ -1,18 +1,19 @@
 <div class="container-fluild">
-  <button><a routerLink="/home">
-    <font color="black">BACK</font>
-  </a></button>
-<button type="button" (click)="reset()">RESET</button>
-  <p id="turn">{{turn}}</p>
-  <div class="board" id="board">
-    <div class="box" *ngFor="let val of getvalue;let i = index;" (click)="onclicks(i)"
-      [ngClass]="{'pink': this.winnerPosition?.includes(i)}">{{val}}</div>
+  <button class="btnback"><a routerLink="/games"><i class="fa fa-angle-left" aria-hidden="true"></i></a></button>
 
+
+  <div class="tic">
+   <h1>Tic-tac-toe Game</h1>
+    <p id="turn">{{turn}}</p>
+    <div class="board" id="board">
+      <div class="box" *ngFor="let val of getvalue;let i = index;" (click)="onclicks(i)"
+        [ngClass]="{'pink': this.winnerPosition?.includes(i)}">{{val}}</div>
+
+    </div>
+    <p id="res" [ngClass]="this.result==''?'white':'green'">{{result}}</p>
+    <button class="reset" type="button" (click)="reset()">RESET</button>
   </div>
-  <p id="res" [ngClass]="this.result==''?'white':'green'">{{result}}</p>
-  
 </div>
-
 
 <!-- [ngClass]="{'pink': this.winnerPosition?.includes(i)}" -->
 <!-- <div class="box" (click)="onclicks(1)" [ngClass]="{'green': this.winnerPosition?.includes(1)}">{{getvalue[1]}}</div>

@@ -1,8 +1,5 @@
 <div class="container-fluild">
-    <button><a routerLink="/home">
-      <font color="black">BACK</font>
-    </a></button>
-<div class="container">
+<div class="guess-number">
     <h1>Guess the Number Game</h1>
     <div class="game-container" [ngClass]="{'game-over': gameOver}" [@feedbackAnimation]="feedbackState">
       <p class="instruction" *ngIf="!gameOver">Guess a number between {{min}} and {{max}}</p>

@@ -1,80 +1,90 @@
-.footer-bgimg {
-    background-image: url(/assets/pattern.png.webp);
-    padding: 72px 0;
-}
 
-.footer-widget {
-    padding: 40px 30px 7px;
-    background-color: black;
+.subscription{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+   
+   
+}
+.subscription .sub-part{
+      
+    padding: 10px 400px;
+}
+.subscription .sub-part .s-button .btnsub{
+    padding: 10px;
     color: white;
-    border: 1px solid #4a4a4a;
+}
+.subscription .sub-part .s-button input{
+    padding: 10px;
+    width: 30%;
+}
+.subscription .sub-part .s-button .btnsub{
+    background-color:  #1e0e4a;
 }
 
-.footer-img {
-    float: left;
-    width: 97px;
-    height: 97px;
-    /* margin-bottom:23px; */
+footer {
+    /* font-family: 'Poppins', sans-serif; */
+    background: #110432;
+    margin-top: 10px;
+    color: white;
+}
+
+footer .top {
+    display: flex;
+    justify-content: center;
 
 }
 
-.footer {
-    margin-bottom: 23px;
+footer .top .center {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
-.footer-text {
-    padding-left: 110px;
+footer .top .center .navigation,
+footer .top .center .help-center,
+footer .top .center .legel-info {
+
+    position: relative;
+    /* text-align: center; */
+    min-width: 200px;
+    margin: 0px 30px;
+    text-align: center;
 }
 
-.date {
-    font-size: 12px;
-    color: #ffb320;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    font-weight: bold;
+footer .top .center h2 {
+    /* text-align: center; */
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
-.img-description {
-    font-size: 12px;
+footer .top .center ul {
+    padding: 0;
+    list-style: none;
 }
 
-.author-img {
-    width: 63px;
-    height: 63px;
-    border-radius: 50%;
-    float: left;
+footer .bottom {
+    background-color: #1e0e4a;
+    height: 60px;
+    color: white;
+    display: flex;
+    font-size: 70%;
+    justify-content: center;
+    align-items: center;
 }
-
-.footer-title {
-    margin-bottom: 40px;
-}
-
-.author-description {
-    color: #ff205f;
-    font-size: 12px;
-}
-
-.footer-section {
-    padding: 18px 0 16px;
-    overflow: hidden;
-    background: #252525;
-}
-
-.footer-pagelink {
-    float: right;
-    color: #aeaeae;
-    font-weight: 500;
-}
-
-.footer-gametext {
-    float: left;
-    color: #aeaeae;
-    font-weight: 500;
-}
-
-@media screen and (max-width:970px) {
-    .footer-gametext {
-        display: none;
-    }
+@media only screen and (max-width:800px){
     
+    footer .top .center .navigation,
+footer .top .center .help-center,
+footer .top .center .legel-info {
+
+    width: 100%;
+    margin: 0px 30px;
+    text-align: center;
+}
+  
 }

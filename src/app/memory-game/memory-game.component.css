@@ -1,11 +1,40 @@
-.container {
+.container-fluid {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
     text-align: center;
-    margin-top: 50px;
+    background: url("/assets/back_game.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
   }
-  
+  .memory-game{
+    padding-top: 80px;
+  }
+  .btnback{
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    float: left;
+  }
+  .btnback a{
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+.timer{
+  background-color: rgb(61, 30, 61);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
   h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    color:rgb(61, 30, 61);
   }
   
   .grid {
@@ -18,7 +47,7 @@
   .card {
     width: 100px;
     height: 100px;
-    background-color: #2196F3;
+    background-color:#eadede;
     color: #ffffff;
     font-size: 2em;
     display: flex;
@@ -43,17 +72,21 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    
+  }
+  .card{
+    border: none;
   }
   
   .front {
-    background-color: #89a755;
+    background-color: rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .back {
-    background-color: #2196F3;
+    background-color: white;
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
@@ -65,7 +98,7 @@
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: rgb(61, 30, 61);
     color: rgb(250, 250, 248);
     border: none;
     border-radius: 5px;
@@ -73,5 +106,10 @@
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: rgb(118, 69, 118);
+  }
+  @media screen and (max-width:800px) {
+    .card{
+      min-width: 20%;
+    }
   }
