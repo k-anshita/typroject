@@ -1,7 +1,5 @@
-<div class="container-fluild">
-    <button><a routerLink="/home">
-      <font color="black">BACK</font>
-    </a></button>
+<div class="container-fluid">
+  <button class="back-btn" routerLink="/games"> <i class='fas fa-arrow-circle-left'></i></button>
 
 
 <div class="game-container">
@@ -12,7 +10,7 @@
         <div *ngIf="mole" class="mole"></div>
       </div>
     </div>
-  
+    
     <div class="info">
       <p>Score: {{ score }}</p>
       <p>Target Score: {{ targetScore }}</p>
