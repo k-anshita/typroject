@@ -60,16 +60,24 @@
           
         </div> -->
     <!-- <div class="container"> -->
+
     <div class="form1" method="post">
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
         <h1>RESIGSTER</h1>
         <div class="row">
             <div class="col-md-6 form-group">
-                <input type="text" name="fname" class="form-control" value="" [(ngModel)]="firstname"
-                    placeholder="enter you first name" required>
+              
+             <input type="text" placeholder="enter your firstName here.." id="firstName" name="firstName" [(ngModel)]="firstName" (ngModelChange)="validateFirstName($event)" required>
+        <div *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched" class="alert alert-danger">
+        First Name is required and must contain only letters.
+        </div>
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="lname" value="" [(ngModel)]="lastname"
-                    placeholder="enter your last name" required>
+                <input type="text"  placeholder="enter Your lastName here.." id="lastName" name="lastName" [(ngModel)]="lastName" (ngModelChange)="validateLastName($event)" required>
+                <div *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" class="alert alert-danger">
+                  Last Name is required and must contain only letters.
+                </div>
+                
             </div>
 
         </div>
@@ -79,9 +87,10 @@
                 <input type="radio" name="gender" value="female" [(ngModel)]="gender">female
             </div>
             <div class="col-md-6 form-group  mt-3 mt-md-0 ">
-                <!-- <span>date of birth:</span> -->
-                <input class=" input_bg form-control" type="date" value="" [(ngModel)]="date"
-                    placeholder="Enter your birthdate" ><br>
+                <input type="date" id="dob" name="dob" [(ngModel)]="dateOfBirth" required [max]="maxDate">
+                <div *ngIf="dateOfBirth && calculateAge(dateOfBirth) < 5" class="alert alert-danger">
+                  Age must be greater than or equal to 5 years.
+                </div>
             </div>
         </div>
             <!-- <div class="form-group mt-3">
@@ -89,9 +98,15 @@
               </div> -->
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <input type="email" class="form-control" name="email" [(ngModel)]="email"
-                        placeholder="enter Your email" required>
-                </div>
+                    <input type="email" id="email" name="email" [(ngModel)]="email" required>
+                    <div *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
+                        Email is required.
+                      </div>
+                      <div *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)">
+                        Invalid email format.
+                      </div>
+                    
+                </div>             
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                     <input type="text" name="uname" class="form-control res-group" value="" [(ngModel)]="username"
                         placeholder="enter your username" required>
@@ -110,6 +125,7 @@
             </div>
             <button type="button" class="btn btn-primary" (click)="add()">REGISTER
             </button>
+</form>
             <div style="text-align: center;">
                 <span>
                     <a routerLink="/">
