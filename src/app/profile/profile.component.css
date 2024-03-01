@@ -1,3 +1,40 @@
+
+.container-fluid{
+  background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url("/assets/profile_back.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.btnback{
+  padding: 0px;
+  display: inline-block;
+  border-radius:50%;
+  background-color: white;
+  border: none;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+}
+.btnback .fa-arrow-circle-left{
+  font-size: 70px;
+
+
+}
+.profile{
+  background-color: rgba(0,0,0,0.50);
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+}
+.profile input{
+  background-color: black;
+}
+.row{
+  color: white;
+}
 .tableformat {
   /* border-bottom: 3px solid grey;
   padding: 5px; */
@@ -7,15 +44,66 @@
   border-bottom: 3px solid grey;
   padding: 5px;
   outline: 0;
+  color: white;
+
 
 }
+.button{
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+    }     
+.btnupdate {
+  background-image: linear-gradient(to right, #3CA55C 0%, #B5AC49  51%, #3CA55C  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 10px #eee;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
 
-button {
+.btnupdate:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+         
+.btndelete {
+  background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+
+.btndelete:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* button {
   margin: 10px;
   border: none;
   border-radius: 12px;
   box-shadow: 0px 0px 3px 0px rebeccapurple;
   padding: 10px;
   margin-top: 90px;
-}
+} */
 
