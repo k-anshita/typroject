@@ -15,9 +15,6 @@
       <p>Score: {{ score }}</p>
       <p>Target Score: {{ targetScore }}</p>
       <p *ngIf="!gameOver">Time left: {{ timeLeft }}s</p>
-      <p *ngIf="gameOver && timeLeft === 0">Time's up!</p>
-      <p *ngIf="gameOver && score < targetScore">You did not reach the target score.</p>
-      <p *ngIf="gameOver && score >= targetScore">Congratulations! You've won the game!</p>
       <button (click)="restart()" [disabled]="!gameOver">Restart</button>
     </div>
   </div>

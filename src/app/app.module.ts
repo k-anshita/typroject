@@ -28,12 +28,12 @@ import { RPSComponent } from './rps/rps.component';
 import { SudokuComponent } from './sudoku/sudoku.component';
 import { WhackAMoleComponent } from './whack-a-mole/whack-a-mole.component';
 import { WordSearchComponent } from './word-search/word-search.component';
-import { GuessthenumberComponent } from './guessthenumber/guessthenumber.component';
+
 import { KillthebirdsComponent } from './killthebirds/killthebirds.component';
 import { ConnectfourComponent } from './connectfour/connectfour.component';
 import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
-import { CandyComponent } from './candy/candy.component';
+import Swal from 'sweetalert2';
 
 @NgModule({
   declarations: [
@@ -59,12 +59,10 @@ import { CandyComponent } from './candy/candy.component';
     SudokuComponent,
     WhackAMoleComponent,
     WordSearchComponent,
-    GuessthenumberComponent,
     KillthebirdsComponent,
     ConnectfourComponent,
     TowerofhanoiComponent,
     StackcubeComponent,
-    CandyComponent,
   ],
   imports: [
     BrowserModule,
