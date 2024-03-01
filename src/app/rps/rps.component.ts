@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-rps',
@@ -12,7 +13,7 @@ export class RPSComponent {
   playerScore: number = 0;
   computerScore: number = 0;
   result: any = null;
-  resultMessage: string|undefined;
+  resultMessage: any;
   computerMove: string|undefined;
   playerMove: any;
   
@@ -35,18 +36,18 @@ export class RPSComponent {
 
     if (playerMove === computerMove) {
       this.result = 'draw';
-      this.resultMessage = 'It\'s a draw!';
+      this.resultMessage = Swal.fire("It's draw");
     } else if (
       (playerMove === 'rock' && computerMove === 'scissors') ||
       (playerMove === 'paper' && computerMove === 'rock') ||
       (playerMove === 'scissors' && computerMove === 'paper')
     ) {
       this.result = 'win';
-      this.resultMessage = 'You win!';
+      this.resultMessage = Swal.fire('You win!');
       this.playerScore++;
     } else {
       this.result = 'lose';
-      this.resultMessage = 'You lose!';
+      this.resultMessage =Swal.fire( 'You lose!');
       this.computerScore++;
     }
 

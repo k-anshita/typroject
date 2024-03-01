@@ -1,52 +1,162 @@
-body {
-    margin: 0;
-    padding: 0;
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.home-main {
+    background-image: url(/assets/home-bg.jpg);
+    width: 100%;
+    /* height: 723px; */
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    padding-top: 190px;
+    padding-bottom: 190px;
+}
+.home-lining{
+    width: 40%;
+    margin-left: 60px;
+}
+.title{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    margin: 0px;
+}
+.title:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+.content{
+    font-size: 20px;
+    color: white;
+}
+.home-lining .btn{
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background:#200b50fa;
+    padding: 10px 20px;
+    border-radius: 35px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin-top: 10px;
+}
+.home-lining .btn:hover,.read-more:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    border: none;
 }
 
+h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 30px;
+    position: relative;
 
+}
 
-/* .home .container #bg-video{
+button {
+    padding: 16px 30px;
+    background-color: #ffb320;
+    border-radius: 30px;
+    border: none;
+}
+
+.game-note {
+    width: 100%;
+    left: 0%;
+    /* bottom:10%; */
+    margin-top: 300px;
+    margin-bottom: auto;
     position: absolute;
+    margin-left: 50px;
+    color: white;
+
+}
+
+.heading-color {
+    color: #ffb320
+}
+
+.news-header {
+    background-color: black;
+    width: 100%;
+    padding: 24px 0;
+    position: relative;
+    height: 74px;
+    overflow: hidden;
+}
+
+.news-title {
+    position: absolute;
+    color: white;
+    background-color: #60169a;
+    width: 29%;
     top: 0;
-    left: 0;
-    min-width: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-} */
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    padding-top: 24px;
+    height: 100%;
+    padding-right: 66px;
+    overflow: hidden;
+}
 
+.news-ticker {
+    width: 71%;
+    float: right;
+    overflow: hidden;
+}
 
-
-
+.marquee-wrapper {
+    width: 10000px;
+    transform: translateX(0px);
+    animation: 13.1034s linear 0s infinite normal none running marqueeAnimation;
+}
 .read-more {
     background-color: #2b1961;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 30px;
     border: none;
  
 }
 
-.home .row .trailer {
+.home .trailer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+    padding: 50px 0px;
 }
-.home .row .trailer-video img{
+.home .trailer h1{
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+}
+.home .trailer-video img{
     min-width: 300px;
     width: 100vw;
     max-width: 800px;
 } 
-
+.home .trailer .content h3{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
 .home .trailer .content {
-   
+   color: black;
    width: 60%;
     font-size: 20px;
     margin: auto;
     padding: 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .home .row .top-game {
     background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/assets/back_img.jpg");
@@ -63,7 +173,7 @@ body {
 .home .row .top-game .content{
     padding: 30px;
 }
-.home .row .range{
+/* .home .row .range{
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -80,31 +190,144 @@ body {
 }
 .home .row .range .card img{
     border-radius: 50%;
+} */
+.feedback-lining{
+    background-image: url(/assets/6920655.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
 }
-.home .row .second{
-    display: flex;
-    justify-content: center;
+.feedback-lining h1{
+    color: white;
+    font-size: 50px;
     text-align: center;
-    flex-direction: column;
+    margin-bottom: 30px;
 }
-.home .row .second .feedback{
+.feedback-lining .feedback{
     display: flex;
     justify-content: center;
    
 }
-.home .row .second .feedback .card{
-    background-color: rgb(56, 15, 95);
-    margin: 20px;
-    padding: 20px ;
-    transition: 0.2s;
+.feedback-lining .feedback .card{
+    background-color: rgb(8 8 8 / 58%);;
     color: white;
-
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border: none;
 }
-.home .row .second .feedback .card:hover{
-    /* box-shadow: 0 0 10px black; */
-    transform: translateY(-5px);
+.feedback-lining .feedback .card:hover{
+    box-shadow: 0 0 20px #2f2d2d;
 }
-.home .row .second .feedback img{
+.feedback-lining .feedback img{
     border-radius: 50%;
-    height: 200px;
+    width: 45%;
+    height: auto;
+}
+@keyframes marqueeAnimation {
+    100% {
+        transform: translateX(-1551.2px);
+    }
+}
+
+.news-ticker-contant .news-item {
+    margin-right: 35px;
+    color: white;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.news-item span {
+    margin-right: 35px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    padding: 4px 20px;
+}
+
+.bg-imgtext {
+    color: white;
+    left: 0;
+    bottom: 0;
+    padding-top: 350px;
+    padding-bottom: 40px;
+}
+
+.New {
+    background-color: #ff205f;
+}
+
+.strategy {
+    background-color: #4eae60;
+}
+
+.Latest {
+    background-color: #694eae;
+}
+
+.recentgame-title {
+    text-align: center;
+    margin-bottom: 75px;
+    color: black;
+    padding-top: 50px;
+}
+
+.img-descri {
+    padding: 30px;
+}
+
+.game-des {
+    padding: 34px 22px 20px;
+    background: #fff;
+    border: 1px solid #d6dee7;
+    border-top: none;
+    position: relative;
+}
+
+.bg_img {
+    background-color: #eef2f6;
+}
+
+.cata {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px 25px;
+}
+
+.tournament-title {
+    display: inline-block;
+    padding: 7px 25px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    background: #fb6e10;
+}
+
+.spad {
+    padding-top: 97px;
+    padding-bottom: 97px;
+}
+
+
+@media screen and (max-width:768px) {
+    .bg-imgtext {
+        padding-top: 100px;
+    }
+
+    .news-title {
+        font-size: 13px;
+        padding-right: 23px;
+    }
+}
+
+@media screen and (max-width:354px) {
+    .bg-imgtext {
+        padding-top: 236px;
+    }
 }

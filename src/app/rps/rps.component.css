@@ -22,7 +22,30 @@ html, body {
   line-height: 1;
   font-family: Acme, Arial, sans-serif;
 }
-
+ 
+.back-btn{
+  padding: 0px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+.fa-arrow-circle-left{
+font-size: 70px;
+}
+.rps{
+  padding-top: 110px;
+}
+.container-fluid{
+  background-image: url(/assets/586.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
 form {
   position: absolute;
   top: 0;

@@ -2,7 +2,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, interval, Subscription } from 'rxjs';
 import { map, takeWhile } from 'rxjs/operators';
-
+import Swal from 'sweetalert2';
 interface Card {
   matched: boolean;
   value: string;
@@ -37,7 +37,7 @@ export class MemoryGameComponent {
     this.timerSubscription = this.timer$.subscribe({
       complete: () => {
         if (!this.isGameWon()) {
-          alert('Time is up! You lose.');
+          Swal.fire('Time is up! You lose.');
           
         }
       }
@@ -98,7 +98,7 @@ export class MemoryGameComponent {
             this.cards[this.flippedCards[1]].matched = true;
             this.matchedPairs += 1;
             if (this.isGameWon()) {
-              alert('Congratulations! You win!');
+              Swal.fire('Congratulations! You win!');
               this.resetGame();
             }
           } else {

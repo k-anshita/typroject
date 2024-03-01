@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { AuthService } from '../auth.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -71,7 +71,7 @@ export class CardComponent implements AfterViewInit {
   // random_value: Array<number[]> = [];
   get = ['', '', '', '', '', '']
   random_value: any[] = ['', '', '', '', '', ''];
-  winner?: string
+  winner?: any
   player1?: boolean
   player2?: boolean
   cardwinner?: any[] = [];
@@ -123,12 +123,12 @@ export class CardComponent implements AfterViewInit {
     const p1_allsame = p_1.every(x => x == p_1[0])
     const p2_alleq = p_2.every(x => x == p_2[0])
     if (p1_allsame) {
-      this.winner = 'player 1 is win'
+      this.winner =Swal.fire( 'player 1 is win')
     } else if (p2_alleq) {
-      this.winner = 'player 2 is win'
+      this.winner =Swal.fire( 'player 2 is win')
     }
     if (p1_allsame && p2_alleq) {
-      this.winner = 'match is draw'
+      this.winner = Swal.fire('match is draw')
     }
     if (!p1_allsame && !p2_alleq) {
       //  location.reload()

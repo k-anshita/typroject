@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-whack-a-mole',
   templateUrl: './whack-a-mole.component.html',
@@ -71,11 +71,11 @@ export class WhackAMoleComponent {
     this.gameOver = true;
     
     if (this.timeLeft === 0) {
-      console.log("Time's up! Your final score is: " + this.score);
+      Swal.fire("Time's up! Your final score is: " + this.score);
     } else if (this.score < this.targetScore) {
-      console.log("Game Over! You did not reach the target score. Your final score is: " + this.score);
+      Swal.fire("Game Over! You did not reach the target score. Your final score is: " + this.score);
     } else {
-      console.log("Congratulations! You've won the game with a score of: " + this.score);
+      Swal.fire("Congratulations! You've won the game with a score of: " + this.score);
     }
     
     // Optionally, you can automatically restart the game here

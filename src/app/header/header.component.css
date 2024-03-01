@@ -33,10 +33,7 @@ li {
     width:150px;
   }
 } */
-button {
-  border: none;
-  background-color: #ffb320;
-}
+
 
 .header {
   /* position: absolute;
@@ -45,26 +42,33 @@ button {
     margin-bottom: 70px;
     width:100%;
     color:white; */
-  background-color: #131313;
+  background:rgba(0, 0,0, 0.2);
   /* overflow: hidden; */
-  padding: 18px 0;
-  position: fixed;
+  padding: 10px 0;
+  position: absolute;
   width: 100%;
   z-index: 1;
-  border-bottom: 1px solid #ffb320;
+  /* border-bottom: 1px solid #ffb320; */
 }
 
 .header_element {
   float: right;
   color: white;
 }
-
+.header-text{
+  display: inline-block;
+}
 li {
   padding: 4px;
   margin-left: 10px;
   /* display:inline-block; */
 }
-
+.user-icon{
+  color:white;
+}
+.dropdown-toggle::after{
+  color: white;
+}
 .game_logo {
   display: inline-block;
   /* float: left; */
@@ -78,7 +82,7 @@ li {
 .users_login {
   float: right;
   font-weight: 500;
-  background: #ffb320;
+  background:#64CCC5;
   padding: 8px 28px;
   border-radius: 30px;
 }
@@ -89,19 +93,92 @@ li {
   color: white;
   font-weight: bold;
   letter-spacing: 1px;
+  margin-top: 8px;
   /* padding: 8px 28px; */
 }
-
+navbar-toggler-icon.close {
+  background-color: black;
+}
 .nav-icon {
   display: none;
   float: right;
   color: white;
 }
+.header-lining {
+  padding: 15px 30px;
+}
+.buttons {
+  display: flex;
+}
+.buttons .btn-outline-primary {
+  border: 1px solid black;
+}
+.buttons .header-sign-in {
+  margin-right: 20px;
+}
+.buttons .btn{
+  padding: 5px 30px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 124%;
+  letter-spacing: -0.36px;
+  color: #0b4c62;
+  background-color: unset;
+}
+.logo_img{
+  margin-left: 30px;
+}
+.navbar-toggler-icon {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  display: block;
+  margin-bottom: 2px;
+}
+.navbar-nav .nav-item .nav-link {
+  color:white;
+  padding-left: 28px;
+  padding-right: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 124%;
+  letter-spacing: -0.36px;
+}
+.header-btn .btn:focus {
+  box-shadow: none;
+  border: none;
 
-@media screen and (max-width:900px) {
-  .users_login {
+}
+.top-header .btn:focus{
+  box-shadow: none;
+}
+.top-header .btn:hover{
+  box-shadow: none;
+  background-color: #0b4c62;
+  color: white;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.dropdown-menu{
+  right: 10%;
+  left: auto;
+}
+a{
+  color:#0b4c62 ;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-toggler {
     display: none;
-  }
+}
+}
+@media screen and (max-width:900px) {
+ 
 
 
   .nav-icon {
@@ -114,4 +191,62 @@ li {
     display: none;
 
   }
+  .navbar-nav {
+    background-color: #EEF5FD;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.navbar-toggler {
+    order: 1;
+    position: relative;
+    z-index: 4;
+    transition: all 0.3s ease-in-out;
+}
+
+.navlogo {
+    width: 125px;
+}
+
+.header-btn .btn {
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: var(--black);
+}
+
+.buttons .btn {
+    padding: 3px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+}
+@media screen and (max-width:768px) {
+  .users_login{
+    display: none;
+  }
+  .header-text{
+    display: none;
+  }
+}
+@media (min-width: 768px){
+.container, .container-md, .container-sm {
+    max-width: 927px;
+}
+
 }

@@ -8,13 +8,14 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  loginuser_data:any={};
+  loginuser_data: any = {};
+  openmenu: boolean = false;
   // @ViewChild('header') headerEle: ElementRef<HTMLElement> | undefined;
   // @ViewChild('main') mainEle: ElementRef<HTMLElement> | undefined;
 
   constructor(private router: Router, private toastr: ToastrService) {
     this.user_data();
-   }
+  }
 
   ngOnInit() {
     if (localStorage.getItem('loginuser') && location.pathname == '/') {
@@ -22,15 +23,29 @@ export class HeaderComponent {
       this.router.navigate(['/home'])
 
     }
-    
+
   }
 
-  check_loginuser(){
+  toggleMenu() {
+    this.openmenu = !this.openmenu;
+  }
+
+  myFunction(): void {
+    const x = document.getElementById("myTopnav") as HTMLElement | null;
+
+    if (x && x.className === "navbar-toggler") {
+      x.className += " responsive";
+    } else if (x) {
+      x.className = "navbar-toggler";
+    }
+  }
+
+  check_loginuser() {
     if (localStorage.getItem('loginuser')) {
       this.toastr.warning('you are already log in!!');
-     }else{
+    } else {
       this.router.navigate(['/'])
-     }
+    }
   }
 
   logout() {
@@ -40,11 +55,11 @@ export class HeaderComponent {
     this.toastr.success('logout successfully!!')
   }
 
-  user_data(){
-    var users=localStorage.getItem('loginuser')
-    this.loginuser_data=JSON.parse(users||'[]')||[];
-    
- }
+  user_data() {
+    var users = localStorage.getItem('loginuser')
+    this.loginuser_data = JSON.parse(users || '[]') || [];
+
+  }
 
   resize() {
     // if (this.mainEle?.nativeElement?.style) {

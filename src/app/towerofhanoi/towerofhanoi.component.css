@@ -241,17 +241,29 @@ body {
     margin: 0;
     background-color: #f8f8f8;
 }
-
+.container-fluid{
+    padding-top: 110px;
+}
+.back-btn{
+    padding: 0px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+.fa-arrow-circle-left{
+  font-size: 70px;
+}
 h1 {
     margin: 0;
-    padding: 5vmin;
-    color: rgba(0, 0, 0, 0.5);
+    color: black;
     font-family: Arial, sans-serif;
-    font-size: 7.5vmin;
-    font-weight: lighter;
+    font-size: 45px;
+    font-weight: 600;
     text-align: center;
-    background: linear-gradient(to right, rgba(150, 111, 51, 0.4), rgba(150, 111, 51, 0.2)),
-    repeating-linear-gradient(to right, #eec487, #eec487 3vmin, #f3cf9a 3vmin, #f3cf9a 6vmin, #f8d8a2 6vmin, #f8d8a2 9vmin, #f1ca88 9vmin, #f1ca88 12vmin, #f4d09e 12vmin, #f4d09e 15vmin, #faddb0 15vmin, #faddb0 18vmin, #eec88a 18vmin, #eec88a 21vmin);
 }
 
 form {
@@ -287,22 +299,22 @@ form {
     linear-gradient(#b27315, #966f33 13%, #faddb0 14.5%, #faddb0 27.5%, #966f33 29%, #966f33 42%, #faddb0 43.5%, #d7b889 56.5%, #966f33 58%, #966f33 71%, #d7b889 72.5%, #d7b889 85.5%, #966f33 87%, #b27315);
 }
 
-button {
+.reset {
     margin: 7.5vmin auto;
     border: none;
     border-radius: 1vmin;
     width: 35vmin;
     height: 10vmin;
     font-size: 4vmin;
-    color: rgba(0, 0, 0, 0.5);
+    color: black;
     background: linear-gradient(to right, #c39550, #966f33);
     outline: none;
     cursor: pointer;
     transition: background 0.3s;
 }
-button:hover {
+.reset:hover {
     background: linear-gradient(to right, #caa163, #a77b39);
 }
-button:active {
+.reset:active {
     background: linear-gradient(to right, #cf9844, #9e6f29);
 }
