@@ -18,7 +18,7 @@ export class ResigsterComponent {
   username?: string
   password?: string
   gender?: string
-  date?: string
+  date?: any
   arr: any[] = [];
   firstName: string = '';
   lastName: string = '';
@@ -51,7 +51,7 @@ export class ResigsterComponent {
   }
 
   onSubmit() {
-    const age = this.calculateAge(this.dateOfBirth);
+    const age = this.calculateAge(this.date);
     if (age >= 5) {
       console.log('Form submitted successfully');
       // Proceed with form submission
@@ -59,9 +59,9 @@ export class ResigsterComponent {
       console.log('Age must be greater than or equal to 5 years');
       // Display error message or prevent form submission
     }
-    if (this.firstName && this.lastName && this.isFirstNameValid && this.isLastNameValid) {
+    if (this.firstname && this.lastname && this.isFirstNameValid && this.isLastNameValid) {
       console.log('Form submitted successfully');
-      console.log(this.firstName);
+      console.log(this.firstname);
       // You can perform further actions here, like sending the form data to a server
     } else {
       console.log('Form is invalid');
