@@ -1,6 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 .home-main {
     background-image: url(/assets/home-bg.jpg);
@@ -215,6 +216,8 @@ button {
     margin: 20px;
     text-align: center;
     border: none;
+    transition: 0.5s;
+    width: 30%;
 }
 .feedback-lining .feedback .card:hover{
     box-shadow: 0 0 20px #2f2d2d;
@@ -330,4 +333,5 @@ button {
     .bg-imgtext {
         padding-top: 236px;
     }
+    
 }

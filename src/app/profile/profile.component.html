@@ -33,36 +33,39 @@
 </div> -->
 
 <div class="container-fluid">
-	<button class="btnback" routerLink="/home"><i class="fas fa-arrow-circle-left"></i></button>
 	<div class="profile">
-		<div class="row" *ngFor="let info of data1;let i=index">
-			<div class="col-6">
-				<p class="tableformat">
-					{{info.name}}
-				</p>
-			</div>
-			<div class="col-6">
-				<ng-container *ngIf="info.type == 'input'">
-					<input type="text" class="tableformat" [(ngModel)]="profileData[info.key]">
-				</ng-container>
-				<ng-container *ngIf="info.type == 'date'">
-					<input type="date" class="tableformat" [(ngModel)]="profileData[info.key]">
-				</ng-container>
-				<ng-container *ngIf="info.type == 'radio'">
-					<ng-container *ngFor="let val of info.values">
-						<input type="radio" [name]="info.key" class="mr-1" [value]="val.toLowerCase()"
-							[(ngModel)]="profileData[info.key]">{{val}}
+		<button class="btnback" routerLink="/home"><i class="fas fa-arrow-circle-left"></i></button>
+		<div class="profile-form">
+			<div class="row" *ngFor="let info of data1;let i=index">
+				<div class="col-lg-6 col-sm-12">
+					<p class="tableformat">
+						{{info.name}}
+					</p>
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					<ng-container *ngIf="info.type == 'input'">
+						<input type="text" class="tableformat" [(ngModel)]="profileData[info.key]">
 					</ng-container>
-				</ng-container>
+					<ng-container *ngIf="info.type == 'date'">
+						<input type="date" class="tableformat" [(ngModel)]="profileData[info.key]">
+					</ng-container>
+					<ng-container *ngIf="info.type == 'radio'">
+						<ng-container *ngFor="let val of info.values">
+							<input type="radio" [name]="info.key" [value]="val.toLowerCase()"
+								[(ngModel)]="profileData[info.key]">{{val}}
+						</ng-container>
+					</ng-container>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="button">
-			<button class="btnupdate" (click)="updateProfile()">Update</button>
-			<button class="btndelete" data-toggle="modal" data-target="#delete-profile-confirmation">Delete</button>
+			<div class="row">
+				<div class="button">
+					<button class="btnupdate btncss" (click)="updateProfile()">Update</button>
+					<button class="btndelete btncss" data-toggle="modal"
+						data-target="#delete-profile-confirmation">Delete</button>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 </div>
 
 

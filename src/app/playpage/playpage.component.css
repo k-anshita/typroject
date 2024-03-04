@@ -1,0 +1,34 @@
+.container-fluid{
+    background-color:  rgb(29, 29, 73);
+}
+.playpage{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:100px 20px;
+   
+}
+.playvideo{
+    padding:auto;
+    margin: 10px;
+   
+}
+h3{
+    background-color: rgb(29, 29, 73);
+    box-shadow: 0 0 10px white;
+    color: white;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 20px;
+    width: 50%;
+    min-width: 300px;
+    max-width: 600px;
+}
+@media screen and (max-width:1000px){
+    h3{
+        padding: 5px;
+        font-size: 20px;
+     
+    }
+}

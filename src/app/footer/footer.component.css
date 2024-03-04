@@ -125,14 +125,15 @@ body{
 }
 .subscription .sub-part .s-button .btnsub{
     padding: 10px;
+    border: none;
     color: white;
+    background-color:  #1e0e4a;
 }
 .subscription .sub-part .s-button input{
     padding: 10px;
     width: 30%;
-}
-.subscription .sub-part .s-button .btnsub{
-    background-color:  #1e0e4a;
+    border: none;
+    outline: none;
 }
 
 footer {

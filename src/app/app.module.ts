@@ -34,6 +34,7 @@ import { ConnectfourComponent } from './connectfour/connectfour.component';
 import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
 import Swal from 'sweetalert2';
+import { PlaypageComponent } from './playpage/playpage.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import Swal from 'sweetalert2';
     ConnectfourComponent,
     TowerofhanoiComponent,
     StackcubeComponent,
+    PlaypageComponent,
   ],
   imports: [
     BrowserModule,

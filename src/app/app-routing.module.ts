@@ -25,6 +25,7 @@ import { KillthebirdsComponent } from './killthebirds/killthebirds.component';
 import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
 import { ConnectfourComponent } from './connectfour/connectfour.component';
+import { PlaypageComponent } from './playpage/playpage.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path:'towerofhanoi',component:TowerofhanoiComponent},
   {path:'stackcube',component:StackcubeComponent},
 {path:'connectfour',component:ConnectfourComponent},
+{path:'playpage',component:PlaypageComponent}
 
 ];
 
