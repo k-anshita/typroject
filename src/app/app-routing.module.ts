@@ -45,8 +45,7 @@ const routes: Routes = [
   {path:'RPS',component:RPSComponent},
   {path:'sudoku',component:SudokuComponent},
   {path:'whack-a-mole',component:WhackAMoleComponent},
-  {path:'wordsearch',component:WordSearchComponent},
-    
+  {path:'wordsearch',component:WordSearchComponent}, 
   {path:'killthebirds',component:KillthebirdsComponent},
   {path:'towerofhanoi',component:TowerofhanoiComponent},
   {path:'stackcube',component:StackcubeComponent},
