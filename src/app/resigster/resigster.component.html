@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" placeholder="enter your email here.." required>
-                    <div
+                    <p
                         *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
                         Email is required.
                 </p>
