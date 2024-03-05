@@ -75,7 +75,7 @@ import { PlaypageComponent } from './playpage/playpage.component';
     BrowserAnimationsModule,
     HttpClientModule,
     ToastrModule.forRoot({
-      positionClass: 'toast-top-center',
+      positionClass: 'toast-top-right',
     }),
   ],
   providers: [],

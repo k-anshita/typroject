@@ -1,17 +1,27 @@
-
 <div class="bg-img">
-                <div class="container"><br>
-                    <h1 class="title">LOGIN</h1>
-                   
-                        <input class="form-control" type="text" value="" [(ngModel)]="username"
-                            placeholder="enter your username" required>
-
-                        <input class="form-control" type="password" value="" [(ngModel)]="password"
-                            placeholder="enter your password" required>
-                        <button type="button" class="btn" (click)="check()">
-                           LOGIN
-                        </button>
-                        <a routerLink="/res"> create new account?</a>
-                  
-                </div>
+    <div class="container"><br>
+        <form #myForm="ngForm">
+            <h1 class="title">LOGIN</h1>
+            <div>
+                <input id="username" name="username" class="form-control" type="text" value="" [(ngModel)]="username"
+                    placeholder="enter your username" required>
+                <p id="alert"
+                    *ngIf="myForm.controls['username'].touched && myForm.controls['username'].dirty && myForm.controls['username'].errors?.['required']">
+                    username is required.
+                </p>
+            </div>
+            <div>
+                <input id="password" name="password" class="form-control" type="password" value=""
+                    [(ngModel)]="password" placeholder="enter your password" required>
+                <p id="alert"
+                    *ngIf="myForm.controls['password'].touched && myForm.controls['password'].dirty && myForm.controls['password'].errors?.['required']">
+                    password is required.
+                </p>
+            </div>
+            <button type="button" class="btn" (click)="check()">
+                LOGIN
+            </button>
+            <a routerLink="/res"> create new account?</a>
+        </form>
+    </div>
 </div>
