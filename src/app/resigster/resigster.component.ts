@@ -17,6 +17,7 @@ export class ResigsterComponent {
   lastname?: string
   username?: string
   password?: string
+  confirmPassword?: string
   gender?: string
   date?: any
   arr: any[] = [];
@@ -25,7 +26,7 @@ export class ResigsterComponent {
   isFirstNameValid: boolean = true;
   isLastNameValid: boolean = true;
   email: string = '';
-  maxDate:any;
+  maxDate: any;
   dateOfBirth: any; // Store date of birth as string
   minDate: string; // Store minimum date as string
   validateFirstName(value: string) {
@@ -41,7 +42,7 @@ export class ResigsterComponent {
     const emailPattern = /^[a-z]+(\.[a-z]+)*@([a-z]+\.)+[a-z]{2,}$/;
     return emailPattern.test(email);
   }
-  
+
   calculateAge(birthDateString: string): number {
     const birthDate = new Date(birthDateString); // Convert string to Date object
     const today = new Date();
@@ -53,35 +54,28 @@ export class ResigsterComponent {
   onSubmit() {
     const age = this.calculateAge(this.date);
     if (age >= 5) {
-      console.log('Form submitted successfully');
-      // Proceed with form submission
     } else {
-      console.log('Age must be greater than or equal to 5 years');
-      // Display error message or prevent form submission
     }
     if (this.firstname && this.lastname && this.isFirstNameValid && this.isLastNameValid) {
-      console.log('Form submitted successfully');
-      console.log(this.firstname);
-      // You can perform further actions here, like sending the form data to a server
+
     } else {
-      console.log('Form is invalid');
+
     }
     if (this.validateEmail(this.email)) {
-      console.log('Form submitted with email:', this.email);
-      // You can perform further actions here, such as submitting the form data to a server
+
     } else {
-      console.log('Please enter a valid email address.');
+
     }
   }
-  
+
   constructor(public router: Router,
     private toastr: ToastrService,
     private authService: AuthService) {
-       // Setting the minimum date (5 years ago from today)
+    // Setting the minimum date (5 years ago from today)
     const today = new Date();
     today.setFullYear(today.getFullYear() - 5);
     this.minDate = today.toISOString().split('T')[0];
-  
+
   }
 
   add() {
@@ -104,6 +98,8 @@ export class ResigsterComponent {
       this.toastr.warning('please fill the gender')
     } else if (this.date == null || this.date == '' || this.date == undefined) {
       this.toastr.warning('please fill the date')
+    } else if (this.password != this.confirmPassword) {
+      this.toastr.error('your conform password is wrong!!');
     } else {
 
       const obj = {
@@ -128,14 +124,14 @@ export class ResigsterComponent {
           this.gender = '',
           this.date = ''
       }
-      // else{
-      //   this.toastr.error(x.message)
+        // else{
+        //   this.toastr.error(x.message)
 
-      // })
+        // })
         , err => {
           this.toastr.error('error in register')
         })
-    
+
     }
   }
 }
