@@ -2,61 +2,21 @@
 
     <div class="form1" method="post">
         <form #myForm="ngForm" (ngSubmit)="onSubmit()">
-<<<<<<< HEAD
-            <h1>RESIGSTER</h1>
-            <div class="row">
-                <div class="col-md-6 form-group">
-
-                    <input type="text" placeholder="enter your firstName here.." id="firstName" name="firstName"
-                        [(ngModel)]="firstname" (ngModelChange)="validateFirstName($event)" required>
-                    <div *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched" class="alert alert-danger">
-                        First Name is required and must contain only letters.
-                    </div>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="text" placeholder="enter Your lastName here.." id="lastName" name="lastName"
-                        [(ngModel)]="lastname" (ngModelChange)="validateLastName($event)" required>
-                    <div *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" class="alert alert-danger">
-                        Last Name is required and must contain only letters.
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-6 form-group pt-2  ">
-                    gender: <input type="radio" name="gender" value="male" [(ngModel)]="gender">male
-                    <input type="radio" name="gender" value="female" [(ngModel)]="gender">female
-                </div>
-                <div class="col-md-6 form-group  mt-3 mt-md-0 ">
-                    <input type="date" id="dob" name="dob" [(ngModel)]="date" required [max]="maxDate">
-                    <div *ngIf="date && calculateAge(date) < 5" class="alert alert-danger">
-                        Age must be greater than or equal to 5 years.
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="enter Your email" required>
-              </div> -->
-            <div class="row">
-                <div class="col-md-6 form-group">
-                    <input type="email" id="email" name="email" [(ngModel)]="email" required>
-=======
             <h1 class="title">RESIGSTER</h1>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <input type="text" placeholder="enter your firstName here.." class="form-control" id="firstName"
                         name="firstName" [(ngModel)]="firstname" (ngModelChange)="validateFirstName($event)" required>
-                    <div *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched" class="alert alert-danger">
+                    <p id="alert" *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched">
                         First Name is required and must contain only letters.
-                    </div>
+                    </p>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                     <input type="text" placeholder="enter Your lastName here.." class="form-control" id="lastName"
                         name="lastName" [(ngModel)]="lastname" (ngModelChange)="validateLastName($event)" required>
-                    <div *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" class="alert alert-danger">
+                    <p id="alert" *ngIf="!isLastNameValid && myForm.controls['lastName'].touched">
                         Last Name is required and must contain only letters.
-                    </div>
+                    </p>
                 </div>
             </div>
             <div class="row ">
@@ -72,23 +32,22 @@
                 <div class="col-md-6 form-group  mt-3 mt-md-0 ">
                     <input type="date" id="dob" name="dob" [(ngModel)]="date" class=" input_bg form-control" required
                         [max]="maxDate">
-                    <div *ngIf="date && calculateAge(date) < 5" class="alert alert-danger">
+                    <p *ngIf="date && calculateAge(date) < 5"  id="alert">
                         Age must be greater than or equal to 5 years.
-                    </div>
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <input type="email" id="email" class="form-control" placeholder="enter your email" name="email"
                         [(ngModel)]="email" required>
->>>>>>> 1f65fbd8adb0f4d9355ca644b5dcae182c3e6b7c
-                    <div
-                        *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
+                    <p
+                        *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']" id="alert">
                         Email is required.
-                    </div>
-                    <div *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)">
+                </p>
+                    <p *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)" id="alert">
                         Invalid email format.
-                    </div>
+                    </p>
 
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
@@ -98,29 +57,25 @@
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <input type="password" name="pwd" class="form-control res-group" value="" [(ngModel)]="password"
+                    <input type="password" name="password" id="password" class="form-control res-group" value="" [(ngModel)]="password"
                         placeholder="enter your password" required>
+                        <p
+                        *ngIf="myForm.controls['password'].touched && myForm.controls['password'].dirty && myForm.controls['password'].errors?.['required']" id="alert">
+                        password is required.
+                </p>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="password" class="form-control res-group" name="pwd" value=""
+                    <input type="password" class="form-control res-group" name="confirmPassword" id="confirmPassword" value=""
                         [(ngModel)]="confirmPassword" placeholder="confirm your password" required>
+                        <p
+                        *ngIf="myForm.controls['confirmPassword'].touched && myForm.controls['confirmPassword'].dirty && myForm.controls['confirmPassword'].errors?.['required']" id="alert">
+                         conform password is required.
+                </p>
                 </div>
 
             </div>
-            <button type="button" [disabled]="!myForm.valid" class="btn btn-primary" (click)="add()">REGISTER
+            <button type="button" [disabled]="!myForm.valid" [class.enabled]="myForm.valid" class="btn btn-primary" (click)="add()">REGISTER
             </button>
         </form>
-<<<<<<< HEAD
-        <div style="text-align: center;">
-            <span>
-                <a routerLink="/">
-                    <font color="black">already have an account?</font>
-                </a>
-            </span>
-        </div>
-
-        <!-- </div> -->
-=======
                 <a routerLink="/">already have an account?</a>
->>>>>>> 1f65fbd8adb0f4d9355ca644b5dcae182c3e6b7c
     </div>

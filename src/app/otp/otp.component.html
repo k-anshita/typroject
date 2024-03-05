@@ -1,0 +1,28 @@
+<p>otp works!</p>
+<div class="mid">
+    <div class="container">
+      <form #myForm="ngForm">
+    <div>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+                    <div *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
+                        Email is required.
+                      </div>
+                      <div *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)">
+                        Invalid email format.
+                      </div>
+                  
+      <button (click)="sendOTP()" class="btn">Send OTP</button>
+    </div>
+    <div *ngIf="otpSent">
+      <input type="text" [(ngModel)]="otpCode" name="otpCode" placeholder="Enter OTP">
+      <button (click)="verifyOTP()">Verify OTP</button>
+    </div>
+    <div *ngIf="verificationStatus">{{ verificationStatus }}</div>
+    <div>
+    <button (click)="clickme()" class="btn">next</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    
+    

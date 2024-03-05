@@ -7,6 +7,14 @@
     input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
+
+
+#alert{
+ font-size: 15px;
+ padding: 0;
+ margin: 0;
+ color: red;
+}
 .bg-img {
     background-image: url(/assets/3513217.jpg);
     background-size: cover;
