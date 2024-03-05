@@ -1,68 +1,8 @@
 <div class="bg-img">
-    <!-- <vg-player>
-        <video preload="auto" width="100%" height="auto">
-            <source src="/assets/bg.mp4" type="video/mp4">
-        </video>
-    </vg-player> -->
-    <!-- <div class="col-12 col-sm-12 col-md-6">
-            <img src="./assets/login.webp" class="res_img">
-        </div> -->
-    <!-- <div class="col-6 borders">
-            <form class="form" [formGroup]="registerform">
-                <h1>REGISTRATION</h1>
-                <input class="input_bg" type="text" value="" formControlName="firstname"
-                    placeholder="Please enter your firstname"><br><br>
-                <input class="input_bg" type="text" value="" formControlName="lastname"
-                    placeholder="Please enter your lastname"><br><br>
-                <input class="input_bg" type="email" value="" formControlName="email"
-                    placeholder="please enter youe email"><br><br>
-                gender:<input type="radio" name="gender" value="male" formControlName="gender">male
-                <input type="radio" name="gender" value="female" formControlName="gender">female<br><br>
-                <label>Date of birth:</label>
-                <input class="input_bg" type="date" value="" formControlName="date"
-                    placeholder="Enter your birthdate"><br><br>
-                <button type="button" class="btn btn-primary" (click)="add()">RESIGSTER</button><br><br>
-                <div>
-                    <span><a routerLink="/">
-                            <font color="black">already have an account?</font>
-                        </a></span>
-                </div>
-            </form>
-        </div> -->
-
-    <!-- <div class="col-12 col-sm-12 col-md-6 borders">
-      
-            <div class="form">
-                <h4>REGISTRATION</h4>
-                <input class=" input_bg form-control" type="text" value="" [(ngModel)]="firstname"
-                    placeholder="Please enter your firstname" required><br>
-                <input class=" input_bg form-control" type="text" value="" [(ngModel)]="lastname"
-                    placeholder="Please enter your lastname" required><br>
-                <input class=" input_bg form-control" type="email" value="" [(ngModel)]="email"
-                    placeholder="please enter your email" required><br>
-                <input class=" input_bg form-control" type="text" value="" [(ngModel)]="username"
-                    placeholder="please enter your usename" required><br>
-                <input class=" input_bg form-control" type="password" value="" [(ngModel)]="password"
-                    placeholder="please enter your password" required><br>
-                gender:<input type="radio" name="gender" value="male" [(ngModel)]="gender">male
-                <input type="radio" name="gender" value="female" [(ngModel)]="gender">female<br><br>
-                <label>Date of birth:</label>
-                <input class=" input_bg form-control" type="date" value="" [(ngModel)]="date"
-                    placeholder="Enter your birthdate"><br>
-                <button type="button" class="btn btn-primary" (click)="add()">REGISTER
-                </button><br><br>
-                <div>
-                    <span><a routerLink="/">
-                            <font color="black">already have an account?</font>
-                        </a></span>
-                </div>
-            </div>
-          
-        </div> -->
-    <!-- <div class="container"> -->
 
     <div class="form1" method="post">
         <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+<<<<<<< HEAD
             <h1>RESIGSTER</h1>
             <div class="row">
                 <div class="col-md-6 form-group">
@@ -101,6 +41,47 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <input type="email" id="email" name="email" [(ngModel)]="email" required>
+=======
+            <h1 class="title">RESIGSTER</h1>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input type="text" placeholder="enter your firstName here.." class="form-control" id="firstName"
+                        name="firstName" [(ngModel)]="firstname" (ngModelChange)="validateFirstName($event)" required>
+                    <div *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched" class="alert alert-danger">
+                        First Name is required and must contain only letters.
+                    </div>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="text" placeholder="enter Your lastName here.." class="form-control" id="lastName"
+                        name="lastName" [(ngModel)]="lastname" (ngModelChange)="validateLastName($event)" required>
+                    <div *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" class="alert alert-danger">
+                        Last Name is required and must contain only letters.
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 form-group gender-row">
+                    <div class="form-control">
+                        <input type="radio" name="gender" class="male" value="male" [(ngModel)]="gender"><span
+                        class="gender">male</span>
+                    <input type="radio" name="gender" class="female" value="female" [(ngModel)]="gender"><span
+                        class="gender">female</span>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 form-group  mt-3 mt-md-0 ">
+                    <input type="date" id="dob" name="dob" [(ngModel)]="date" class=" input_bg form-control" required
+                        [max]="maxDate">
+                    <div *ngIf="date && calculateAge(date) < 5" class="alert alert-danger">
+                        Age must be greater than or equal to 5 years.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input type="email" id="email" class="form-control" placeholder="enter your email" name="email"
+                        [(ngModel)]="email" required>
+>>>>>>> 1f65fbd8adb0f4d9355ca644b5dcae182c3e6b7c
                     <div
                         *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
                         Email is required.
@@ -129,6 +110,7 @@
             <button type="button" [disabled]="!myForm.valid" class="btn btn-primary" (click)="add()">REGISTER
             </button>
         </form>
+<<<<<<< HEAD
         <div style="text-align: center;">
             <span>
                 <a routerLink="/">
@@ -138,4 +120,7 @@
         </div>
 
         <!-- </div> -->
+=======
+                <a routerLink="/">already have an account?</a>
+>>>>>>> 1f65fbd8adb0f4d9355ca644b5dcae182c3e6b7c
     </div>
