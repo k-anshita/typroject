@@ -47,11 +47,6 @@ h1{
   }
 
   .mole {
-    /* width: 100px;
-    height: 200px; */
-    /* background-color: antiquewhite; */
-    /* border-radius: 50%; */
-    /* transform: translate(-50%, -50%); */
     height: 80px;
     width: 80px;
     background-image: url(/assets/bear-2.png);
@@ -68,14 +63,19 @@ h1{
     font-weight: 800;
   }
   
-  button {
+  .reset{
+    background-image: linear-gradient(to right, #9f3232 0%, #B5AC49  51%, #f12f2f  100%);
+    color: white;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
   }
   
-  button:disabled {
+  .reset:disabled {
     background-color: lightgray;
     cursor: not-allowed;
   }
-  
+           
+
+
+ 

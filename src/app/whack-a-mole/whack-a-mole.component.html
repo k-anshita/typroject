@@ -15,7 +15,7 @@
       <p>Score: {{ score }}</p>
       <p>Target Score: {{ targetScore }}</p>
       <p *ngIf="!gameOver">Time left: {{ timeLeft }}s</p>
-      <button (click)="restart()" [disabled]="!gameOver">Restart</button>
+      <button class="reset" (click)="restart()" [disabled]="!gameOver">Restart</button>
     </div>
   </div>
 </div>

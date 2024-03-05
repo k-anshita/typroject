@@ -1,47 +1,7 @@
-/* .header {
-  background: linear-gradient(135deg, rgb(17, 13, 143) 0%, rgb(141, 28, 202) 100%);
-  z-index: 1;
-  color: white;
-  padding-top: 5px;
- 
-  display: inline-block;
-  width: 100%;
-  position: fixed;
-}
 
-.header_element {
-  float: right;
-  line-height: 3;
-  
-}
-
-li {
-  padding-left: 20px;
-}
-
-.logo_img {
-  width:250px;
-  padding:10px;
-}
-
-#user_selectionbox{
-  cursor: pointer;
-}
-
-@media screen and (max-width:576px) {
-  .logo_img {
-    width:150px;
-  }
-} */
 
 
 .header {
-  /* position: absolute;
-    z-index: 9;
-    background-color: black;
-    margin-bottom: 70px;
-    width:100%;
-    color:white; */
   background:rgba(0, 0,0, 0.2);
   /* overflow: hidden; */
   padding: 10px 0;
@@ -169,7 +129,22 @@ navbar-toggler-icon.close {
 .dropdown-menu{
   right: 10%;
   left: auto;
+  background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
+  border-radius: 10px;
+
 }
+.dropdown-menu,
+.dropdown-menu a{
+  color: white;
+}
+         
+
+
+.dropdown-menu:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
 a{
   color:#0b4c62 ;
 }
@@ -196,6 +171,7 @@ a:hover{
     display: none;
 
   }
+
   .navbar-nav {
     background-color: #EEF5FD;
     height: 100vh;
