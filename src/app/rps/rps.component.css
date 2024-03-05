@@ -15,13 +15,13 @@
   50% { transform: rotateY(180deg) rotate(-10deg); }
 }
 
-html, body {
+/* html, body {
   margin: 0;
   padding: 0;
   border: 0;
   line-height: 1;
   font-family: Acme, Arial, sans-serif;
-}
+} */
  
 .back-btn{
   padding: 0px;
@@ -30,7 +30,7 @@ html, body {
   background-color: white;
   border: none;
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 20%;
 }
 .fa-arrow-circle-left{
@@ -177,12 +177,12 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
 #rock-paper:checked ~ div h2::before,
 #paper-scissors:checked ~ div h2::before,
 #scissors-rock:checked ~ div h2::before {
-  content: "You Win!"
+  content: "You Win:)"
 }
 #rock-scissors:checked ~ div h2::before,
 #paper-rock:checked ~ div h2::before,
 #scissors-paper:checked ~ div h2::before {
-  content: "Computer Wins!"
+  content: "Computer Wins:("
 }
 
 #message {
@@ -193,7 +193,18 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
 input:checked ~ #message {
   display: block;
 }
+.msg h2{
+  color: red;
+  font-size: 40px;
+  padding: 30px;
+  margin: auto;
+  box-shadow: 0 0 10px black;
+  width: 600px;
+}
+#id{
+  color: blue;
 
+}
 #hands {
   display: flex;
   align-items: center;
