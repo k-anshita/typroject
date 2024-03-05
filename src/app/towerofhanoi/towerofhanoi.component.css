@@ -83,7 +83,7 @@ input[readonly]:focus + input + input + input:checked ~ #zero {
     pointer-events: initial;
 }
 
-/* Discs */
+
 .discs {
     position: relative;
     display: flex;
@@ -175,7 +175,6 @@ input + input + input + input:active + label + .disc {
     background: linear-gradient(to right, #f2a097, #ff3a24, #e74c3c);
 }
 
-/* Spacers/Separators */
 .spacer {
     width: 30vmin;
     height: 1px;
@@ -215,7 +214,7 @@ input[readonly]:focus + input + input + input:checked ~ .c {
     flex-grow: 1;
 }
 
-/* Winning */
+
 .win {
     z-index: 7;
     position: absolute;
@@ -236,7 +235,6 @@ input:nth-child(6n + 4):checked ~ input:nth-child(6n + 4):checked ~ input:nth-ch
     pointer-events: initial;
 }
 
-/* Everything Else */
 body {
     margin: 0;
     background-color: #f8f8f8;
@@ -251,7 +249,7 @@ body {
     background-color: white;
     border: none;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 20%;
 }
 .fa-arrow-circle-left{

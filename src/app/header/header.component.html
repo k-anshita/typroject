@@ -1,35 +1,4 @@
-<!-- <header class="header" (window:resize)="resize()" #header>
-    <a routerLink="/main">
-        <img src="/assets/b-1.webp" class="logo_img" (load)="resize()">
-    </a>
-    <div class="header_element ">
-        <span class="dropdown px-3">
-            <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
-                <i class="fa fa-user user-icon"></i>
-                {{loginuser_data.firstname}}{{loginuser_data.lastname}}
-            </span>
-            <ul class="dropdown-menu">
-                <li><a routerLink="/profile">
-                        <font color="black">Profile</font>
-                    </a></li>
-                <li><a routerLink="/cardreport">
-                        <font color="black">Card Report</font>
-                    </a></li>
-                <li><a routerLink="/randomreport">
-                        <font color="black">Random Report</font>
-                    </a></li>
-                <li><a routerLink="/ticreport">
-                        <font color="black">Tic-Toe Report</font>
-                    </a></li>
-                <li (click)="logout()">Log Out</li>
-            </ul>
-        </span>
-    </div> -->
-<!-- </div> -->
-<!-- </header>
-<div class="main" #main>
-    <router-outlet></router-outlet>
-</div> -->
+
 <div class="top-header">
     <div class="container-fluid header-lining">
        <div class="row">
@@ -85,9 +54,9 @@
             </span>
             <ul class="dropdown-menu">
                 <li><a routerLink="/profile">
-                        <font color="black">Profile</font>
+                    Profile
                     </a></li>
-                <li><a routerLink="/cardreport">
+                <!-- <li><a routerLink="/cardreport">
                         <font color="black">Card Report</font>
                     </a></li>
                 <li><a routerLink="/randomreport">
@@ -95,8 +64,8 @@
                     </a></li>
                 <li><a routerLink="/ticreport">
                         <font color="black">Tic-Toe Report</font>
-                    </a></li>
-                <li (click)="logout()" id="user_selectionbox">Log Out</li>
+                    </a></li>-->
+                <li (click)="logout()" id="user_selectionbox">Log Out</li> 
             </ul>
         </span>
     </div>

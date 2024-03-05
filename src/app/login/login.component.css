@@ -1,5 +1,4 @@
-
-.title{
+.title {
     font-family: 'Open Sans';
     font-size: 40px;
     font-weight: 700;
@@ -7,26 +6,30 @@
     text-align: center;
     transition: .5s;
 }
-.form-control{
+
+.form-control {
     margin-bottom: 35px;
-    background-color:#363da4 ;
+    background-color: #363da4;
     color: white;
     border-radius: 80px;
     border: 3px solid #4085cb;
 }
-.form-control::placeholder{
+
+.form-control::placeholder {
     color: rgb(215, 203, 203);
     font-weight: 100;
 }
-.bg-img {  
-        background-image: url(/assets/3513217.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 600px;
-        padding-top: 150px;
-        padding-bottom: 80px;
+
+.bg-img {
+    background-image: url(/assets/3513217.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding-top: 150px;
+    padding-bottom: 80px;
 }
+
 .container {
     text-align: left;
     background-color: #363da4;
@@ -36,6 +39,13 @@
     width: 50%;
     margin: auto;
 }
+
+#alert {
+    color: red;
+    padding: 0px;
+    margin: 0;
+}
+
 .btn {
     color: #fff !important;
     text-transform: uppercase;
@@ -49,44 +59,52 @@
     margin-bottom: 10px;
     width: 100%;
 }
+
 .btn:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
     transition: all 0.4s ease 0s;
 }
 
-.bg-img a{
-    color:white;
+.bg-img a {
+    color: white;
     text-align: center;
     display: block;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
+
 @media screen and (max-width:1199px) {
     .container {
         left: 31%;
     }
 }
+
 @media screen and (max-width:991px) {
-    .container{
+    .container {
         left: 25%;
     }
 }
+
 @media screen and (max-width:767px) {
-    .container{
+    .container {
         left: 2%;
         margin: 0px 61px;
         top: 110px;
         width: -webkit-fill-available;
     }
-    .bg-img{
+
+    .bg-img {
         height: 480px;
     }
 
 }
+
 @media screen and (max-width:480px) {}
-    /* .bg-img {
+
+/* .bg-img {
         width: 100vw;
         height: 63vw;
     }
@@ -120,7 +138,7 @@ a:hover{
         width: 50%;
         /* right:0; */
 
-    
+
 
 /* @media screen and (max-width:500px){
     .bg-img{
