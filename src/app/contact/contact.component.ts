@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../auth.service';
+import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,11 +12,11 @@ import { AuthService } from '../auth.service';
 })
 export class ContactComponent {
   name?: string
-  email?: string
+  email: string='';
   subject?: string
   message?: string
   arr: any[] = [];
-
+  isNameValid:boolean=true;
 
 
   constructor(public router: Router,
@@ -28,7 +30,7 @@ export class ContactComponent {
     // const userinfo = this.arr.find(x => x.username == this.username && x.email && this.email)
     if (this.name == null || this.name == '' || this.name == undefined) {
       this.toastr.warning('please fill the name')
-    } else if (this.subject == null || this.subject == '' || this.subject == undefined) {
+    } else if (!String(this.subject||'').trim()){
       this.toastr.warning('please fill the subject')
     } else if (this.email == null || this.email == '' || this.email == undefined) {
       this.toastr.warning('please fill the email')
@@ -63,4 +65,19 @@ export class ContactComponent {
     }
   }
 
+  validateName(value: string) {
+    // Validate first name here
+    this.isNameValid = /^[a-zA-Z]+$/.test(value);
+  }
+  validateEmail(email: string): boolean {
+    const emailPattern =  /^[^\.\s][\w\-]+(\.[\w\-]+)*@([\w-]+\.)+[\w-]{2,}$/;
+    return emailPattern.test(email);
+  }
+onSubmit(){
+
 }
+}
+function trim(): any {
+  throw new Error('Function not implemented.');
+}
+

@@ -38,7 +38,7 @@ export class ResigsterComponent {
     this.isLastNameValid = /^[a-zA-Z]+$/.test(value);
   }
   validateEmail(email: string): boolean {
-    const emailPattern = /^[a-z]+(\.[a-z]+)*@([a-z]+\.)+[a-z]{2,}$/;
+    const emailPattern =  /^[^\.\s][\w\-]+(\.[\w\-]+)*@([\w-]+\.)+[\w-]{2,}$/;
     return emailPattern.test(email);
   }
   

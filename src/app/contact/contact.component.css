@@ -322,7 +322,13 @@ label{
 .card{
     border-radius: 0px;
     background-color: #363da4;
-    color: white;
+    color: rgb(209, 33, 33);
     border-top: 1px solid white;
     padding: 20px 70px;
+}
+#alert{
+   color: red;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0px;
 }
