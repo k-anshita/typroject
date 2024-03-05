@@ -4,42 +4,68 @@
         <div class="header">
             <p class="title">GET IN TOUCH</p>
             <p class="content">
-                If you have any questions or general enquiry,we'are here to help you. Complete the form below and we will get back to  you as soon as we can.
+                If you have any questions or general enquiry,we'are here to help you. Complete the form below and we
+                will get back to you as soon as we can.
             </p>
-            <div class="form">
+            <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form">
                     <div>
                         <p>Enter Your name:</p>
-                        <input type="text" class="form-control"  placeholder="Name" [(ngModel)]="name">
+                        <input type="text" class="form-control" placeholder="Name" id="Name" name="Name"
+                            [(ngModel)]="name" (ngModelChange)="validateName($event)" required>
+
+                        <p [ngClass]="!isNameValid?'alt':''" *ngIf="!isNameValid && myForm.controls['Name'].touched" class="alert" id="alert"> Name is required
+                            and must contain only letters.</p>
+
                     </div>
                     <div>
                         <p>Enter Your email:</p>
-                        <input type="text" class="form-control"  placeholder="Email" [(ngModel)]="email">
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+                        <p
+                            *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']" id="alert">
+                            Email is required.
+                        </p>
+                        <p *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)" id="alert">
+                            Invalid email format.
+                        </p>
                     </div>
                     <div>
                         <p>Enter Your subject:</p>
-                        <input type="text" class="form-control"  placeholder="Subject" [(ngModel)]="subject">
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" [(ngModel)]="subject" required>
+                        <p
+                            *ngIf="myForm.controls['subject'].touched && myForm.controls['subject'].dirty && myForm.controls['subject'].errors?.['required']" id="alert">
+                            subject is required.
+                        </p>
                     </div>
                     <div>
                         <p>Enter Your messege:</p>
-                        <input class="textarea-message form-control" placeholder="Message" [(ngModel)]="message">
+                        <input class="textarea-message form-control" id="message" name="message" [(ngModel)]="message"
+                            required>
+                            <p
+                            *ngIf="myForm.controls['message'].touched && myForm.controls['message'].dirty && myForm.controls['message'].errors?.['required']" id="alert">
+                            message is required.
+                        </p>
                     </div>
                     <div>
-                        <input type="checkbox" id="agree"  value="yes">
-                         <label for="agree"> I have agree to recieve email and updates</label><br>
-                         <button (click)="submit_review()" class="btn">Send Message</button>
+                        <input type="checkbox" id="agree" value="yes">
+                        <label for="agree"> I have agree to recieve email and updates</label><br>
+                        <button [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" (click)="submit_review()" class="btn">Send Message</button>
                     </div>
-            </div>
+                </div>
+            </form>
         </div>
+    
     </div>
 </section>
 <section class="faq">
     <div class="faq-lining">
         <div>
-        <p class="faq-title">FAQ</p>
-        <p class="content">How Can We Help YOU?</p>
-        </div> 
+            <p class="faq-title">FAQ</p>
+            <p class="content">How Can We Help YOU?</p>
+        </div>
     </div>
 </section>
+<<<<<<< HEAD
     <div class="accordtion" id="accordtion">
       <div class="accordtion-body" >
         <button class="btn  accordion-btn collapsed" type="button" data-toggle="collapse" data-target="#que-first" aria-expanded="true" aria-controls="que-first">
@@ -103,8 +129,82 @@
           <div class="card card-body">
             we offer a mix of free-to-play games as well as premium or paid games. you can play online without paying
           </div>
+=======
+<div class="accordtion">
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-first"
+            aria-expanded="false" aria-controls="que-first">
+            How can i register?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-first">
+            <div class="card card-body">
+                Fill out the registration form with the required information.Review and accept the terms of service or
+                terms and conditions.After completing all required fields, submit the registration form.
+            </div>
         </div>
-      </div>
-     </div>
-        
-    
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-second"
+            aria-expanded="false" aria-controls="que-first">
+            what is the website about?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-second">
+            <div class="card card-body">
+                it is a collection of games across various genres, including action, adventure, puzzle, sports, and
+                more. Users can play these games directly on the our website without the need for downloads or
+                installations.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-three"
+            aria-expanded="false" aria-controls="que-first">
+            is there any age resytriction?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-three">
+            <div class="card card-body">
+                To ensure a safe and age-appropriate gaming experience,there are age restrication only 5 year up person
+                can play its game
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-four"
+            aria-expanded="false" aria-controls="que-first">
+            What about games update?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-four">
+            <div class="card card-body">
+                Game updates typically refer to new releases of game content, bug fixes, improvements, and additional
+                features provided by game developers post-launch.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-five"
+            aria-expanded="false" aria-controls="que-first">
+            Are all games on websites free to play?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-five">
+            <div class="card card-body">
+                we offer a mix of free-to-play games as well as premium or paid games. you can play online without
+                paying
+            </div>
+>>>>>>> c22fe6bf60f5748fd8ef78129ee1663c6077b16d
+        </div>
+    </div>
+</div>

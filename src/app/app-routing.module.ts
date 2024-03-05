@@ -26,32 +26,35 @@ import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
 import { ConnectfourComponent } from './connectfour/connectfour.component';
 import { PlaypageComponent } from './playpage/playpage.component';
+import { PaymentComponent } from './payment/payment.component';
+import { OtpComponent } from './otp/otp.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'res', component: ResigsterComponent },
   { path: 'games', component: GamesComponent },
-  {path:'contact',component:ContactComponent},
+  { path: 'contact', component: ContactComponent },
   { path: 'home', component: HomepageComponent },
   { path: 'main', component: MainpageComponent, canActivate: [AuthGuard] },
-  { path: 'chess', component: ChessComponent, canActivate: [AuthGuard] },
+  { path: 'chess', component: ChessComponent },
   { path: 'tic-toe', component: TicToeComponent, canActivate: [AuthGuard] },
   { path: 'card', component: CardComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'cardreport', component: CardreportComponent, canActivate: [AuthGuard] },
   { path: 'randomreport', component: RandomreportComponent, canActivate: [AuthGuard] },
-  { path: 'ticreport', component: TicreportComponent, canActivate: [AuthGuard] },
-  {path:'memorygame',component:MemoryGameComponent},
-  {path:'RPS',component:RPSComponent},
-  {path:'sudoku',component:SudokuComponent},
-  {path:'whack-a-mole',component:WhackAMoleComponent},
-  {path:'wordsearch',component:WordSearchComponent}, 
-  {path:'killthebirds',component:KillthebirdsComponent},
-  {path:'towerofhanoi',component:TowerofhanoiComponent},
-  {path:'stackcube',component:StackcubeComponent},
-{path:'connectfour',component:ConnectfourComponent},
-{path:'playpage',component:PlaypageComponent}
-
+  { path: 'ticreport', component: TicreportComponent },
+  { path: 'memorygame', component: MemoryGameComponent, canActivate: [AuthGuard] },
+  { path: 'RPS', component: RPSComponent },
+  { path: 'sudoku', component: SudokuComponent, canActivate: [AuthGuard] },
+  { path: 'whack-a-mole', component: WhackAMoleComponent, canActivate: [AuthGuard] },
+  { path: 'wordsearch', component: WordSearchComponent, canActivate: [AuthGuard] },
+  { path: 'killthebirds', component: KillthebirdsComponent, canActivate: [AuthGuard] },
+  { path: 'towerofhanoi', component: TowerofhanoiComponent, canActivate: [AuthGuard] },
+  { path: 'stackcube', component: StackcubeComponent, canActivate: [AuthGuard] },
+  { path: 'connectfour', component: ConnectfourComponent, canActivate: [AuthGuard] },
+  { path: 'playpage', component: PlaypageComponent },
+  {path:'payment',component:PaymentComponent},
+  {path:'otp',component:OtpComponent},
 ];
 
 @NgModule({

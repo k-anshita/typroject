@@ -35,6 +35,8 @@ import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
 import Swal from 'sweetalert2';
 import { PlaypageComponent } from './playpage/playpage.component';
+import { PaymentComponent } from './payment/payment.component';
+import { OtpComponent } from './otp/otp.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { PlaypageComponent } from './playpage/playpage.component';
     TowerofhanoiComponent,
     StackcubeComponent,
     PlaypageComponent,
+    PaymentComponent,
+    OtpComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,7 @@ import { PlaypageComponent } from './playpage/playpage.component';
     BrowserAnimationsModule,
     HttpClientModule,
     ToastrModule.forRoot({
-      positionClass: 'toast-top-center',
+      positionClass: 'toast-top-right',
     }),
   ],
   providers: [],

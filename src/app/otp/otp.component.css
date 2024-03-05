@@ -1,0 +1,41 @@
+.mid{
+    background-image: url("../../assets/back_img.jpg");
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+}
+
+.container{
+ align-items: center;
+  position: absolute;
+  justify-content: center;
+  top:50%;
+  left: 50%;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+/* Full-width input fields */
+input{
+
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=email]:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  

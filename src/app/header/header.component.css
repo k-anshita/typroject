@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c22fe6bf60f5748fd8ef78129ee1663c6077b16d
 .header {
   background:rgba(0, 0,0, 0.2);
   padding: 10px 0;
@@ -103,7 +109,22 @@ li {
 .dropdown-menu{
   right: 10%;
   left: auto;
+  background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
+  border-radius: 10px;
+
 }
+.dropdown-menu,
+.dropdown-menu a{
+  color: white;
+}
+         
+
+
+.dropdown-menu:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
 a{
   color:#0b4c62 ;
 }
@@ -130,6 +151,7 @@ a:hover{
     display: none;
 
   }
+
   .navbar-nav {
     background-color: #EEF5FD;
     height: 100vh;

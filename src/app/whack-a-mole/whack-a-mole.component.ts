@@ -11,7 +11,7 @@ export class WhackAMoleComponent {
   timeLeft:number=60;
   timer: any;
   gameOver: any;
-  targetScore:number=2;
+  targetScore:number=7;
 
 
   constructor() { }

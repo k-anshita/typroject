@@ -3,7 +3,7 @@
   <button class="btnback"><a routerLink="/games"><i class="fa fa-angle-left" aria-hidden="true"></i></a></button>
 
   <h1>Memory Game</h1>
-  <div class="timer">{{ formatTime() }} </div>
+  <div class="timer"><i class='fas fa-clock'></i>{{ formatTime() }} </div>
   <div class="grid">
     <div *ngFor="let card of cards; let i = index" class="card" [class.flipped]="card.flipped || card.matched"
       (click)="flipCard(i)">
