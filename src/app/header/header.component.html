@@ -1,40 +1,11 @@
-<!-- <header class="header" (window:resize)="resize()" #header>
-    <a routerLink="/main">
-        <img src="/assets/b-1.webp" class="logo_img" (load)="resize()">
-    </a>
-    <div class="header_element ">
-        <span class="dropdown px-3">
-            <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
-                <i class="fa fa-user user-icon"></i>
-                {{loginuser_data.firstname}}{{loginuser_data.lastname}}
-            </span>
-            <ul class="dropdown-menu">
-                <li><a routerLink="/profile">
-                        <font color="black">Profile</font>
-                    </a></li>
-                <li><a routerLink="/cardreport">
-                        <font color="black">Card Report</font>
-                    </a></li>
-                <li><a routerLink="/randomreport">
-                        <font color="black">Random Report</font>
-                    </a></li>
-                <li><a routerLink="/ticreport">
-                        <font color="black">Tic-Toe Report</font>
-                    </a></li>
-                <li (click)="logout()">Log Out</li>
-            </ul>
-        </span>
-    </div> -->
-<!-- </div> -->
-<!-- </header>
-<div class="main" #main>
-    <router-outlet></router-outlet>
-</div> -->
 <div class="top-header">
     <div class="container-fluid header-lining">
        <div class="row">
-          <div class="col-md-6 col-sm-7">
-             <p class="header-text">create account for better experiance</p>
+          <div class="col-md-6 col-sm-7 header-social-media">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
           </div>
           <div class="col-md-6 col-sm-5 buttons justify-content-end">
              <div class="header-sign-in">
@@ -55,7 +26,6 @@
 
 <header class="header" (window:resize)="resize()" #header>
     <nav class="navbar navbar-expand-lg ">
-    <!-- <div class="container"> -->
         <a routerLink="/home"  class="navbar-brand">
             <img src="/assets/main_logo.png" class="logo_img" (load)="resize()">
         </a>
@@ -100,45 +70,4 @@
         </span>
     </div>
     </nav>
-        <!-- <div class="nav-icon">
-            <span class="dropdown px-3">
-                <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
-                    <i class="fa fa-bars " ></i>
-
-                </span>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/home">
-                            <font color="black">Home</font>
-                        </a></li>
-                    <li><a routerLink="/games">
-                            <font color="black">Games</font>
-                        </a></li>
-                    <li><a routerLink="/contact">
-                            <font color="black">contact</font>
-                        </a></li>
-                   
-                </ul>
-            </span>
-        </div>
-       
-       
-        <nav class="main-menu">
-            <div>
-               
-                <span class="px-3"><a routerLink="/home">
-                        <font color="black">Home</font>
-                    </a></span>
-                <span class="px-3 "><a routerLink="/games">
-                        <font color="black">Games</font>
-                    </a></span>
-                <span class="px-3 "><a routerLink="/contact">
-                        <font color="black">Contact</font>
-                    </a></span>
-                
-            </div>
-
-        </nav> -->
-
-    <!-- </div> -->
-
 </header>
