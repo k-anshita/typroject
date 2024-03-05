@@ -26,6 +26,8 @@ import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
 import { ConnectfourComponent } from './connectfour/connectfour.component';
 import { PlaypageComponent } from './playpage/playpage.component';
+import { PaymentComponent } from './payment/payment.component';
+import { OtpComponent } from './otp/otp.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -50,8 +52,9 @@ const routes: Routes = [
   { path: 'towerofhanoi', component: TowerofhanoiComponent, canActivate: [AuthGuard] },
   { path: 'stackcube', component: StackcubeComponent, canActivate: [AuthGuard] },
   { path: 'connectfour', component: ConnectfourComponent, canActivate: [AuthGuard] },
-  { path: 'playpage', component: PlaypageComponent }
-
+  { path: 'playpage', component: PlaypageComponent },
+  {path:'payment',component:PaymentComponent},
+  {path:'otp',component:OtpComponent},
 ];
 
 @NgModule({

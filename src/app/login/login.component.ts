@@ -16,7 +16,8 @@ export class LoginComponent {
   data: any[] = [];
   // data1: any[] = [];
   update_data?: any;
-  // router?:any
+  isUserNameValid: boolean = true;
+  isPAsswordValid: boolean = true;
 
   // add() {
   //   var logindetail = localStorage.getItem('userDetail')
@@ -73,6 +74,5 @@ export class LoginComponent {
       this.password = '';
     }
   }
-
 
 }

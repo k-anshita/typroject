@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-chess',
@@ -64,8 +65,8 @@ constructor(private toastr: ToastrService,private authService: AuthService){}
     }else{
       this.per=(this.same_number/this.count)*100
       this.percentage=Math.floor(this.per)
-      this.toastr.warning('YOU ARE'+this.percentage+ '%COMPLETE!');
-
+      // this.toastr.warning('YOU ARE'+this.percentage+ '%COMPLETE!');
+      Swal.fire('YOU ARE'+ this.percentage+ '%COMPLETE!');
        this.randomValues = []
       this.findstring = ''
       this.randomno = undefined
