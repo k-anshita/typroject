@@ -8,6 +8,12 @@ img {
     box-shadow: 0px 0px 12px 4px #000000a3;
 }
 
+.btns{
+    position: absolute;
+    bottom: 20%;
+    left: 47%;
+}
+
 .btns button {
     color: #fff !important;
     text-transform: uppercase;
@@ -21,8 +27,8 @@ img {
     padding: 10px;
     background: #494949a3;
     color: white;
-
-}
+    width: 100px;
+  }
 
 p {
     color: #fdeff9;
@@ -82,11 +88,6 @@ p {
     padding-right: 50px;
 }
 
-.btns{
-    position: absolute;
-    bottom: 30%;
-    left: 47%;
-}
 .back-btn{
     padding: 0px;
     display: inline-block;
