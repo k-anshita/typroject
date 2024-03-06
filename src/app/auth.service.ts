@@ -89,4 +89,18 @@ export class AuthService {
       obj,
     );
   }
+
+  email(obj: any) {
+    return this.http.post<any>(
+      this.apiUrl + '/otp/otp',
+      obj
+    )
+  }
+
+  payment(obj: any) {
+    return this.http.post<any>(
+      this.apiUrl + '/payment/payment',
+      obj
+    )
+  }
 }
