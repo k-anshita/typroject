@@ -1,28 +1,33 @@
-<p>otp works!</p>
 <div class="mid">
-    <div class="container">
+  <p class="title">SUBSCRIBE NOW</p>
+  <div class="container">
+
+    <div class="otp-form">
       <form #myForm="ngForm">
-    <div>
-        <input type="email" id="email" name="email" [(ngModel)]="email" required>
-                    <div *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
-                        Email is required.
-                      </div>
-                      <div *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)">
-                        Invalid email format.
-                      </div>
-                  
-      <button (click)="sendOTP()" class="btn">Send OTP</button>
+        <div>
+          <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Enter Your email" required>
+          <div class="alt"
+            *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
+           <p> *Email is required.</p>
+          </div>
+          <div class="alt" *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)">
+            <p>*Invalid email format.</p>
+          </div>
+          <div class="btnotp">
+            <button (click)="sendOTP()" class="btn">Send OTP</button>
+          </div>
+        </div>
+        <div *ngIf="otpSent">
+          <input type="text" [(ngModel)]="otpCode" name="otpCode" placeholder="Enter OTP">
+          <div class="btnverify">
+            <button (click)="verifyOTP()" class="btn">Verify OTP</button>
+          </div>
+        </div>
+        <div *ngIf="verificationStatus">{{ verificationStatus }}</div>
+        <div>
+          <button (click)="clickme()" class="btn">next</button>
+        </div>
+      </form>
     </div>
-    <div *ngIf="otpSent">
-      <input type="text" [(ngModel)]="otpCode" name="otpCode" placeholder="Enter OTP">
-      <button (click)="verifyOTP()">Verify OTP</button>
-    </div>
-    <div *ngIf="verificationStatus">{{ verificationStatus }}</div>
-    <div>
-    <button (click)="clickme()" class="btn">next</button>
-    </div>
-    </form>
-    </div>
-    </div>
-    
-    
+  </div>
+</div>

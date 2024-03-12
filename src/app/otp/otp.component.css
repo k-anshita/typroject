@@ -1,41 +1,105 @@
 .mid{
-    background-image: url("../../assets/back_img.jpg");
+    background-image: url("../../assets/3513217.jpg");
     background-size: cover;
     height: 650px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .container{
- align-items: center;
+ /* align-items: center;
   position: absolute;
   justify-content: center;
   top:50%;
   left: 50%;
-  max-width: 300px;
-  padding: 16px;
-  background-color: white;
+  max-width: 300px; */
+ 
 }
-/* Full-width input fields */
+.title{
+  font-family:'Open Sans';
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  transition: .5s;
+ /* margin-top: 150px; */
+}
+.title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.title:hover::before {
+  transform: scale(1.1);
+}
+
+.title:hover {
+  color: #ffe310; 
+  text-shadow: 0 0 10px #ffee10;
+}
+.otp-form{
+  /* padding: 50px;
+  margin-top:10px; */
+  padding: 20px;
+  margin: auto;
+  background-color: #363da4;
+  border-radius: 10px;
+  width: 50%;
+}
+
 input{
 
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  input[type=email]:focus{
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit button */
-  .btn {
-    background-color: #04AA6D;
+  margin-bottom: 35px;
+    background-color: #363da4;
     color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.9;
+    border-radius: 80px;
+    border: 3px solid #4085cb;
+    padding: 10px;
+    margin: 15px;
+    width: 75%;
   }
+  input::placeholder {
+    color: rgb(215, 203, 203);
+    font-weight: 100;
+}
   
+  input:focus{
+    outline: none;
+    background-color: white;
+    color: black;
+  }
+
+  .btn {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #200b5094;
+    padding: 10px 20px;
+    border-radius: 35px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .btn:hover{
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
+    border: none;
+}
+.alt p{
+  color: red;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 65px;
+}
