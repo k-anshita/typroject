@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, } from '@angular/platform-browser';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,6 @@ import Swal from 'sweetalert2';
 import { PlaypageComponent } from './playpage/playpage.component';
 import { PaymentComponent } from './payment/payment.component';
 import { OtpComponent } from './otp/otp.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,6 +81,7 @@ import { OtpComponent } from './otp/otp.component';
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
     }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

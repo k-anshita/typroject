@@ -22,8 +22,8 @@
       </ul>
     </div>
       <div><p><i class='fas fa-clock'></i>{{ timer }}</p></div>
-      <div *ngIf="isGameWon && timer < totalTime" class="game-over">Congratulations! You found all the words in {{ timer }} seconds!</div>
-      <div *ngIf="!isGameWon && timer >= totalTime" class="game-over">Time's up! You did not find all the words in time.</div>
+      <div *ngIf="isGameWon && timer > totalTime" class="game-over">Congratulations! You found all the words in {{ timer }} seconds!</div>
+      <div *ngIf="!isGameWon && timer <= totalTime" class="game-over">Time's up! You did not find all the words in time.</div>
     </div>
     <button (click)="resetGame()" class="reset-button">Reset Game</button>
   </div>

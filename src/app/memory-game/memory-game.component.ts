@@ -19,10 +19,10 @@ export class MemoryGameComponent {
   flippedCards: number[] = [];
   readonly symbols: string[] = ['🐱', '🐶', '🐰', '🐼', '🦊', '🐵', '🐸', '🐷'];
   matchedPairs: number = 0;
-  timer: number = 0;
+  timer: number = 40;
   timer$: Observable<number>|undefined;
   timerSubscription: Subscription|undefined;
-  maxTime: number = 40; // Maximum time allowed in seconds
+  maxTime: number = 0; // Maximum time allowed in seconds
 
   constructor() {
     this.resetGame();
@@ -30,8 +30,8 @@ export class MemoryGameComponent {
 
   ngOnInit() {
     this.timer$ = interval(1000).pipe(
-      map(() => ++this.timer),
-      takeWhile(() => this.timer <= this.maxTime)
+      map(() => --this.timer),
+      takeWhile(() => this.timer >= this.maxTime)
     );
 
     this.timerSubscription = this.timer$.subscribe({
@@ -54,17 +54,16 @@ export class MemoryGameComponent {
     this.cards = [];
     this.flippedCards = [];
     this.matchedPairs = 0;
-    this.timer = 0;
     const shuffledSymbols = this.shuffle([...this.symbols, ...this.symbols]);
-
     for (const symbol of shuffledSymbols) {
       this.cards.push({ value: symbol, flipped: false, matched: false });
     }
+    
   }
 
   startTimer() {
-    // Timer starts automatically with ngOnInit and timer$ observable
-  }
+  }// Timer starts automatically with ngOnInit and timer$ observable
+  
 
   shuffle(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -99,7 +98,6 @@ export class MemoryGameComponent {
             this.matchedPairs += 1;
             if (this.isGameWon()) {
               Swal.fire('Congratulations! You win!');
-              this.resetGame();
             }
           } else {
             this.cards[this.flippedCards[0]].flipped = false;
