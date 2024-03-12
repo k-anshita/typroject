@@ -1,11 +1,8 @@
-import { JsonPipe } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../auth.service';
-import { NgForm } from '@angular/forms';
-
+import { MatTooltip } from '@angular/material/tooltip';
 // Custom validator function
 
 @Component({

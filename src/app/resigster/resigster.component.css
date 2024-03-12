@@ -6,7 +6,7 @@
     input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
-
+    
     .bg-img {
         background-image: url(/assets/3513217.jpg);
         background-size: cover;

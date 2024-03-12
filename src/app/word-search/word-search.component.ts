@@ -12,9 +12,9 @@ export class WordSearchComponent {
   foundWords: Set<string> = new Set();
   selectedLetters: string[] = [];
   isGameWon: boolean = false;
-  timer: number = 0;
+  timer: number = 30;
   intervalId: any;
-  totalTime: number = 10; // Total time in seconds (3 minutes)
+  totalTime: number = 0; // Total time in seconds (3 minutes)
   gameOver: boolean = false;
 
   constructor() { }
@@ -143,12 +143,16 @@ export class WordSearchComponent {
   }
 
   startTimer() {
+    this.timer=30;
+    this.totalTime=0;
     this.intervalId = setInterval(() => {
-      this.timer++;
-      if (this.timer >= this.totalTime) {
+      this.timer--;
+
+      if (this.timer <= this.totalTime) {
         this.stopTimer();
         if (!this.isGameWon) {
-          this.gameOver = true; // Game is over if the timer runs out and all words are not found
+          this.gameOver = true;
+          this.stopTimer();// Game is over if the timer runs out and all words are not found
         }
       }
     }, 1000);
