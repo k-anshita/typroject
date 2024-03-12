@@ -32,7 +32,7 @@
                     </div>
                     <div class="inputBox">
                         <span>exp month :</span>
-                        <input type="number" placeholder="01-12" id="expiryMonth" name="expiryMonth" ngModel min="1" max="12" required>
+                        <input type="number" placeholder="01-12" id="expiryMonth" name="expiryMonth" [(ngModel)]="expMonth" min="1" max="12" required>
         <div *ngIf="myForm.controls['expiryMonth'].touched && myForm.controls['expiryMonth'].dirty">
           <div *ngIf="myForm.controls['expiryMonth'].errors?.['required']">Expiry month is required.</div>
           <div *ngIf="myForm.controls['expiryMonth'].errors?.['min'] || myForm.controls['expiryMonth'].errors?.['max']">Invalid expiry month. Please enter a month between 1 and 12.</div>
@@ -42,12 +42,12 @@
                     <div class="flex">
                         <div class="inputBox">
                             <span>exp year :</span>
-                            <input type="text" placeholder="2024" name="expiryYear" [(ngModel)]="expiryYear" required>
+                            <input type="text" placeholder="2024" name="expiryYear" [(ngModel)]="expYear" required>
                             <div *ngIf="(myForm.controls['expiryYear'].dirty || myForm.controls['expiryYear'].touched)">
                               <div *ngIf="myForm.controls['expiryYear'].errors?.['required']">
                                 Expiry year is required.
                               </div>
-                              <div *ngIf="expiryYear !== '' && !isValidExpiryYear()">
+                              <div *ngIf="expYear !== '' && !isValidExpiryYear()">
                                 Invalid expiry year.
                               </div>
                             </div>
