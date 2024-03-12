@@ -1,20 +1,17 @@
 <div class="container-fluid">
 
-    <div class="container">
-    
-    
-    
-        <form action="post" #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <!-- <div class="container"> -->
+      <form action="post" #myForm="ngForm" (ngSubmit)="onSubmit()">
           
             <div class="row">
-              <img src="./assets/img.png" height="400" width="300">
+              <img src="./assets/21861.jpg" height="600" width="300">
                 <div class="col">
     
                     <h3 class="title">payment</h3>
     
                     <div class="inputBox">
                         <span>cards accepted :</span>
-                        <img src="./assets/card_img.png" alt="">
+                        <img src="./assets/img.png" alt="">
                     </div>
                     <div class="inputBox">
                         <span>name on card :</span>
@@ -76,10 +73,10 @@
         
             </div>
     
-            <button type="submit" [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" value="proceed to checkout" >Sumit</button>
+            <button type="submit" class="btn" [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" value="proceed to checkout" >payment</button>
     
         </form>
-    </div>
+    <!-- </div> -->
     </div>
     
         
