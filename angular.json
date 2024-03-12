@@ -25,11 +25,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-              "@angular/material/prebuilt-themes/pink-bluegrey.css",
-=======
-              "@angular/material/prebuilt-themes/indigo-pink.css",
->>>>>>> fc2ec6b7332c6c28d272227e0240958a299a50f3
+              
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/fontawesome-free/css/all.min.css"
@@ -94,11 +90,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-              "@angular/material/prebuilt-themes/pink-bluegrey.css",
-=======
-              "@angular/material/prebuilt-themes/indigo-pink.css",
->>>>>>> fc2ec6b7332c6c28d272227e0240958a299a50f3
+             
               "src/styles.css"
             ],
             "scripts": []

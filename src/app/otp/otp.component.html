@@ -23,7 +23,7 @@
             <button (click)="verifyOTP()" class="btn">Verify OTP</button>
           </div>
         </div>
-        <div *ngIf="verificationStatus">{{ verificationStatus }}</div>
+        <div class="vmsg" *ngIf="verificationStatus"><p>{{ verificationStatus }}</p></div>
         <div>
           <button (click)="clickme()" class="btn">next</button>
         </div>
