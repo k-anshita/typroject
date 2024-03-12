@@ -8,27 +8,43 @@ body{
   user-select: none;
     overflow:hidden;
   }
-  /*hide checkbox*/
+  .back-btn{
+    padding: 0px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    border: none;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: 5;
+}
+.fa-arrow-circle-left{
+  font-size: 70px;
+}
   input{position:fixed; left:-10px; top:-10px;}
   
   h1{margin:0; text-align:center;}
   h2{position:fixed; right:20px; bottom:0; font-size:18px; color:red;}
   
-  /*play area*/
+
   .wrapper{  
     height:500px;
     background: -webkit-linear-gradient(top, hsla(210,70%,80%,1) 0%,hsla(210,50%,100%,1) 100%);
     position:relative;
     cursor:crosshair;
+    /* z-index: -1; */
   }
-  /*count dead birds*/
+.container-fluild{
+  padding-top: 100px;
+}
   .input-circle:checked{
     counter-increment:birds;
   }
   
-  .sum{position:fixed; left:45%; top:60px; font-size:24px; fonot-weight:bold;}
+  .sum{position:absolute; left:45%; top:15%; font-size:24px; font-weight:bold;}
   
-  /*print to screen dead birds*/
   .sum:after{
     content: counter(birds);
   }
@@ -115,7 +131,9 @@ body{
   
   .timer{
     background-color:#333; width:300px;height:50px;
-    position:fixed;
+    position:absolute;
+    display: inline-block;
+    z-index: 3;
   }
   
   
@@ -146,11 +164,24 @@ body{
   
   
   .gameover{
-    position:fixed; z-index:100000; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.8);
+    position:fixed;  left:0; top:0; bottom:0; right:0; 
+    background-color:rgba(0,0,0,0.8);
     animation:gameover 20s linear forwards;
     font-size:80px; color:white; font-weight:bold; text-align:center; 
     text-indent:0;  
     line-height:500px;
+    z-index: 4;
+    /* margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 50%;
+    height: auto;
+    background-color: #14efe1;
+    color: white;
+    font-weight: 800;
+    font-size: 100px;
+    animation:gameover 20s linear forwards; */
   }
   
   @keyframes gameover{

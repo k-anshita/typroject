@@ -1,7 +1,7 @@
 <div class="container-fluild main-bg">
  
   <div *ngIf="this.per==100">
-    <img class="animation" src="./assets/1239451_ce1e2.gif">
+    <img class="animation" src="./assets/gamepage_back.gif">
   </div>
   <div class="btns">
     <button><a routerLink="/games">
@@ -9,13 +9,10 @@
       </a></button>
     <button (click)="fillRandom((activebutton=true));nocount()" [disabled]="disabled">Fill random</button>
   
-    <!-- <button (click)="nocount()">Count</button> -->
-    <!-- <div *ngIf="count">{{count}}</div>  -->
     <button (click)="reset()">RESET</button><br>
     <p style="color: white;font-size: 30px;">{{findstring}}{{randomno}}</p>
     <div style="color: white;font-size: 25px;" *ngIf="minus_count">{{minus_count}}</div>
-    <!-- <div>you are{{per}} compeleted</div> -->
-    <!-- <div>{{same_number}}</div> -->
+  
   </div>
   <div class="board">
     <ng-container *ngFor="let row of getvalue;let i = index">

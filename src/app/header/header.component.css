@@ -3,25 +3,31 @@
 
 .header {
   background:rgba(0, 0,0, 0.2);
-  /* overflow: hidden; */
   padding: 10px 0;
   position: absolute;
   width: 100%;
   z-index: 1;
-  /* border-bottom: 1px solid #ffb320; */
 }
-
+ .header-social-media {
+  align-items: center;
+  display: flex;
+  padding-left: 20px;
+}
+ .header-social-media .fab {
+  font-size: 20px;
+  margin-right: 22px;
+  color: #0397b1;
+}
+ .header-social-media a {
+  text-decoration: none;
+}
 .header_element {
   float: right;
   color: white;
 }
-.header-text{
-  display: inline-block;
-}
 li {
   padding: 4px;
   margin-left: 10px;
-  /* display:inline-block; */
 }
 .user-icon{
   color:white;
@@ -29,40 +35,11 @@ li {
 .dropdown-toggle::after{
   color: white;
 }
-.game_logo {
-  display: inline-block;
-  /* float: left; */
-  padding-top: 6px;
-}
-
 #user_selectionbox {
   cursor: pointer;
 }
-
-.users_login {
-  float: right;
-  font-weight: 500;
-  background:#64CCC5;
-  padding: 8px 28px;
-  border-radius: 30px;
-}
-
-.main-menu {
-  float: right;
-  margin-right: 150px;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-top: 8px;
-  /* padding: 8px 28px; */
-}
-navbar-toggler-icon.close {
+.navbar-toggler-icon.close {
   background-color: black;
-}
-.nav-icon {
-  display: none;
-  float: right;
-  color: white;
 }
 .header-lining {
   padding: 15px 30px;

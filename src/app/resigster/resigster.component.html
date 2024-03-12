@@ -6,16 +6,16 @@
                 <div class="col-md-6 form-group">
                     <input type="text" class="form-control" placeholder="enter your firstName here.." id="firstName"
                         name="firstName" [(ngModel)]="firstname" (ngModelChange)="validateFirstName($event)" required>
-                    <div *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched" class="alert alert-danger">
+                    <p  *ngIf="!isFirstNameValid && myForm.controls['firstName'].touched" id="alert">
                         First Name is required and must contain only letters.
-                    </div>
+                    </p>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                     <input type="text" placeholder="enter Your lastName here.." id="lastName" name="lastName"
                         class="form-control" [(ngModel)]="lastname" (ngModelChange)="validateLastName($event)" required>
-                    <div *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" class="alert alert-danger">
+                    <p *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" id="alert">
                         Last Name is required and must contain only letters.
-                    </div>
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -28,9 +28,9 @@
                 <div class="col-md-6 form-group  mt-3 mt-md-0 ">
                     <input type="date" id="dob" name="dob" [(ngModel)]="date" required [max]="maxDate"
                         class="form-control input_bg">
-                    <div *ngIf="date && calculateAge(date) < 5" class="alert alert-danger">
+                    <p *ngIf="date && calculateAge(date) < 5" id="alert">
                         Age must be greater than or equal to 5 years.
-                    </div>
+                    </p>
                 </div>
             </div>
             <!-- <div class="form-group mt-3">
@@ -40,7 +40,7 @@
                 <div class="col-md-6 form-group">
                     <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" placeholder="enter your email here.." required>
                     <p
-                        *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']">
+                        *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']" id="alert">
                         Email is required.
                 </p>
                     <p *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)" id="alert">
@@ -49,14 +49,22 @@
 
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="text" name="uname" class="form-control res-group" value="" [(ngModel)]="username"
+                    <input type="text" name="username" id="username"class="form-control res-group" value="" [(ngModel)]="username"
                         class="form-control" placeholder="enter your username" required>
+                        <p
+                        *ngIf="myForm.controls['username'].touched && myForm.controls['username'].dirty && myForm.controls['username'].errors?.['required']" id="alert">
+                        username is required.
+                </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <input type="password" name="pwd" class="form-control res-group" value="" [(ngModel)]="password"
+                    <input type="password" name="password" id="password" class="form-control res-group" value="" [(ngModel)]="password"
                         class="form-control" placeholder="enter your password" required>
+                        <p
+                        *ngIf="myForm.controls['password'].touched && myForm.controls['password'].dirty && myForm.controls['password'].errors?.['required']" id="alert">
+                        password is required.
+                </p>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                     <input type="password" class="form-control res-group" name="confirmPassword" id="confirmPassword" value=""
