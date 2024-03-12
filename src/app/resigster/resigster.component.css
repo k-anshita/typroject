@@ -6,7 +6,7 @@
     input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
-
+    
     .bg-img {
         background-image: url(/assets/3513217.jpg);
         background-size: cover;
@@ -81,6 +81,8 @@
     padding: 0;
     font-size: 15px;
 }
+
+
     .btn {
         color: #fff !important;
         text-transform: uppercase;
@@ -154,3 +156,5 @@
         height: 100vw;
     } */
     }
+
+    
