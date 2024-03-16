@@ -25,8 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/legacy-prebuilt-themes/legacy-pink-bluegrey.css",
-              "src/styles.css",
+                     "src/styles.css",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/fontawesome-free/css/all.min.css"
             ],
