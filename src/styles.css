@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-toastr/toastr';
+/* styles.css */
+
+@import '@angular/material/theming';
+
+
+
+
+
+
 /* @import 'ngx-toastr/toastr-bs4-alert';
 
 
