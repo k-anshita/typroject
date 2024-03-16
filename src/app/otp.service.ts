@@ -40,7 +40,7 @@ export class OtpService {
     setTimeout(() => {
       const isCorrect = otpCode === this.correctOTP;
       this.otpVerificationSubject.next(isCorrect);
-    }, 1000); // Simulate delay
+    }, 10); // Simulate delay
 
     return this.otpVerificationSubject.asObservable();
   }
