@@ -70,8 +70,8 @@ export class LoginComponent {
         //   this.toastr.error('login cancel!please try again')
         // }
       // }
-      this.username = '';
-      this.password = '';
+      // this.username = '';
+      // this.password = '';
     }
   }
 
