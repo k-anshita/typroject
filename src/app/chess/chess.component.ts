@@ -60,7 +60,7 @@ constructor(private toastr: ToastrService,private authService: AuthService){}
     if(this.count==this.same_number){
       this.per=(this.same_number/this.count)*100
       this.percentage=Math.floor(this.per)
-      this.toastr.success('YOU ARE'+this.percentage+ '%COMPLETE!');
+      Swal.fire('YOU ARE'+this.percentage+ '%COMPLETE!');
       
     }else{
       this.per=(this.same_number/this.count)*100
