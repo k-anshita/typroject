@@ -1,16 +1,19 @@
-.container {
+.container-fluid {
   background-size: cover;
     text-align: center;
     background-image: url('../../assets/image.png');
     background-repeat: no-repeat;
-    height: 700px;
-    width: 2000px;
+   width: 100%;
+   height: 100vh;
   }
  
   .tt{
     color: whitesmoke;
     position: relative;
     top: 20%;
+    /* padding-top: 130px;
+    margin-bottom: 20px; */
+    
   }
   .grid {
     display:flex;
@@ -26,9 +29,10 @@
   .button{
     position: absolute;
     top: 40%;
-    left: 12%;
+    left: 10%;
     height: 7%;
-    width: 9%;
+    width: 10%;
+    /* margin-top: 25px; */
     border: 4px solid #8685aa;
     background-color: #2a2325;
     color: #cccc;
