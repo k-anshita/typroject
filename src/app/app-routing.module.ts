@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'home', component: HomepageComponent },
   { path: 'main', component: MainpageComponent, canActivate: [AuthGuard] },
-  { path: 'chess', component: ChessComponent },
+  { path: 'chess', component: ChessComponent, canActivate: [AuthGuard] },
   { path: 'tic-toe', component: TicToeComponent, canActivate: [AuthGuard] },
   { path: 'card', component: CardComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
@@ -44,8 +44,8 @@ const routes: Routes = [
   { path: 'randomreport', component: RandomreportComponent, canActivate: [AuthGuard] },
   { path: 'ticreport', component: TicreportComponent },
   { path: 'memorygame', component: MemoryGameComponent, canActivate: [AuthGuard] },
-  { path: 'RPS', component: RPSComponent },
-  { path: 'sudoku', component: SudokuComponent, canActivate: [AuthGuard] },
+  { path: 'RPS', component: RPSComponent, canActivate: [AuthGuard] },
+  { path: 'sudoku', component: SudokuComponent },
   { path: 'whack-a-mole', component: WhackAMoleComponent, canActivate: [AuthGuard] },
   { path: 'wordsearch', component: WordSearchComponent, canActivate: [AuthGuard] },
   { path: 'killthebirds', component: KillthebirdsComponent, canActivate: [AuthGuard] },
@@ -53,8 +53,8 @@ const routes: Routes = [
   { path: 'stackcube', component: StackcubeComponent, canActivate: [AuthGuard] },
   { path: 'connectfour', component: ConnectfourComponent, canActivate: [AuthGuard] },
   { path: 'playpage', component: PlaypageComponent },
-  {path:'payment',component:PaymentComponent},
-  {path:'otp',component:OtpComponent},
+  { path: 'payment', component: PaymentComponent },
+  { path: 'otp', component: OtpComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
