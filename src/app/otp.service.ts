@@ -10,7 +10,12 @@ export class OtpService {
   private correctOTP: any; // Store the correct OTP
   private otpVerificationSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor() { }
+  constructor() {
+    const status = localStorage.getItem('paymentStatus');
+    if (status !== null) {
+      this.paymentSuccessful = status === 'true';
+    }
+  }
 
   sendOTP(email: string): Promise<void> {
     // Generate OTP
@@ -54,5 +59,17 @@ export class OtpService {
     }
     return otp;
   }
+  private paymentSuccessful: boolean = false;
+
+  setPaymentStatus(status: boolean) {
+    this.paymentSuccessful = status;
+    localStorage.setItem('paymentStatus', status.toString());
+  
+  }
+
+  getPaymentStatus(): boolean {
+    return this.paymentSuccessful;
+  }
 }
+
 

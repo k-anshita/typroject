@@ -20,7 +20,7 @@ import { RPSComponent } from './rps/rps.component';
 import { SudokuComponent } from './sudoku/sudoku.component';
 import { WhackAMoleComponent } from './whack-a-mole/whack-a-mole.component';
 import { WordSearchComponent } from './word-search/word-search.component';
-
+import { PaymentguardGuard } from './paymentguard.guard';
 import { KillthebirdsComponent } from './killthebirds/killthebirds.component';
 import { TowerofhanoiComponent } from './towerofhanoi/towerofhanoi.component';
 import { StackcubeComponent } from './stackcube/stackcube.component';
@@ -50,7 +50,7 @@ const routes: Routes = [
   { path: 'wordsearch', component: WordSearchComponent, canActivate: [AuthGuard] },
   { path: 'killthebirds', component: KillthebirdsComponent, canActivate: [AuthGuard] },
   { path: 'towerofhanoi', component: TowerofhanoiComponent, canActivate: [AuthGuard] },
-  { path: 'stackcube', component: StackcubeComponent, canActivate: [AuthGuard] },
+  { path: 'stackcube', component: StackcubeComponent, canActivate: [PaymentguardGuard] },
   { path: 'connectfour', component: ConnectfourComponent, canActivate: [AuthGuard] },
   { path: 'playpage', component: PlaypageComponent },
   {path:'payment',component:PaymentComponent},

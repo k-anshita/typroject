@@ -25,6 +25,17 @@
   display: flex;
   justify-content: center;
 }
+/* .accordion-btn{
+  width: 100%;
+  background-color: #363da4;
+  border-radius: 0px;
+  color: white;
+  margin-top: 25px; */
+/* } */
+.accordion-btn:hover,.accordion-btn:focus{
+  box-shadow: none;
+
+}
 /* .container{
   display: flex;
   justify-content: center;
