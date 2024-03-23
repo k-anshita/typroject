@@ -95,61 +95,13 @@ a:hover {
         top: 110px;
         width: -webkit-fill-available;
     }
-
-    .bg-img {
-        height: 480px;
+    .title{
+        font-size: 35px;
     }
-
 }
 
-@media screen and (max-width:480px) {}
-
-/* .bg-img {
-        width: 100vw;
-        height: 63vw;
+@media screen and (max-width:480px) {
+    .title{
+        font-size: 30px;
     }
-
-    .container {
-        width: 450px;
-        right: 20;
-        top: 130px;
-        left: 25%;
-    } */
-
-
-/* @media screen and (max-width:570px){
-    .bg-img{
-        width:100vw;
-        height:100vw;
-    }
-    .container{
-        width:100%;
-        right:0;
-    }
-} */
-
-/* @media screen and (max-width:800px) {
-    .bg-img {
-        width: 100vw;
-        height: 70vw;
-    }
-
-    .container {
-        width: 50%;
-        /* right:0; */
-
-
-
-/* @media screen and (max-width:500px){
-    .bg-img{
-        width:100vw;
-        height:100vw;
-    }
-    .container{
-        width:100%;
-        right:0;
-        left:0;
-        top:0%;
-        padding:0px;
-    }
-} */
+}

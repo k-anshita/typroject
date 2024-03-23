@@ -123,6 +123,9 @@ body{
       padding: 40px 0px;
     
 }
+.subscription .sub-part h3{
+    font-size: 30px;
+}
 .subscription .sub-part .s-button .btnsub{
     padding: 10px;
     border: none;

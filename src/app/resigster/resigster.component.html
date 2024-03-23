@@ -10,7 +10,7 @@
                         First Name is required and must contain only letters.
                     </p>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
+                <div class="col-md-6 form-group mt-3 mt-sm-0">
                     <input type="text" placeholder="enter Your lastName here.." id="lastName" name="lastName"
                         class="form-control" [(ngModel)]="lastname" (ngModelChange)="validateLastName($event)" required>
                     <p *ngIf="!isLastNameValid && myForm.controls['lastName'].touched" id="alert">
@@ -25,7 +25,7 @@
                         <input type="radio" name="gender" class="female" value="female" [(ngModel)]="gender">female
                     </div>
                 </div>
-                <div class="col-md-6 form-group  mt-3 mt-md-0 ">
+                <div class="col-md-6 form-group  mt-3 mt-sm-0 ">
                     <input type="date" id="dob" name="dob" [(ngModel)]="date" required [max]="maxDate"
                         class="form-control input_bg">
                     <p *ngIf="date && calculateAge(date) < 5" id="alert">
@@ -48,7 +48,7 @@
                     </p>
 
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
+                <div class="col-md-6 form-group mt-3 mt-sm-0">
                     <input type="text" name="username" id="username"class="form-control res-group" value="" [(ngModel)]="username"
                         class="form-control" placeholder="enter your username" required>
                         <p
@@ -66,7 +66,7 @@
                         password is required.
                 </p>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
+                <div class="col-md-6 form-group mt-3 mt-sm-0">
                     <input type="password" class="form-control res-group" name="confirmPassword" id="confirmPassword" value=""
                         [(ngModel)]="confirmPassword" placeholder="confirm your password" required>
                         <p

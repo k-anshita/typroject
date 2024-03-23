@@ -25,7 +25,7 @@ body {
     font-size: 60px;
     font-weight: 700;
     color: white;
-    margin: 0px;
+    margin-bottom: 30px;
 }
 
 .title:hover {
@@ -168,7 +168,9 @@ button {
     text-align: center;
     margin-bottom: 30px;
 }
-
+.feedback-lining h3 {
+    font-size: 27px;
+}
 .feedback-lining .feedback {
     display: flex;
     justify-content: center;
@@ -177,7 +179,7 @@ button {
 
 .feedback-lining .feedback .card {
     background-color: rgb(8 8 8 / 58%);
-    ;
+    
     color: white;
     padding: 20px;
     margin: 20px;
