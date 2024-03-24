@@ -7,12 +7,20 @@
       </div>
 </div>-->
 <div class="container-fluid">
-  <div *ngIf="showPaymentButton">
   
+  <div *ngIf="showPaymentButton">
+    <div class="title">
+      <h1>PAYMENT ONLINE</h1>
+     
+      <p> Unlock Premium Features: Gain access to exclusive game guides, walkthroughs, tips, and tricks crafted by seasoned gamers and industry experts.</p>
     <button class="pay-now-button" (click)="payNow()">Pay Now</button>
   </div>
+</div>
+  
+  <div class="content">
   <div *ngIf="!showPaymentButton" class="success-message">
     <i class="checkmark">✓</i><h1>Payment done successfully!</h1>
     <h1>YOU PAID RS.49</h1>
   </div>
+</div>
 </div>
