@@ -10,11 +10,12 @@ declare var Razorpay: any;
   selector: 'app-payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css'],
-  
+
 })
 export class PaymentComponent implements OnInit {
   showPaymentButton?: boolean;
-  constructor(private cdr: ChangeDetectorRef,private OtpService:OtpService) {}
+  data: any[] = [];
+  constructor(private cdr: ChangeDetectorRef, private OtpService: OtpService) { }
 
   ngOnInit() {
     // Retrieve the state of showPaymentButton from localStorage
@@ -41,7 +42,7 @@ export class PaymentComponent implements OnInit {
         this.paymentCallback(response);
       },
       modal: {
-        ondismiss:  () => {
+        ondismiss: () => {
           console.log('dismissed')
         }
       }
@@ -53,11 +54,22 @@ export class PaymentComponent implements OnInit {
   paymentCallback(response: any) {
     console.log('Payment successful:', response);
     this.showPaymentButton = false;
-    localStorage.setItem('showPaymentButton',JSON.stringify(this.showPaymentButton))
+    // localStorage.setItem('showPaymentButton',JSON.stringify(this.showPaymentButton))
     this.cdr.detectChanges();
+    const detail = localStorage.getItem('loginuser')
+    this.data = JSON.parse(detail || '[]') || [];
+
+    // const loginuserinfo = this.data.find(x => x.username == this.username && x.password == this.password)
+    // if (loginuserinfo) {
+    // this.router.navigate(['/main'])
+   
+
+      
+      localStorage.setItem('loginuser', JSON.stringify(this.data) || '')
+    
     
   this.OtpService.setPaymentStatus(true);
-  
+
     Swal.fire({
       title: 'Payment successful',
       text: 'Thank you for your payment!',
