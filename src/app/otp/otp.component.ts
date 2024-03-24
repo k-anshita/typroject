@@ -54,19 +54,20 @@ export class OtpComponent {
         if (isCorrect) {
           this.verificationStatus = 'OTP Verified successfully!';
           this.abc = isCorrect;
+          this.router.navigate(['/payment']);
         } else {
           this.verificationStatus = 'Invalid OTP!';
         }
       });
   }
-  clickme() {
-    if (this.verificationStatus == 'OTP Verified successfully!') {
-      this.router.navigate(['/payment']);
-    }
+  // clickme() {
+  //   if (this.verificationStatus == 'OTP Verified successfully!') {
+  //     this.router.navigate(['/payment']);
+  //   }
 
 
 
-  }
+  // }
 }
 
 

@@ -127,7 +127,7 @@ body{
     font-size: 30px;
 }
 .subscription .sub-part .s-button .btnsub{
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     color: white;
     background-color:  #1e0e4a;
@@ -193,15 +193,57 @@ footer .bottom {
     justify-content: center;
     align-items: center;
 }
-@media only screen and (max-width:800px){
-    
-    footer .top .center .navigation,
-footer .top .center .help-center,
-footer .top .center .legel-info {
-
-    width: 100%;
-    margin: 0px 30px;
-    text-align: center;
-}
-  
+@media only screen and (max-width:768px){
+    footer .top .center{
+        display: contents;
+    }
+    .center h2{
+        font-size: 20px;
+    }
+    .subscription .sub-part {
+        width: 60%;
+    }
+    .center li{
+        font-size: 16px;
+    }
+    footer .top .center .navigation, footer .top .center .help-center, footer .top .center .legel-info {
+        min-width: 115px;
+    }
+    .subscription .sub-part h3 {
+        font-size: 25px;
+    }
+    .subscription .sub-part .s-button .btnsub {
+        padding: 5px;
+    }
+    .subscription .sub-part .s-button input {
+        padding: 5px;
+    }
 } 
+@media only screen and (max-width:480px){
+    .center li{
+        font-size: 14px;
+    }
+    footer .top .center h2{
+        font-size: 16px;
+        border-bottom:1px solid #00f1ff;
+        display: inline;
+        padding-bottom: 5px;
+    }
+   footer .top{
+    display: contents;
+   }
+   .help-center ul ,.navigation ul ,.legel-info ul{
+        margin-top: 10px;
+   }
+   .s-button{
+    display: contents;
+   }
+   .subscription .sub-part .s-button .btnsub {
+    
+    font-size: 14px;
+}
+
+.subscription .sub-part .s-button input::placeholder{
+    font-size: 14px;
+}
+}

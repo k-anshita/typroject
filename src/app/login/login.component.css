@@ -8,7 +8,7 @@
 }
 
 .form-control {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     background-color: #363da4;
     color: white;
     border-radius: 80px;
@@ -42,8 +42,9 @@
 
 #alert {
     color: red;
-    padding: 0px;
-    margin: 0;
+    padding: 0px 10px;
+   
+    margin-bottom: 20px;
 }
 
 .btn {
@@ -76,6 +77,9 @@ a:hover {
     text-decoration: none;
 }
 
+.input:focus .form-control{
+    margin-bottom: 25px;
+}
 @media screen and (max-width:1199px) {
     .container {
         left: 31%;
@@ -86,6 +90,7 @@ a:hover {
     .container {
         left: 25%;
     }
+   
 }
 
 @media screen and (max-width:767px) {

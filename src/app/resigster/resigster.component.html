@@ -1,7 +1,7 @@
 <div class="bg-img">
     <div class="form1" method="post">
         <form #myForm="ngForm" (ngSubmit)="onSubmit()">
-            <h1 class="title">RESIGSTER</h1>
+            <h1 class="title">REGISTER</h1>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <input type="text" class="form-control" placeholder="enter your firstName here.." id="firstName"
@@ -76,7 +76,7 @@
                 </div>
 
             </div>
-            <button type="button" [disabled]="!myForm.valid" [class.enabled]="myForm.valid" class="btn btn-primary" (click)="add()" matTooltip="All fields are required,fill up them" [matTooltipDisabled]='myForm.valid'>REGISTER
+            <button type="button" [disabled]="!myForm.valid" [class.enabled]="myForm.valid" class="btn btn-primary" (click)="add()" >REGISTER
             </button>
         </form>
         <div style="text-align: center;">

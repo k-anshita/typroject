@@ -161,3 +161,75 @@ label{
     font-weight: 300;
     padding: 0px;
 }
+@media only screen and (max-width:991px){
+    .header{
+        width: 65%;
+    }
+    .faq-title{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+ 
+}
+@media only screen and (max-width:767px){
+    .title{
+        font-size: 35px;
+    }
+    .contact-lining{
+        padding-top: 130px;
+        padding-bottom: 75px;
+    }
+    .header{
+        width: 90%;
+    }
+    .faq-title{
+        font-size: 35px;
+        margin-bottom: 0px;
+    }
+    .accordtion{
+        padding:40px 20px;
+    }
+    .card{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:480px){
+.title{
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+    .content{
+        font-size: 14px;
+    }
+    .form p{
+        font-size: 14px;
+    }
+    input::placeholder{
+        font-size: 14px;
+    }
+    .form-control{
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    .contact-lining .btn{
+        width: 100%;
+        padding: 7px 20px;
+        font-size: 12px;
+    }
+    .contact-lining{
+        padding-bottom: 50px;
+    }
+    .faq-title{
+        font-size: 30px;
+    }
+    .card{
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    .accordtion-body{
+        margin-bottom: 27px;
+    }
+    .accordion-btn{
+        font-size: 14px;
+    }
+}

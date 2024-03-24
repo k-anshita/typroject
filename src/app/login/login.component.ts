@@ -39,7 +39,7 @@ export class LoginComponent {
 
   check() {
 
-    if (this.username == '') {
+    if (!String(this.username || '').trim()) {
       this.toastr.warning('please fill the username')
     } else if (this.password == '') {
       this.toastr.warning('please fill the password')
@@ -70,8 +70,8 @@ export class LoginComponent {
         //   this.toastr.error('login cancel!please try again')
         // }
       // }
-      this.username = '';
-      this.password = '';
+      // this.username = '';
+      // this.password = '';
     }
   }
 
