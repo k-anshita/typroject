@@ -7,14 +7,14 @@
   background-size: cover;
   width: 100%;
   height: auto;
-  padding: 100px 0px;
+  padding: 150px 0px;
   margin: auto;
   display: flex;
   justify-content: center;
 }
 /* Style for the button */
-.pay-now-button {
-  background-color:#7a2e9b; /* Green */
+/* .pay-now-button {
+  background-color:#7a2e9b; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -25,14 +25,33 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
+} */
+.pay-now-button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #200b50fa;
+  padding: 15px 30px;
+  border-radius: 35px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  margin-top: 20px;
+}
+
+.pay-now-button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+  border: none;
 }
 i {
-  color: #9ABC66;
+  color: white;
   font-size: 100px;
   line-height: 200px;
   margin-left:-15px;
   width: 200px;
-  border: 2px solid green;
+  border: 2px solid white;
   padding: 0px 35px 0px 20px;
   border-radius: 50%;
 }
@@ -40,19 +59,22 @@ i {
 /* Style for the success message container */
 .success-message {
   text-align: center;
-  background-color: white; 
+  background-color:#363da4 ;
+  border-radius: 20px;
   background-size: cover;
   width: 50%;
 }
 
 /* Style for the success message */
 .success-message h1 {
-  color: #4caf50; /* Green */
+  color: white; 
   font-size: 24px;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 40px;
 }
-
+.success-message h1:nth-child(2){
+  margin-bottom: 20px;
+}
 /* Optional: Add animation for the success message */
 .success-message h1 {
   animation-name: fadeInUp;
@@ -73,6 +95,14 @@ i {
     transform: translateY(0);
   }
 }
+@media screen and (max-width: 991px) {
+  .success-message{
+    width: 60%;
+  }
+  .container-fluid{
+    padding: 150px 0px 80px 0px;
+  }
+}
 @media screen and (max-width: 768px) {
   .pay-now-button {
     padding: 10px 20px;
@@ -82,9 +112,30 @@ i {
   .success-message h1 {
     font-size: 20px;
   }
+  .success-message{
+    width: 80%;
+  }
 }
 @media screen and (max-width: 750px) {
   .success-message{
     margin-top: 40px;
+  }}
+  @media screen and (max-width: 480px){
+    i {
+    
+      font-size: 60px;
+      line-height: 96px;
+      padding: 0px 28px 0px 20px;
+    
   }
-}
+  .success-message{
+    padding-top: 20px;
+  }
+  .success-message h1{
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .container-fluid{
+    padding: 110px 0px 80px 0px;
+  }
+  }
