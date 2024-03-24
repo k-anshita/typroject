@@ -31,13 +31,13 @@
         </a>
 
 
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" id="myTopnav"
+        <!-- <button type="button" class="navbar-toggler" data-bs-toggle="collapse" id="myTopnav"
             data-bs-target="#responsivenav" aria-controls="responsivenav" aria-expanded="false"
             aria-label="Toggle navigation">
             <span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
             <span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
             <span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         <div class="collapse navbar-collapse" id="responsivenav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link " routerLink="/home">Home</a></li>
@@ -67,6 +67,28 @@
                         <font color="black">Tic-Toe Report</font>
                     </a></li>-->
                     <li (click)="logout()" id="user_selectionbox">Log Out</li>
+                </ul>
+            </span>
+        </div>
+        <div class="nav-icon">
+            <span class="dropdown px-3">
+                <span class="dropdown-toggle" data-toggle="dropdown" id="user_selectionbox">
+                    <i class="fa fa-bars"></i>
+
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/home">
+                            <font color="white">Home</font>
+                        </a></li>
+                    <li><a routerLink="/games">
+                            <font color="white">Games</font>
+                        </a></li>
+                    <li><a routerLink="/playpage">
+                            <font color="white">How to play</font>
+                        </a></li>
+                        <li><a routerLink="/contact">
+                            <font color="white">contact</font>
+                        </a></li>
                 </ul>
             </span>
         </div>
