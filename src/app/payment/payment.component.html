@@ -1,83 +1,18 @@
+<!--<div class="container-fluid">
+<div *ngIf="showPaymentButton">
+        <button (click)="payNow()">Pay Now</button>
+      </div>
+      <div *ngIf="!showPaymentButton">
+        <h1>Payment done successfully!</h1>
+      </div>
+</div>-->
 <div class="container-fluid">
-
-    <!-- <div class="container"> -->
-      <form action="post" #myForm="ngForm" (ngSubmit)="onSubmit()">
-          
-            <div class="row">
-              <img src="./assets/21861.jpg" height="600" width="300">
-                <div class="col">
-    
-                    <h3 class="title">payment</h3>
-    
-                    <div class="inputBox">
-                        <span>cards accepted :</span>
-                        <img src="./assets/img.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>name on card :</span>
-                        <input type="text" placeholder="enter your card name" id="card" name="cardName" [(ngModel)]="cardName" (ngModelChange)="validatecardName($event)" required>
-                        <div *ngIf="myForm.controls['cardName'].touched">
-                            <div *ngIf="myForm.controls['cardName'].errors?.['required']">Credit card name is required.</div>
-                            <div *ngIf="!iscardNameValid">Credit card name must contain only letters</div>
-                        </div>
-                      
-                    </div>
-                    <div class="inputBox">
-                        <span>credit card number :</span>
-                        <input type="number" id="cardnum" name="cardnum" placeholder="1111-2222-3333-4444" [(ngModel)]="cardNumber" (ngModelChange)="validatecardnum($event)" required>
-                        <div *ngIf="myForm.controls['cardnum'].touched">
-                            <div *ngIf="myForm.controls['cardnum'].errors?.['required']">Credit card number is required.</div>
-                            <div *ngIf="!iscardnumvalid">Invalid credit card number. Please enter a 16-digit number.</div>
-                          </div>
-                    </div>
-                    <div class="inputBox">
-                        <span>exp month :</span>
-                        <input type="number" placeholder="01-12" id="expiryMonth" name="expiryMonth" [(ngModel)]="expMonth" min="1" max="12" required>
-        <div *ngIf="myForm.controls['expiryMonth'].touched && myForm.controls['expiryMonth'].dirty">
-          <div *ngIf="myForm.controls['expiryMonth'].errors?.['required']">Expiry month is required.</div>
-          <div *ngIf="myForm.controls['expiryMonth'].errors?.['min'] || myForm.controls['expiryMonth'].errors?.['max']">Invalid expiry month. Please enter a month between 1 and 12.</div>
-        </div>
-                    </div>
-    
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>exp year :</span>
-                            <input type="text" placeholder="2024" name="expiryYear" [(ngModel)]="expYear" required>
-                            <div *ngIf="(myForm.controls['expiryYear'].dirty || myForm.controls['expiryYear'].touched)">
-                              <div *ngIf="myForm.controls['expiryYear'].errors?.['required']">
-                                Expiry year is required.
-                              </div>
-                              <div *ngIf="expYear !== '' && !isValidExpiryYear()">
-                                Invalid expiry year.
-                              </div>
-                            </div>
-                        </div>
-    
-                        <div class="inputBox">
-                            <span>CVV :</span>
-                            <input type="text" placeholder="123" name="cvv" [(ngModel)]="cvv" required>
-    
-                            <div *ngIf=" (myForm.controls['cvv'].dirty || myForm.controls['cvv'].touched)">
-                                <div *ngIf="myForm.controls['cvv'].errors?.['required']">
-                                  CVV is required.
-                                </div>
-                                <div *ngIf="!validateCVV(cvv)">
-                                  Invalid CVV. It should be a 3-digit number.
-                                </div>
-                              </div>
-                            
-                        </div>
-                    </div>
-    
-                </div>
-        
-            </div>
-    
-            <button type="submit" class="btn" [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" value="proceed to checkout" >payment</button>
-    
-        </form>
-    <!-- </div> -->
-    </div>
-    
-        
-    
+  <div *ngIf="showPaymentButton">
+  
+    <button class="pay-now-button" (click)="payNow()">Pay Now</button>
+  </div>
+  <div *ngIf="!showPaymentButton" class="success-message">
+    <i class="checkmark">✓</i><h1>Payment done successfully!</h1>
+    <h1>YOU PAID RS.49</h1>
+  </div>
+</div>

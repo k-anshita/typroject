@@ -129,82 +129,46 @@ a:hover{
   text-decoration: none;
   color: white;
 }
-@media (min-width: 992px){
-.navbar-expand-lg .navbar-toggler {
-    display: none;
+@media screen and (max-width:1280px) {
+  .navbar-nav .nav-item .nav-link{
+    padding: 0px 10px;
+  }
 }
+@media screen and (max-width:1157px) {
+  .navbar-nav .nav-item .nav-link{
+    padding: 0px 5px;
+  }
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:1069px) {
+  .navbar-nav .nav-item .nav-link{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width:767px) {
+  .logo_img{
+    width: 80%;
+  }
+  .navbar-brand{
+    width: 40%;
+  }
  
-
-
-  .nav-icon {
+}
+@media screen and (max-width:480px) {
+  .navbar{
     display: block;
-    float: right;
-    color: white;
   }
-
-  .main-menu {
-    display: none;
-
+  .navbar-brand{
+    width: 60%;
   }
-
-  .navbar-nav {
-    background-color: #EEF5FD;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    font-size: 15px;
+  .buttons .btn{
+    padding: 4px 10px;
 }
-
-.navbar-collapse {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    width: 100%;
+.navbar-toggler{
+  float: right;
+  margin-top: 12px;
 }
-
-.navbar-toggler {
-    order: 1;
-    position: relative;
-    z-index: 4;
-    transition: all 0.3s ease-in-out;
+.header-social-media .fab{
+  font-size: 16px;
+  margin-right: 15px;
 }
-
-.navlogo {
-    width: 125px;
-}
-
-.header-btn .btn {
-    padding: 10px 20px;
-}
-
-.navbar-nav .nav-item .nav-link {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: var(--black);
-}
-
-.buttons .btn {
-    padding: 3px 24px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-}
-@media screen and (max-width:768px) {
-  .users_login{
-    display: none;
-  }
-  .header-text{
-    display: none;
-  }
-}
-@media (min-width: 768px){
-.container, .container-md, .container-sm {
-    max-width: 927px;
-}
-
 }

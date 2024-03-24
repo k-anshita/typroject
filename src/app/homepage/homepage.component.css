@@ -25,11 +25,11 @@ body {
     font-size: 60px;
     font-weight: 700;
     color: white;
-    margin: 0px;
+    margin-bottom: 30px;
 }
 
 .title:hover {
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 1px white;
     color: transparent;
 }
 
@@ -169,6 +169,10 @@ button {
     margin-bottom: 30px;
 }
 
+.feedback-lining h3 {
+    font-size: 27px;
+}
+
 .feedback-lining .feedback {
     display: flex;
     justify-content: center;
@@ -177,7 +181,7 @@ button {
 
 .feedback-lining .feedback .card {
     background-color: rgb(8 8 8 / 58%);
-    ;
+
     color: white;
     padding: 20px;
     margin: 20px;
@@ -241,11 +245,166 @@ button {
 }
 
 
+@media screen and (max-width:1280px) {
+    .home-lining {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1157px) {
+    .home-main {
+        padding-top: 160px;
+        padding-bottom: 100px;
+    }
+
+    .home-lining {
+        width: 50%;
+    }
+
+    .title {
+        font-size: 52px;
+        margin-bottom: 0px;
+    }
+    .home .trailer .content {
+        width: 62%;
+    }
+    .home .trailer .content p{
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    .home-main {
+        padding-top: 145px;
+        padding-bottom: 56px;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .home-lining {
+        width: 60%;
+    }
+    .home .trailer .content {
+        width: 80%;
+    }
+    .home .trailer{
+        padding: 30px 0px;
+    }
+    .home .trailer h1{
+        margin-bottom: 10px;
+    }
+    .read-more{
+        padding: 5px 20px;
+    }
+    .feedback-lining h1{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    .feedback-lining .feedback{
+        display: inline-block;
+    }
+    .feedback-lining .feedback .card{
+        margin: 20px 0px;
+        width: 100%;
+    }
+    .feedback-lining .feedback img{
+        width: 15%;
+    }
+}
 
 @media screen and (max-width:768px) {
 
     .news-title {
         font-size: 13px;
         padding-right: 23px;
+    }
+
+    .home-main {
+        padding-top: 115px;
+        padding-bottom: 30px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .home-lining {
+        width: 50%;
+    }
+    .home-lining .btn{
+        font-size: 12px;
+        padding: 6px 20px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .news-header{
+        height: 60px;
+        padding: 18px 0px;
+        font-size: 16px;
+    }
+    .news-title{
+        padding-top: 15px;
+        font-size: 18px;
+    }
+    .home .trailer h1{
+        font-size: 25px;
+    }
+    .home .trailer .content h3 {
+        font-size: 25px;
+    }
+    .home .trailer .content p{
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    .read-more{
+        font-size: 16px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .feedback-lining h1{
+        font-size: 35px;
+        margin-bottom: 0px;
+    }
+    .feedback-lining h3{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .home-lining {
+        width: 100%;
+        margin: 0px;
+        padding: 0px 20px;
+        text-align: center;
+    }
+    .title p{
+        font-size: 25px;        
+    }
+    .news-header{
+        height: 50px;
+        padding: 14px 0px;
+        font-size: 14px;
+    }
+    .news-title{
+        padding-top: 15px;
+        font-size: 14px;
+    }
+    .news-item span {
+        margin-right: 15px;
+        font-size: 10px;
+        padding: 3px 11px;
+}
+}
+@media screen and (max-width:480px){
+    .content p{
+        font-size: 14px;
+    }
+    .home .trailer .content h3 {
+        font-size: 20px;
     }
 }

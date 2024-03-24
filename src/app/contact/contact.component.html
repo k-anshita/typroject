@@ -20,11 +20,11 @@
                     </div>
                     <div>
                         <p>Enter Your email:</p>
-                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
-                        <p
+                        <input type="email" class="form-control" placeholder="enter your email" id="email" name="email" [(ngModel)]="email" required>
+                        <!-- <p
                             *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']" id="alert">
                             Email is required.
-                        </p>
+                        </p> -->
                         <p *ngIf="!myForm.controls['email'].errors?.['required'] && !validateEmail(email)" id="alert">
                             Invalid email format.
                         </p>
@@ -32,24 +32,24 @@
                     <div>
                         <p>Enter Your subject:</p>
                         <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" [(ngModel)]="subject" required>
-                        <p
+                        <!-- <p
                             *ngIf="myForm.controls['subject'].touched && myForm.controls['subject'].dirty && myForm.controls['subject'].errors?.['required']" id="alert">
                             subject is required.
-                        </p>
+                        </p> -->
                     </div>
                     <div>
                         <p>Enter Your messege:</p>
                         <input class="textarea-message form-control" id="message" name="message" [(ngModel)]="message"
                             required>
-                            <p
+                            <!-- <p
                             *ngIf="myForm.controls['message'].touched && myForm.controls['message'].dirty && myForm.controls['message'].errors?.['required']" id="alert">
                             message is required.
-                        </p>
+                        </p> -->
                     </div>
                     <div>
-                        <input type="checkbox" id="agree" value="yes">
-                        <label for="agree"> I have agree to recieve email and updates</label><br>
-                        <button [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" (click)="submit_review()" class="btn" matTooltip="Oops!you have to fill all the detail to enable me :( " [matTooltipDisabled]="myForm.valid">Send Message</button>
+                        <!-- <input type="checkbox" id="agree" value="yes"> -->
+                        <!-- <label for="agree"> I have agree to recieve email and updates</label><br> -->
+                        <button [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" (click)="submit_review()" class="btn">Send Message</button>
                     </div>
                 </div>
             </form>
@@ -170,7 +170,7 @@
       
       <div class="accordtion-body">
         <button class="btn  accordion-btn collapsed" type="button" data-toggle="collapse" data-target="#que-three" aria-expanded="false" aria-controls="que-three">
-            is there any age resytriction?
+            is there any age restriction?
             <i class="fa fa-question-circle"></i>
         </button>
       

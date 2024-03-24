@@ -9,15 +9,9 @@
     flex-direction: column;
 }
 
-.container{
- /* align-items: center;
-  position: absolute;
-  justify-content: center;
-  top:50%;
-  left: 50%;
-  max-width: 300px; */
+
  
-}
+
 .title{
   font-family:'Open Sans';
   font-size: 40px;
@@ -25,7 +19,7 @@
   color: white;
   text-align: center;
   transition: .5s;
- /* margin-top: 150px; */
+ 
 }
 .title::before {
   content: '';
@@ -47,8 +41,7 @@
   text-shadow: 0 0 10px #ffee10;
 }
 .otp-form{
-  /* padding: 50px;
-  margin-top:10px; */
+  
   padding: 20px;
   margin: auto;
   background-color: #363da4;
@@ -103,9 +96,39 @@ input{
   text-align: left;
   margin-left: 65px;
 }
-.vmsg p{
-  font-size: 15px;
-  text-align: left;
-  margin-left: 80px;
-  margin-top: 5px;
+@media only screen and (max-width:991px){
+  .otp-form{
+    width: 70%;
+  }
+  .mid{
+    height: 535px;
+  }
+  .title{
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width:767px){
+  .title{
+    font-size: 30px;
+  }
+  .mid{
+    height: 435px;
+    padding-top: 50px;
+  }
+}
+@media only screen and (max-width:480px){
+  .title{
+    font-size: 25px;
+  }
+  .otp-form{
+    width: 90%;
+  }
+  input{
+    padding: 5px 10px;
+  }
+  .btn{
+    font-size: 14px;
+    padding: 5px 20px;
+  }
+  
 }

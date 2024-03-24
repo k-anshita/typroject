@@ -1,75 +1,78 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2';
 import { AuthService } from '../auth.service';
+import { OtpService } from '../otp.service';
 
+declare var Razorpay: any;
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.css']
+  styleUrls: ['./payment.component.css'],
+  
 })
-export class PaymentComponent {
-  [x: string]: any;
-  min?: number;
-  max?: number;
-  cardName: string = '';
-  cardNumber?: any;
-  iscardNameValid: boolean = true;
-  iscardnumvalid: boolean = true;
-  expYear: string = '';
-  expMonth: string = '';
-  cvv: string = '';
+export class PaymentComponent implements OnInit {
+  showPaymentButton?: boolean;
+  constructor(private cdr: ChangeDetectorRef,private OtpService:OtpService) {}
 
-  constructor(private toastr: ToastrService, private authService: AuthService) { }
-  validatecardName(value: string) {
-    // Validate first name here
-    this.iscardNameValid = /^[a-zA-Z]+$/.test(value);
-  }
-  validatecardnum(value: string) {
-    // Validate first name here
-    this.iscardnumvalid = /^\d{16}$/.test(value);
+  ngOnInit() {
+    // Retrieve the state of showPaymentButton from localStorage
+    const showPaymentButtonState = localStorage.getItem('showPaymentButton');
+    this.showPaymentButton = showPaymentButtonState ? JSON.parse(showPaymentButtonState) : true;
   }
 
-  validateExpiryYear(year: string): boolean {
-    const currentYear = new Date().getFullYear();
-    const inputYear = parseInt(year, 10);
-    return /^\d{4}$/.test(year) && inputYear >= currentYear;
-  }
-  isValidExpiryYear(): boolean {
-    return this.validateExpiryYear(this.expYear);
-  }
-
-  validateCVV(cvv: string): boolean {
-    return /^\d{3}$/.test(cvv);
-  }
-
-  onSubmit() {
-    if ((!this.cardName && !this.iscardNameValid) && (!this.validateExpiryYear(this.expYear)) && (!this.cardNumber && !this.iscardnumvalid) && (!this.cvv)) {
-      console.log('form is invalid');
-    }
-    else {
-      Swal.fire("your payment sunmitted successfully and RS.49 will be debited from your account");
-    }
-  }
-
-  add() {
-    if (!String(this.cardName || '').trim() || !String(this.cardNumber || '').trim() || !String(this.expYear || '').trim() || !String(this.expMonth || '').trim() || !String(this.cvv || '').trim()) {
-      this.toastr.warning('All fields are compulsory');
-    } else {
-      const obj = {
-        cardName: this.cardName,
-        cardNumber: this.cardNumber,
-        expYear: this.expYear,
-        expMonth: this.expMonth,
-        cvv: this.cvv
+  payNow() {
+    const RozarpayOptions = {
+      description: 'Sample Razorpay demo',
+      currency: 'INR',
+      amount: 4900,
+      name: 'online gamezone',
+      key: 'rzp_test_iugwyatZzUBIId',
+      prefill: {
+        name: '',
+        email: '',
+        phone: ''
+      },
+      theme: {
+        color: '#6466e3'
+      },
+      handler: (response: any) => {
+        this.paymentCallback(response);
+      },
+      modal: {
+        ondismiss:  () => {
+          console.log('dismissed')
+        }
       }
-      this.authService.payment(obj).subscribe(x => {
-        console.log(x);
-      })
+    };
 
-    }
+    Razorpay.open(RozarpayOptions);
   }
 
-}
+  paymentCallback(response: any) {
+    console.log('Payment successful:', response);
+    this.showPaymentButton = false;
+    localStorage.setItem('showPaymentButton',JSON.stringify(this.showPaymentButton))
+    this.cdr.detectChanges();
+    
+  this.OtpService.setPaymentStatus(true);
+  
+    Swal.fire({
+      title: 'Payment successful',
+      text: 'Thank you for your payment!',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  }
 
+  failureCallback(error: any) {
+    console.log('Payment failed:', error);
+    Swal.fire({
+      title: 'Payment failed',
+      text: 'Sorry, your payment could not be processed.',
+      icon: 'error',
+      confirmButtonText: 'OK'
+    });
+  }
+}

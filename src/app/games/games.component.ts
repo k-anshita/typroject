@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { OtpService } from '../otp.service';
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class GamesComponent {
 
+  paymentSuccessful?: boolean;
+
+  constructor(private OtpService : OtpService) {
+    
+  }
 }

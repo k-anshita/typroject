@@ -13,8 +13,8 @@ export class WordSearchComponent {
   selectedLetters: string[] = [];
   isGameWon: boolean = false;
   timer: number = 30;
-  intervalId: any;
-  totalTime: number = 0; // Total time in seconds (3 minutes)
+  intervalId: any=1000;
+  totalTime: number = 1; // Total time in seconds (3 minutes)
   gameOver: boolean = false;
 
   constructor() { }
@@ -27,7 +27,7 @@ export class WordSearchComponent {
   initializeGame() {
     // Initialize your word search grid and list of words here
     this.initializeGrid();
-    this.wordsToFind = [ 'VU'];
+    this.wordsToFind = [ 'APPLE'];
   }
 
   initializeGrid() {
@@ -144,7 +144,7 @@ export class WordSearchComponent {
 
   startTimer() {
     this.timer=30;
-    this.totalTime=0;
+    this.totalTime=1;
     this.intervalId = setInterval(() => {
       this.timer--;
 
