@@ -82,6 +82,7 @@ import { OtpComponent } from './otp/otp.component';
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
     }),
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

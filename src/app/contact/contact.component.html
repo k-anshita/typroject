@@ -20,7 +20,7 @@
                     </div>
                     <div>
                         <p>Enter Your email:</p>
-                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+                        <input type="email" class="form-control" placeholder="enter your email" id="email" name="email" [(ngModel)]="email" required>
                         <!-- <p
                             *ngIf="myForm.controls['email'].touched && myForm.controls['email'].dirty && myForm.controls['email'].errors?.['required']" id="alert">
                             Email is required.
@@ -47,8 +47,8 @@
                         </p> -->
                     </div>
                     <div>
-                        <input type="checkbox" id="agree" value="yes">
-                        <label for="agree"> I have agree to recieve email and updates</label><br>
+                        <!-- <input type="checkbox" id="agree" value="yes"> -->
+                        <!-- <label for="agree"> I have agree to recieve email and updates</label><br> -->
                         <button [disabled]="!myForm.valid"  [class.enabled]="myForm.valid" (click)="submit_review()" class="btn">Send Message</button>
                     </div>
                 </div>
@@ -65,6 +65,82 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
+<div class="accordtion">
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-first"
+            aria-expanded="false" aria-controls="que-first">
+            How can i register?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-first">
+            <div class="card card-body">
+                Fill out the registration form with the required information.Review and accept the terms of service or
+                terms and conditions.After completing all required fields, submit the registration form.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-second"
+            aria-expanded="false" aria-controls="que-first">
+            what is the website about?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-second">
+            <div class="card card-body">
+                it is a collection of games across various genres, including action, adventure, puzzle, sports, and
+                more. Users can play these games directly on the our website without the need for downloads or
+                installations.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-three"
+            aria-expanded="false" aria-controls="que-first">
+            is there any age resytriction?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-three">
+            <div class="card card-body">
+                To ensure a safe and age-appropriate gaming experience,there are age restrication only 5 year up person
+                can play its game
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-four"
+            aria-expanded="false" aria-controls="que-first">
+            What about games update?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-four">
+            <div class="card card-body">
+                Game updates typically refer to new releases of game content, bug fixes, improvements, and additional
+                features provided by game developers post-launch.
+            </div>
+        </div>
+    </div>
+
+    <div class="accordtion-body">
+        <button class="btn  accordion-btn" type="button" data-toggle="collapse" data-target="#que-five"
+            aria-expanded="false" aria-controls="que-first">
+            Are all games on websites free to play?
+            <i class="fa fa-question-circle"></i>
+        </button>
+
+        <div class="collapse" id="que-five">
+            <div class="card card-body">
+                we offer a mix of free-to-play games as well as premium or paid games. you can play online without
+                paying
+            </div>
+=======
     <div class="accordtion" id="accordtion">
       <div class="accordtion-body" >
         <button class="btn  accordion-btn collapsed" type="button" data-toggle="collapse" data-target="#que-first" aria-expanded="true" aria-controls="que-first">
@@ -94,7 +170,7 @@
       
       <div class="accordtion-body">
         <button class="btn  accordion-btn collapsed" type="button" data-toggle="collapse" data-target="#que-three" aria-expanded="false" aria-controls="que-three">
-            is there any age resytriction?
+            is there any age restriction?
             <i class="fa fa-question-circle"></i>
         </button>
       
@@ -128,6 +204,7 @@
           <div class="card card-body">
             we offer a mix of free-to-play games as well as premium or paid games. you can play online without paying
           </div>
+>>>>>>> 75da3492742fe1e8d27d097b51ec16d9601dbd3f
         </div>
     </div>
 </div>
