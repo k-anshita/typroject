@@ -40,6 +40,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  date?:any
+  maxDate: any;
   data1: any[] = [
     { key: 'firstname', name: 'First name', type: 'input' },
     { key: 'lastname', name: 'Last name', type: 'input' },
@@ -59,6 +61,13 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profiledata();
+  }
+  calculateAge(birthDateString: string): number {
+    const birthDate = new Date(birthDateString); // Convert string to Date object
+    const today = new Date();
+    const diff = today.getTime() - birthDate.getTime();
+    const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    return age;
   }
 
   profiledata() {

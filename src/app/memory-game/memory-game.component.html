@@ -11,7 +11,8 @@
       <div class="back">{{ card.value }}</div>
     </div>
   </div>
+  <div *ngIf="!isGameWon || isGameWon">
   <button (click)="resetGame()">Reset Game</button>
-  
+  </div>
 </div>
 </div>
