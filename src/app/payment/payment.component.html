@@ -1,8 +1,18 @@
-<div class="container-fluid">
+<!--<div class="container-fluid">
 <div *ngIf="showPaymentButton">
         <button (click)="payNow()">Pay Now</button>
       </div>
       <div *ngIf="!showPaymentButton">
         <h1>Payment done successfully!</h1>
       </div>
+</div>-->
+<div class="container-fluid">
+  <div *ngIf="showPaymentButton">
+  
+    <button class="pay-now-button" (click)="payNow()">Pay Now</button>
+  </div>
+  <div *ngIf="!showPaymentButton" class="success-message">
+    <i class="checkmark">✓</i><h1>Payment done successfully!</h1>
+    <h1>YOU PAID RS.49</h1>
+  </div>
 </div>

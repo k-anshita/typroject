@@ -7,9 +7,9 @@ import { OtpService } from '../otp.service';
 })
 export class GamesComponent {
 
-  paymentSuccessful: boolean;
+  paymentSuccessful?: boolean;
 
   constructor(private OtpService : OtpService) {
-    this.paymentSuccessful = this.OtpService.getPaymentStatus();
+    
   }
 }

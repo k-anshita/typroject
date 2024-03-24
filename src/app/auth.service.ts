@@ -9,8 +9,25 @@ export class AuthService {
 
   // apiUrl = "https://jsonplaceholder.typicode.com";
   apiUrl = 'http://localhost:3000/api'
+  loggedInUserId: string | undefined;
 
   constructor(private http: HttpClient) { }
+  /*login(username: string, password: string): Observable<any> {
+    return this.http.post<any>(
+      this.apiUrl + '/user/login',
+      { username, password }
+    ).pipe(
+      tap((response: { userId: string | undefined; }) => {
+        // Assuming the login response includes the user's ID
+        this.loggedInUserId = response.userId; // Store the user's ID
+      })
+    );
+  }
+*/
+  /*getUserId(): string | undefined {
+    return this.loggedInUserId;
+  }
+*/
 
 
 
@@ -19,8 +36,7 @@ export class AuthService {
     return this.http.post<any>(
       this.apiUrl + '/user/register',
       obj,
-
-    );
+  );
   }
 
   login(username: string, password: string) {
@@ -30,9 +46,9 @@ export class AuthService {
       {
         username,
         password,
-      },
-
-    );
+      }
+      
+    )
   }
 
   updateProfile(model: any) {
@@ -104,3 +120,7 @@ export class AuthService {
     )
   }
 }
+function tap(arg0: (response: { userId: string | undefined; }) => void): import("rxjs").OperatorFunction<any, any> {
+  throw new Error('Function not implemented.');
+}
+

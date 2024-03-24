@@ -8,7 +8,10 @@
 						<input type="text" class="tableformat" [(ngModel)]="profileData[info.key]">
 					</ng-container>
 					<ng-container *ngIf="info.type == 'date'">
-						<input type="date" class="tableformat" [(ngModel)]="profileData[info.key]">
+						<input type="date" class="tableformat" [(ngModel)]="profileData[info.key]" [max]="maxDate">
+						<p *ngIf="date && calculateAge(date) < 5" id="alert">
+							Age must be greater than or equal to 5 years.
+						</p>
 					</ng-container>
 					<ng-container *ngIf="info.type == 'radio'">
 						<ng-container *ngFor="let val of info.values">
@@ -20,7 +23,7 @@
 			</div>
 			<div class="row">
 				<div class="button">
-					<button class="btnupdate btncss" (click)="updateProfile()">Update</button>
+					<button type="submit" class="btnupdate btncss" (click)="updateProfile()">Update</button>
 					<button class="btndelete btncss" data-toggle="modal"
 						data-target="#delete-profile-confirmation">Delete</button>
 				</div>
