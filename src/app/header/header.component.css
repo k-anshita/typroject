@@ -168,13 +168,9 @@ a:hover {
 
   .nav-icon {
     display: block;
-    float: right;
-    color: white;
   }
-
-  .main-menu {
-    display: none;
-
+  .navbar-brand{
+    width: 60%;
   }
 
   .dropdown-item {

@@ -22,13 +22,43 @@ export class MemoryGameComponent {
   timer: number = 40;
   timer$: Observable<number>|undefined;
   timerSubscription: Subscription|undefined;
-  maxTime: number = 0; // Maximum time allowed in seconds
+  maxTime: number = 1; // Maximum time allowed in seconds
 
   constructor() {
     this.resetGame();
+    // this.timer$ = interval(1000).pipe(
+    //   map(() => --this.timer),
+    //   takeWhile(() => this.timer >= this.maxTime)
+    // );
+
+    // this.timerSubscription = this.timer$.subscribe({
+    //   complete: () => {
+    //     if (!this.isGameWon()) {
+    //       Swal.fire('Time is up! You lose.');
+          
+    //     }
+    //   }
+    // });
   }
 
-  ngOnInit() {
+
+  ngOnDestroy() {
+    if (this.timerSubscription) {
+      this.timerSubscription.unsubscribe();
+    }
+  }
+
+  resetGame() {
+    this.cards = [];
+    this.flippedCards = [];
+    this.matchedPairs = 0;
+    this.timer=40;
+    this.maxTime=1;
+    const shuffledSymbols = this.shuffle([...this.symbols, ...this.symbols]);
+    for (const symbol of shuffledSymbols) {
+      this.cards.push({ value: symbol, flipped: false, matched: false });
+    }
+    
     this.timer$ = interval(1000).pipe(
       map(() => --this.timer),
       takeWhile(() => this.timer >= this.maxTime)
@@ -42,23 +72,6 @@ export class MemoryGameComponent {
         }
       }
     });
-  }
-
-  ngOnDestroy() {
-    if (this.timerSubscription) {
-      this.timerSubscription.unsubscribe();
-    }
-  }
-
-  resetGame() {
-    this.cards = [];
-    this.flippedCards = [];
-    this.matchedPairs = 0;
-    const shuffledSymbols = this.shuffle([...this.symbols, ...this.symbols]);
-    for (const symbol of shuffledSymbols) {
-      this.cards.push({ value: symbol, flipped: false, matched: false });
-    }
-    
   }
 
   startTimer() {
