@@ -14,7 +14,9 @@ export class WhackAMoleComponent {
   targetScore:number=7;
 
 
-  constructor() { }
+  constructor() {
+  this.restart()
+   }
 
   ngOnInit(): void {
     this.initGame();
