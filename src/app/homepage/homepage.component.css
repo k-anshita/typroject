@@ -39,7 +39,7 @@ body {
 }
 
 .home-lining .btn {
-    color: #fff !important;
+    color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     background: #200b50fa;
