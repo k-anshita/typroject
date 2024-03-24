@@ -38,7 +38,8 @@ import Swal from 'sweetalert2';
 import { PlaypageComponent } from './playpage/playpage.component';
 import { PaymentComponent } from './payment/payment.component';
 import { OtpComponent } from './otp/otp.component';
-import { MatTooltipModule} from '@angular/material/tooltip';
+import{ MatTooltipModule} from '@angular/material/tooltip';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +83,7 @@ import { MatTooltipModule} from '@angular/material/tooltip';
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
     }),
-    MatTooltipModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
