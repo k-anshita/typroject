@@ -13,7 +13,7 @@ interface Card {
   templateUrl: './memory-game.component.html',
   styleUrls: ['./memory-game.component.css']
 })
-export class MemoryGameComponent {
+export class MemoryGameComponent implements OnInit{
 
   cards: Card[] = [];
   flippedCards: number[] = [];
@@ -24,6 +24,9 @@ export class MemoryGameComponent {
   timerSubscription: Subscription|undefined;
   maxTime: number = 1; // Maximum time allowed in seconds
 
+  ngOnInit(){
+
+  }
   constructor() {
     this.resetGame();
     // this.timer$ = interval(1000).pipe(
@@ -52,7 +55,7 @@ export class MemoryGameComponent {
     this.cards = [];
     this.flippedCards = [];
     this.matchedPairs = 0;
-    this.timer=40;
+    this.timer=50;
     this.maxTime=1;
     const shuffledSymbols = this.shuffle([...this.symbols, ...this.symbols]);
     for (const symbol of shuffledSymbols) {

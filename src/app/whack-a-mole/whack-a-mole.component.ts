@@ -15,11 +15,11 @@ export class WhackAMoleComponent {
 
 
   constructor() {
-  this.restart()
+  
    }
 
   ngOnInit(): void {
-    this.initGame();
+    this.restart();
   }
 
   initGame(): void {

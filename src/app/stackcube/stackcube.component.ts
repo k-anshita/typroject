@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-stackcube',
   templateUrl: './stackcube.component.html',
@@ -74,7 +74,7 @@ export class StackcubeComponent {
 
       if (this.statesAreEqual(this.tiles, this.winningState)) {
         // Puzzle solved, perform actions or display message
-        alert('Congratulations! You solved the puzzle!');
+        Swal.fire('Congratulations! You solved the puzzle!');
     
       }
     

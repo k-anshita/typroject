@@ -145,7 +145,7 @@ export class WordSearchComponent {
   startTimer() {
     this.timer=30;
     this.totalTime=1;
-    this.intervalId = setInterval(() => {
+    this.intervalId= setInterval(() => {
       this.timer--;
 
       if (this.timer <= this.totalTime) {

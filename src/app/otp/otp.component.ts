@@ -60,14 +60,14 @@ export class OtpComponent {
         }
       });
   }
-  // clickme() {
-  //   if (this.verificationStatus == 'OTP Verified successfully!') {
-  //     this.router.navigate(['/payment']);
-  //   }
+   clickme() {
+     if (this.verificationStatus == 'OTP Verified successfully!') {
+      this.router.navigate(['/payment']);
+    }
 
 
 
-  // }
+   }
 }
 
 

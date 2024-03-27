@@ -158,21 +158,21 @@ body{
     color:red;
   }
   @keyframes timer{
-  0%{width:10px;}
+  0%{width:0px;}
   100%{width:300px; display:block;}
   }
   
   
-  .gameover{
+   .gameover{
     position:fixed;  left:0; top:0; bottom:0; right:0; 
     background-color:rgba(0,0,0,0.8);
     animation:gameover 20s linear forwards;
     font-size:80px; color:white; font-weight:bold; text-align:center; 
     text-indent:0;  
     line-height:500px;
-    z-index: 4;
-    /* margin: auto;
-    position: absolute;
+    z-index: 4;}
+    /* margin: auto; */
+    /* position: absolute;
     top: 50%;
     left: 30%;
     width: 50%;
@@ -182,15 +182,16 @@ body{
     font-weight: 800;
     font-size: 100px;
     animation:gameover 20s linear forwards; */
-  }
   
-  @keyframes gameover{
-  0%{left:-5000px;bottom:100%;}
-  97%{left:-5000px;bottom:100%;}
-  100%{ left:0px;}
-  }
+   
   
-  
+ 
+    @keyframes gameover{
+      0%{left:-5000px;bottom:100%;}
+      97%{left:-5000px;bottom:100%;}
+      100%{ left:0px;}
+      }
+     
   
   
   
@@ -265,7 +266,43 @@ body{
       transform:rotateZ(-2deg) translateX(5px) translateY(8px) translateZ(0);
     }
   }
-  
-  
-  
-  
+  /* Your existing CSS styles here */
+
+/* Hide game over message by default */
+
+/* .gameover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100vh; /* Centering vertically */
+  /* z-index: 4;
+} */
+ 
+/* Show game over message when the win condition is not met */
+/* .wrapper:not(:has(.input-circle:not(:checked))) .gameover {
+  display: block;
+} */
+
+/* Show win message */
+.win-msg {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Show win message when all birds are shot */
+.input-circle:checked ~ .input-circle:checked ~ .input-circle:checked ~ .input-circle:checked ~ .input-circle:checked ~ .input-circle:checked ~ .win-msg {
+  display: block;
+}
